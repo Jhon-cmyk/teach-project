@@ -1,0 +1,781 @@
+/* Shared teacher-side workbench surfaces. Scoped to TeacherLayout content roots so other roles stay untouched. */
+:root {
+  --teacher-ui-bg: #f6f8fb;
+  --teacher-ui-surface: #ffffff;
+  --teacher-ui-surface-soft: #f5f8fc;
+  --teacher-ui-border: #cbd9e8;
+  --teacher-ui-border-soft: #dbe5ef;
+  --teacher-ui-text: #111827;
+  --teacher-ui-text-muted: #526174;
+  --teacher-ui-text-soft: #7a899b;
+  --teacher-ui-primary: #147ed9;
+  --teacher-ui-primary-hover: #0b68bd;
+  --teacher-ui-primary-soft: #e6f2ff;
+  --teacher-ui-success: #287a55;
+  --teacher-ui-warning: #9a641d;
+  --teacher-ui-danger: #a93f3f;
+  --teacher-ui-shadow: 0 12px 28px rgba(18, 42, 68, 0.08);
+  --teacher-ui-shadow-hover: 0 16px 34px rgba(18, 42, 68, 0.12);
+  --teacher-ui-radius: 8px;
+  --teacher-ui-radius-sm: 6px;
+  --teacher-ui-page-gap: 18px;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: var(--teacher-ui-text) !important;
+  background: transparent !important;
+  font-family:
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--teacher-ui-page-gap);
+}
+
+.modern-content > .data-visual-page {
+  --teacher-ui-page-gap: 12px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  padding-right: 4px !important;
+}
+
+.modern-content > .ai-console-wrapper {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(
+  .filter-dashboard,
+  .toolbar-card,
+  .import-panel,
+  .control-panel,
+  .focus-status-bar
+) {
+  background: var(--teacher-ui-surface) !important;
+  border: 1px solid var(--teacher-ui-border) !important;
+  border-radius: var(--teacher-ui-radius) !important;
+  box-shadow: var(--teacher-ui-shadow) !important;
+  color: var(--teacher-ui-text) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.page-header, .analysis-header, .detail-header, .page-top) {
+  padding: 0 0 4px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  flex-shrink: 0 !important;
+  min-height: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--teacher-ui-text) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.title-group, .title-block, .header-left, .intro-copy) {
+  min-width: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(h1, h2, h3, .page-title, .section-title, .panel-title) {
+  color: var(--teacher-ui-text) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.page-header, .analysis-header, .detail-header, .page-top) :where(h1, h2, .page-title) {
+  margin: 0 !important;
+  font-size: 22px !important;
+  line-height: 1.28 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.page-header, .analysis-header, .detail-header, .page-top) :where(p, .subtitle, .page-subtitle, .page-desc, .section-desc) {
+  margin-top: 6px !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.page-header, .analysis-header, .detail-header, .page-top) :where(.title-icon, h1 > .anticon, h2 > .anticon, .page-title > .anticon) {
+  font-size: 26px !important;
+  margin-right: 10px !important;
+  color: var(--teacher-ui-primary) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.subtitle, .page-subtitle, .page-desc, .section-desc, .section-subtitle, .panel-head p, .title-block p) {
+  color: var(--teacher-ui-text-muted) !important;
+  letter-spacing: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(
+  .glass-panel,
+  .panel,
+  .panel-card,
+  .desk-card,
+  .overview-card,
+  .resource-card,
+  .table-panel,
+  .table-container,
+  .schedule-grid-wrapper,
+  .chart-card,
+  .kpi-card,
+  .content-section,
+  .left-sidebar,
+  .user-info-card,
+  .detail-sidebar,
+  .detail-content,
+  .tab-panel,
+  .info-card,
+  .class-card,
+  .task-card,
+  .course-card,
+  .empty-box,
+  .page-state-card
+) {
+  background: var(--teacher-ui-surface) !important;
+  border: 1px solid var(--teacher-ui-border-soft) !important;
+  border-radius: var(--teacher-ui-radius) !important;
+  box-shadow: var(--teacher-ui-shadow) !important;
+  color: var(--teacher-ui-text) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(
+  .glass-panel,
+  .panel,
+  .panel-card,
+  .desk-card,
+  .overview-card,
+  .resource-card,
+  .table-panel,
+  .table-container,
+  .chart-card,
+  .kpi-card,
+  .class-card,
+  .task-card,
+  .course-card
+):hover {
+  box-shadow: var(--teacher-ui-shadow-hover) !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card {
+  padding: 0 0 4px !important;
+  margin: 0 0 14px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--teacher-ui-text) !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card:hover {
+  box-shadow: none !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card .header-top {
+  margin-bottom: 8px !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card :where(h1, h2, .page-title) {
+  margin: 0 !important;
+  font-size: 22px !important;
+  line-height: 1.28 !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card :where(.subtitle, .page-subtitle, .page-desc) {
+  margin-top: 6px !important;
+  color: var(--teacher-ui-text-muted) !important;
+}
+
+.modern-content > .coding-bank-page .page-header-card :where(.title-icon, h1 > .anticon, h2 > .anticon, .page-title > .anticon) {
+  font-size: 26px !important;
+  margin-right: 10px !important;
+  color: var(--teacher-ui-primary) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.filter-dashboard, .toolbar-card, .control-panel, .import-panel, .focus-status-bar) {
+  padding: 14px 16px !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.header-actions, .filter-group, .toolbar-main, .toolbar-left, .toolbar-right, .action-group) {
+  display: flex;
+  align-items: center;
+  gap: 10px !important;
+  flex-wrap: wrap;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-btn, button, .primary-btn, .btn-light, .btn-ghost, .btn-soft-primary, .btn-soft-success, .action-btn) {
+  border-radius: 7px !important;
+  letter-spacing: 0 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-btn-primary, .primary-btn, .add-btn, .search-btn, .generate-btn, .ai-report-btn) {
+  background: linear-gradient(135deg, var(--teacher-ui-primary), #1799e6) !important;
+  border-color: var(--teacher-ui-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(20, 126, 217, 0.24) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-btn-primary:hover, .primary-btn:hover, .add-btn:hover, .search-btn:hover, .generate-btn:hover, .ai-report-btn:hover) {
+  background: linear-gradient(135deg, var(--teacher-ui-primary-hover), #0f83d0) !important;
+  border-color: var(--teacher-ui-primary-hover) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-input, .ant-input-affix-wrapper, .ant-select-selector, .ant-input-number, .form-select, input, textarea, select) {
+  border-radius: 7px !important;
+  border-color: #ccd9e8 !important;
+  color: var(--teacher-ui-text) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-input:focus, .ant-input-affix-wrapper-focused, .ant-select-focused .ant-select-selector, input:focus, textarea:focus, select:focus) {
+  border-color: #6aaee5 !important;
+  box-shadow: 0 0 0 3px rgba(20, 126, 217, 0.14) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-table-wrapper, .ant-table, .ant-table-container) {
+  border-radius: var(--teacher-ui-radius) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-table-thead > tr > th) {
+  background: #f1f6fb !important;
+  color: #435267 !important;
+  font-weight: 700 !important;
+  border-bottom-color: var(--teacher-ui-border-soft) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-table-tbody > tr > td) {
+  border-bottom-color: #e3ebf4 !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-tabs-nav) {
+  margin-bottom: 14px !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-tabs-tab) {
+  border-radius: 7px !important;
+  font-weight: 600 !important;
+  color: var(--teacher-ui-text-muted) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .teacher-community-desk
+) :where(.ant-tabs-tab-active .ant-tabs-tab-btn) {
+  color: var(--teacher-ui-primary) !important;
+}
+
+.modern-content > :where(
+  .graph-page,
+  .data-visual-page,
+  .node-detail-page
+) :where(.chart-card, .chart-container, .chart-shell, .chart-canvas, .detail-content) {
+  min-height: 0;
+}
+
+.modern-content > .graph-page .chart-card {
+  flex: 1 1 auto !important;
+  height: calc(100vh - 294px) !important;
+  min-height: 620px !important;
+  overflow: hidden !important;
+}
+
+.modern-content > .graph-page .graph-body {
+  flex: 1 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.modern-content > .graph-page .chart-spin,
+.modern-content > .graph-page .chart-spin :where(.ant-spin-nested-loading, .ant-spin-container) {
+  flex: 1 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.modern-content > .graph-page .chart-container {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.modern-content > .node-detail-page .detail-body,
+.modern-content > .resource-search-page .workbench,
+.modern-content > .smart-writing-page .writing-workspace,
+.modern-content > .ai-console-wrapper .tool-layout,
+.modern-content > .teacher-community-desk .content-grid {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.modern-content > :where(.resource-search-page, .smart-writing-page, .ai-console-wrapper) :where(.panel-card, .panel) {
+  overflow: auto;
+}
+
+.modern-content > :where(
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .smart-writing-page,
+  .teacher-community-desk
+) > :where(
+  .glass-panel,
+  .panel,
+  .panel-card,
+  .table-panel,
+  .table-container,
+  .content-section,
+  .chart-card,
+  .tab-panel,
+  .page-state-card
+):last-child {
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: auto !important;
+}
+
+.modern-content > .schedule-page .schedule-grid-wrapper {
+  overflow: auto !important;
+}
+
+.modern-content > .schedule-page .schedule-table {
+  background: #ffffff !important;
+}
+
+.modern-content > .schedule-page .schedule-card {
+  border-radius: 7px !important;
+  box-shadow: none !important;
+}
+
+.modern-content > .teacher-community-desk :where(.overview-card, .desk-card, .page-state-card) {
+  border-radius: var(--teacher-ui-radius) !important;
+}
+
+.modern-content > :where(.ai-console-wrapper, .smart-writing-page) :where(.engine-sidebar, .config-panel, .editor-panel, .chat-workspace, .tool-config-panel, .tool-result-panel) {
+  border-radius: var(--teacher-ui-radius) !important;
+  border-color: var(--teacher-ui-border-soft) !important;
+  box-shadow: var(--teacher-ui-shadow) !important;
+}
+
+.modern-content > :where(.ai-console-wrapper, .smart-writing-page) :where(.workspace-header, .editor-topbar) {
+  border-bottom-color: var(--teacher-ui-border-soft) !important;
+}
+
+.modern-content > :where(
+  .schedule-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .modern-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk
+) :where(.ant-modal-content, .ant-drawer-content) {
+  border-radius: var(--teacher-ui-radius) !important;
+}
+
+.teacher-wide-modal {
+  max-width: calc(100vw - 48px);
+}
+
+.teacher-wide-modal .ant-modal-body {
+  height: 680px;
+  max-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.teacher-wide-modal .ant-spin-nested-loading,
+.teacher-wide-modal .ant-spin-container {
+  min-height: 0;
+  height: 100%;
+}
+
+.admin-wide-modal {
+  max-width: calc(100vw - 48px);
+}
+
+.admin-wide-modal .ant-modal-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-wide-modal .ant-modal-body {
+  height: 680px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.admin-wide-modal .ant-spin-nested-loading,
+.admin-wide-modal .ant-spin-container {
+  min-height: 0;
+}
+
+@media (max-width: 1366px) {
+  .modern-content {
+    padding: 22px 26px 24px !important;
+  }
+
+  .modern-content > :where(
+    .schedule-page,
+    .graph-page,
+    .stats-page,
+    .node-detail-page,
+    .teaching-manage,
+    .resource-library,
+    .resource-search-page,
+    .data-visual-page,
+    .modern-page,
+    .smart-writing-page,
+    .teacher-community-desk
+  ) :where(.page-header, .analysis-header, .detail-header, .page-top) {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .modern-content {
+    padding: 18px !important;
+  }
+
+  .modern-content > :where(
+    .schedule-page,
+    .graph-page,
+    .stats-page,
+    .node-detail-page,
+    .teaching-manage,
+    .resource-library,
+    .resource-search-page,
+    .data-visual-page,
+    .modern-page,
+    .smart-writing-page,
+    .teacher-community-desk
+  ) :where(.page-header, .analysis-header, .detail-header, .page-top) {
+    flex-direction: column !important;
+  }
+}

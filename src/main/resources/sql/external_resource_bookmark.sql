@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `external_resource_bookmark` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `teacher_id` BIGINT NOT NULL COMMENT '保存教师ID',
+  `platform` VARCHAR(32) NOT NULL COMMENT '外部平台: github/gitee/paper/bilibili/csdn',
+  `external_id` VARCHAR(255) NOT NULL COMMENT '外部资源唯一ID',
+  `title` VARCHAR(500) NOT NULL COMMENT '资源标题',
+  `summary` TEXT NULL COMMENT '资源摘要',
+  `cover` VARCHAR(1024) NULL COMMENT '封面URL',
+  `author` VARCHAR(255) NULL COMMENT '作者/发布者',
+  `url` VARCHAR(1024) NOT NULL COMMENT '外部访问地址',
+  `resource_type` VARCHAR(64) NULL COMMENT '资源类型: code/paper/video/article_search',
+  `tags_json` TEXT NULL COMMENT '标签JSON',
+  `raw_json` TEXT NULL COMMENT '原始外部元数据JSON',
+  `is_delete` TINYINT NOT NULL DEFAULT 0 COMMENT '逻辑删除',
+  `create_time` DATETIME NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_teacher_platform_external` (`teacher_id`, `platform`, `external_id`, `is_delete`),
+  KEY `idx_teacher_platform` (`teacher_id`, `platform`),
+  KEY `idx_create_time` (`create_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='教师外部资源收藏';

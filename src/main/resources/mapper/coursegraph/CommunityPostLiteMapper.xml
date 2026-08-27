@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CommunityPostLiteMapper">
+  <select id="selectActivePosts" resultType="com.ruyi.teach.model.entity.CommunityPostLite">
+    select id,title,content,post_type,course_name,author_name,status,is_hot,is_teacher_answered,view_count,reply_count,last_active_time,is_delete
+    from community_post
+    where is_delete = 0
+    order by last_active_time desc, id desc
+  </select>
+</mapper>

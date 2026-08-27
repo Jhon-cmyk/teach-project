@@ -1,0 +1,23 @@
+spring:
+  config:
+    # Local overrides and real credentials belong in this ignored file.
+    import: optional:file:./tmp/application-local.yml
+
+ruyi:
+  upload-path: ${RUYI_UPLOAD_PATH:./files/}
+
+knife4j:
+  enable: ${KNIFE4J_ENABLED:true}
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+app:
+  cors:
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:5173}
+
+auth:
+  token:
+    # This known fallback is only for the dev profile; production requires a private value.
+    secret: ${AUTH_TOKEN_SECRET:__local-development-only__}

@@ -1,0 +1,85 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Python ###
+__pycache__/
+*.pyc
+
+
+*.mp4
+*.pptx
+*.wav
+teach-ai-server/static/videos/temp_scene/
+teach-ai-server/static/videos/micro_course/
+teach-ai-server/venv/
+
+### Deployment cleanup ###
+teach-frontend/node_modules/
+teach-frontend/dist/
+teach-frontend/dist-*/
+teach-frontend/*.log
+teach-frontend/*.tsbuildinfo
+teach-ai-server/**/__pycache__/
+teach-ai-server/**/*.pyc
+.idea/
+.vs/
+teach-ai-server/.idea/
+teach-frontend/.idea/
+outputs/
+backups/
+tmp/
+tmp*/
+tmp_*
+video_frame_*.jpg
+video_frames/
+
+### Local secrets ###
+.env
+.env.local
+.env.*.local
+application-local.yml
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+__MACOSX/
+
+### Runtime uploads ###
+/files/
+
+### Local-only project material ###
+/.impeccable/
+/PRODUCT.md
+/teach_platform_full.sql

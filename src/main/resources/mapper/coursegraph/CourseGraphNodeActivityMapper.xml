@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CourseGraphNodeActivityMapper">
+
+    <select id="selectActiveByNodeId" resultType="com.ruyi.teach.model.entity.CourseGraphNodeActivity">
+        SELECT * FROM course_graph_node_activity
+        WHERE isDelete = 0 AND nodeId = #{nodeId}
+        ORDER BY createTime DESC
+    </select>
+
+    <select id="selectActiveByNodeIds" resultType="com.ruyi.teach.model.entity.CourseGraphNodeActivity">
+        SELECT * FROM course_graph_node_activity
+        WHERE isDelete = 0 AND nodeId IN
+        <foreach collection="nodeIds" item="nid" open="(" separator="," close=")">
+            #{nid}
+        </foreach>
+        ORDER BY createTime DESC
+    </select>
+
+</mapper>

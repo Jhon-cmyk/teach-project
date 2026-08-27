@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CourseGraphNodeProgressMapper">
+
+    <select id="selectByStudentId" resultType="com.ruyi.teach.model.entity.CourseGraphNodeProgress">
+        SELECT * FROM course_graph_node_progress
+        WHERE isDelete = 0 AND studentId = #{studentId}
+    </select>
+
+    <select id="selectByNodeId" resultType="com.ruyi.teach.model.entity.CourseGraphNodeProgress">
+        SELECT * FROM course_graph_node_progress
+        WHERE isDelete = 0 AND nodeId = #{nodeId}
+    </select>
+
+    <select id="selectByStudentIdsAndNodeId" resultType="com.ruyi.teach.model.entity.CourseGraphNodeProgress">
+        SELECT * FROM course_graph_node_progress
+        WHERE isDelete = 0 AND nodeId = #{nodeId} AND studentId IN
+        <foreach collection="studentIds" item="sid" open="(" separator="," close=")">
+            #{sid}
+        </foreach>
+    </select>
+
+    <select id="selectByStudentIdsAndNodeIds" resultType="com.ruyi.teach.model.entity.CourseGraphNodeProgress">
+        SELECT * FROM course_graph_node_progress
+        WHERE isDelete = 0
+        AND studentId IN
+        <foreach collection="studentIds" item="sid" open="(" separator="," close=")">
+            #{sid}
+        </foreach>
+        AND nodeId IN
+        <foreach collection="nodeIds" item="nid" open="(" separator="," close=")">
+            #{nid}
+        </foreach>
+    </select>
+
+    <insert id="batchUpsertProgress" parameterType="java.util.List">
+        INSERT INTO course_graph_node_progress (studentId, nodeId, completionRate, masteryRate, studyMinutes, lastStudyTime, createTime, updateTime, isDelete)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.studentId}, #{item.nodeId}, #{item.completionRate}, #{item.masteryRate}, #{item.studyMinutes}, #{item.lastStudyTime}, NOW(), NOW(), 0)
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+            completionRate = VALUES(completionRate),
+            masteryRate = VALUES(masteryRate),
+            studyMinutes = VALUES(studyMinutes),
+            lastStudyTime = VALUES(lastStudyTime),
+            updateTime = NOW()
+    </insert>
+
+</mapper>

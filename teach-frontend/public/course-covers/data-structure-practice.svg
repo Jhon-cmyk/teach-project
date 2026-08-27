@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">数据结构就业实战专题封面</title>
+  <desc id="desc">青绿色背景上的代码窗口与链表节点</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062b2c"/>
+      <stop offset="1" stop-color="#087f6d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#143c46"/>
+      <stop offset="1" stop-color="#092a33"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#bg)"/>
+  <rect x="555" y="102" width="330" height="330" rx="24" fill="url(#panel)" stroke="#64dfc8" stroke-opacity=".45" stroke-width="3"/>
+  <circle cx="589" cy="138" r="8" fill="#ff6b6b"/><circle cx="615" cy="138" r="8" fill="#ffd166"/><circle cx="641" cy="138" r="8" fill="#5be7a9"/>
+  <g font-family="Consolas, monospace" font-size="24" fill="#bff9ed">
+    <text x="590" y="205">class Node {</text><text x="620" y="245">int value;</text><text x="620" y="285">Node next;</text><text x="590" y="325">}</text>
+  </g>
+  <g stroke="#73efd7" stroke-width="4" fill="#0d5e5a">
+    <circle cx="620" cy="375" r="20"/><circle cx="710" cy="375" r="20"/><circle cx="800" cy="375" r="20"/>
+    <path d="M642 375h44m46 0h44"/><path d="m678 366 10 9-10 9m90-18 10 9-10 9"/>
+  </g>
+  <text x="74" y="110" fill="#79ead5" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28" font-weight="700" letter-spacing="4">EMPLOYMENT · PRACTICE</text>
+  <text x="72" y="225" fill="#fff" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="70" font-weight="800">数据结构</text>
+  <text x="74" y="298" fill="#d7fff7" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600">就业实战专题</text>
+  <g transform="translate(74 374)" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="24" font-weight="600">
+    <rect width="128" height="52" rx="26" fill="#fff" opacity=".12"/><text x="24" y="34" fill="#fff">实现</text>
+    <rect x="144" width="128" height="52" rx="26" fill="#fff" opacity=".12"/><text x="168" y="34" fill="#fff">项目</text>
+    <rect x="288" width="128" height="52" rx="26" fill="#fff" opacity=".12"/><text x="312" y="34" fill="#fff">面试</text>
+  </g>
+</svg>

@@ -1,0 +1,241 @@
+[
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "1011",
+    "resourceType": "plan",
+    "title": "二叉树遍历教案",
+    "content": "二叉树遍历包含前序遍历、中序遍历和后序遍历。前序遍历按照根节点、左子树、右子树的顺序访问。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "1012",
+    "resourceType": "quiz",
+    "title": "二叉树遍历练习",
+    "content": "根据访问序列判断二叉树的前序遍历、中序遍历和后序遍历结果。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "1013",
+    "resourceType": "plan",
+    "title": "快速排序教案",
+    "content": "快速排序通过基准元素进行分区，递归处理左右子序列，并分析平均时间复杂度。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "1014",
+    "resourceType": "quiz",
+    "title": "栈与队列练习",
+    "content": "栈遵循后进先出，队列遵循先进先出，练习包含入栈出栈和入队出队。",
+    "scope": "mine"
+  },
+  {
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "case",
+    "sourceId": "1021",
+    "resourceType": "case",
+    "title": "家族树遍历课堂案例",
+    "content": "使用家族树层级关系讲解二叉树前序遍历，让学生依次访问长辈和左右分支。",
+    "scope": "platform",
+    "sourceUrl": "https://example.test/eval/case/1021"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "tree-traversal",
+    "resourceType": "graph_node",
+    "title": "二叉树遍历知识点",
+    "content": "二叉树遍历的前置知识是递归，核心包括前序、中序、后序遍历。",
+    "scope": "platform",
+    "graphNodeId": "tree-traversal"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "quick-sort",
+    "resourceType": "graph_node",
+    "title": "快速排序知识点",
+    "content": "快速排序包括基准选择、分区操作、递归排序和复杂度分析。",
+    "scope": "platform",
+    "graphNodeId": "quick-sort"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "stack-queue",
+    "resourceType": "graph_node",
+    "title": "栈与队列知识点",
+    "content": "栈是后进先出结构，队列是先进先出结构。",
+    "scope": "platform",
+    "graphNodeId": "stack-queue"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 102,
+    "courseName": "计算机网络",
+    "sourceType": "ai_resource",
+    "sourceId": "2011",
+    "resourceType": "plan",
+    "title": "TCP 三次握手教案",
+    "content": "TCP 通过 SYN、SYN-ACK、ACK 三次握手建立可靠连接。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 102,
+    "courseName": "计算机网络",
+    "sourceType": "ai_resource",
+    "sourceId": "2012",
+    "resourceType": "quiz",
+    "title": "TCP 连接管理练习",
+    "content": "练习 TCP 三次握手报文标志、序列号和客户端服务器状态变化。",
+    "scope": "mine"
+  },
+  {
+    "courseId": 102,
+    "courseName": "计算机网络",
+    "sourceType": "case",
+    "sourceId": "2021",
+    "resourceType": "case",
+    "title": "电话接通类比 TCP 握手",
+    "content": "用拨号、应答、确认的电话接通过程类比 TCP 三次握手。",
+    "scope": "platform",
+    "sourceUrl": "https://example.test/eval/case/2021"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "tcp-handshake",
+    "resourceType": "graph_node",
+    "title": "TCP 三次握手知识点",
+    "content": "TCP 三次握手依次交换 SYN、SYN-ACK 和 ACK 报文。",
+    "scope": "platform",
+    "graphNodeId": "tcp-handshake"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 103,
+    "courseName": "操作系统",
+    "sourceType": "ai_resource",
+    "sourceId": "3011",
+    "resourceType": "plan",
+    "title": "进程调度教案",
+    "content": "进程调度算法包括先来先服务、短作业优先和时间片轮转。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 103,
+    "courseName": "操作系统",
+    "sourceType": "ai_resource",
+    "sourceId": "3012",
+    "resourceType": "quiz",
+    "title": "死锁条件练习",
+    "content": "死锁产生需要互斥、请求与保持、不可剥夺和循环等待四个必要条件。",
+    "scope": "mine"
+  },
+  {
+    "courseId": 103,
+    "courseName": "操作系统",
+    "sourceType": "case",
+    "sourceId": "3021",
+    "resourceType": "case",
+    "title": "银行家算法资源分配案例",
+    "content": "银行家算法通过安全性检查避免系统进入不安全状态和死锁。",
+    "scope": "platform",
+    "sourceUrl": "https://example.test/eval/case/3021"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "process-scheduling",
+    "resourceType": "graph_node",
+    "title": "进程调度知识点",
+    "content": "进程调度比较周转时间、等待时间和响应时间。",
+    "scope": "platform",
+    "graphNodeId": "process-scheduling"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "deadlock",
+    "resourceType": "graph_node",
+    "title": "死锁知识点",
+    "content": "死锁四个必要条件与银行家算法安全序列密切相关。",
+    "scope": "platform",
+    "graphNodeId": "deadlock"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 104,
+    "courseName": "数据库原理",
+    "sourceType": "ai_resource",
+    "sourceId": "4011",
+    "resourceType": "plan",
+    "title": "数据库事务教案",
+    "content": "数据库事务具有原子性、一致性、隔离性和持久性，即 ACID 特性。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 104,
+    "courseName": "数据库原理",
+    "sourceType": "ai_resource",
+    "sourceId": "4012",
+    "resourceType": "quiz",
+    "title": "SQL 查询练习",
+    "content": "SQL 查询练习包含 SELECT、WHERE、GROUP BY、HAVING 和多表连接。",
+    "scope": "mine"
+  },
+  {
+    "courseId": 104,
+    "courseName": "数据库原理",
+    "sourceType": "case",
+    "sourceId": "4021",
+    "resourceType": "case",
+    "title": "图书借阅事务案例",
+    "content": "图书借阅与库存更新必须处于同一数据库事务，失败时整体回滚。",
+    "scope": "platform",
+    "sourceUrl": "https://example.test/eval/case/4021"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "database-transaction",
+    "resourceType": "graph_node",
+    "title": "数据库事务知识点",
+    "content": "事务 ACID 特性包括原子性、一致性、隔离性和持久性。",
+    "scope": "platform",
+    "graphNodeId": "database-transaction"
+  },
+  {
+    "teacherId": 2002,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "9001",
+    "resourceType": "plan",
+    "title": "其他教师二叉树私有教案",
+    "content": "其他教师的二叉树遍历私有内容，教师 1001 不应检索到。",
+    "scope": "mine"
+  },
+  {
+    "teacherId": 2002,
+    "courseId": 102,
+    "courseName": "计算机网络",
+    "sourceType": "ai_resource",
+    "sourceId": "9002",
+    "resourceType": "quiz",
+    "title": "其他教师 TCP 私有练习",
+    "content": "其他教师的 TCP 三次握手私有练习，教师 1001 不应检索到。",
+    "scope": "mine"
+  }
+]

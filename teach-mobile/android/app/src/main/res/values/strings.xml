@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SmartEdu Student</string>
+    <string name="title_activity_main">SmartEdu Student</string>
+    <string name="package_name">com.ruyi.teach.mobile</string>
+    <string name="custom_url_scheme">com.ruyi.teach.mobile</string>
+</resources>

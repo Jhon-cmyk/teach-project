@@ -1,0 +1,157 @@
+server:
+  port: ${SERVER_PORT:8820}
+  servlet:
+    context-path: /api
+    session:
+      timeout: ${SESSION_TIMEOUT:30d}
+      cookie:
+        max-age: ${SESSION_COOKIE_MAX_AGE:30d}
+        http-only: true
+        same-site: lax
+
+auth:
+  token:
+    ttl: ${AUTH_TOKEN_TTL:30d}
+
+spring:
+  config:
+    import: optional:file:./tmp/application-local.yml
+  profiles:
+    default: dev
+  application:
+    name: teach-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/teach_platform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  servlet:
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE:1024MB}
+      max-request-size: ${MAX_REQUEST_SIZE:1024MB}
+  flyway:
+    # Dev remains opt-in so merely pulling the code never writes a history table
+    # to an existing developer database. Production enables Flyway below.
+    enabled: ${FLYWAY_ENABLED:false}
+    locations: classpath:db/migration
+    # Existing databases must opt in once after schema comparison and backup.
+    baseline-on-migrate: ${FLYWAY_BASELINE_ON_MIGRATE:false}
+    baseline-version: 1
+    baseline-description: existing-schema-baseline
+    validate-on-migrate: true
+    validate-migration-naming: true
+    clean-disabled: true
+    out-of-order: false
+
+springdoc:
+  group-configs:
+    - group: "default"
+      packages-to-scan: com.ruyi.teach.controller
+
+knife4j:
+  setting:
+    language: zh_cn
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+aliyun:
+  asr:
+    app-key: ${ALIYUN_ASR_APP_KEY:}
+    access-key-id: ${ALIYUN_ASR_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_ASR_ACCESS_KEY_SECRET:}
+  tts:
+    app-key: ${ALIYUN_TTS_APP_KEY:}
+    access-key-id: ${ALIYUN_TTS_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_TTS_ACCESS_KEY_SECRET:}
+    endpoint: ${ALIYUN_TTS_ENDPOINT:https://nls-gateway-cn-shanghai.aliyuncs.com/stream/v1/tts}
+  oss:
+    endpoint: ${ALIYUN_OSS_ENDPOINT:oss-cn-shanghai.aliyuncs.com}
+    access-key-id: ${ALIYUN_OSS_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_OSS_ACCESS_KEY_SECRET:}
+    bucket-name: ${ALIYUN_OSS_BUCKET_NAME:ruyi-teach-assets}
+
+deepseek:
+  base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com/chat/completions}
+  api-key: ${DEEPSEEK_API_KEY:}
+  model: ${DEEPSEEK_MODEL:deepseek-chat}
+
+xfyun:
+  avatar:
+    enabled: ${XFYUN_AVATAR_ENABLED:false}
+    server-url: ${XFYUN_AVATAR_SERVER_URL:wss://avatar.cn-huadong-1.xf-yun.com/v1/interact}
+    app-id: ${XFYUN_AVATAR_APP_ID:}
+    api-key: ${XFYUN_AVATAR_API_KEY:}
+    api-secret: ${XFYUN_AVATAR_API_SECRET:}
+    scene-id: ${XFYUN_AVATAR_SCENE_ID:}
+    avatar-id: ${XFYUN_AVATAR_ID:110117017}
+    avatar-name: ${XFYUN_AVATAR_NAME:朵朵}
+    voice-name: ${XFYUN_AVATAR_VOICE:x4_lingxiaoqi_oral}
+  knowledge-base:
+    enabled: ${XFYUN_KNOWLEDGE_ENABLED:false}
+    base-url: ${XFYUN_KNOWLEDGE_BASE_URL:https://chatdoc.xfyun.cn}
+    app-id: ${XFYUN_KNOWLEDGE_APP_ID:}
+    secret: ${XFYUN_KNOWLEDGE_SECRET:}
+    top-n: ${XFYUN_KNOWLEDGE_TOP_N:5}
+    es-top-n: ${XFYUN_KNOWLEDGE_ES_TOP_N:5}
+    minimum-score: ${XFYUN_KNOWLEDGE_MIN_SCORE:45}
+    timeout: ${XFYUN_KNOWLEDGE_TIMEOUT:60s}
+
+external-client:
+  connect-timeout: ${EXTERNAL_CLIENT_CONNECT_TIMEOUT:10s}
+  default-read-timeout: ${EXTERNAL_CLIENT_READ_TIMEOUT:30s}
+  ai-model-timeout: ${EXTERNAL_CLIENT_AI_MODEL_TIMEOUT:5m}
+  ai-agent-timeout: ${EXTERNAL_CLIENT_AI_AGENT_TIMEOUT:8m}
+  judge0-timeout: ${EXTERNAL_CLIENT_JUDGE0_TIMEOUT:15s}
+  remote-resource-timeout: ${EXTERNAL_CLIENT_REMOTE_RESOURCE_TIMEOUT:20s}
+  max-retries: ${EXTERNAL_CLIENT_MAX_RETRIES:1}
+
+ai:
+  vision:
+    provider: ${AI_VISION_PROVIDER:openai-compatible}
+    base-url: ${AI_VISION_BASE_URL:https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions}
+    api-key: ${AI_VISION_API_KEY:}
+    model: ${AI_VISION_MODEL:qwen-vl-plus}
+  tutor:
+    image-max-size-mb: ${AI_TUTOR_IMAGE_MAX_SIZE_MB:8}
+    audio-max-seconds: ${AI_TUTOR_AUDIO_MAX_SECONDS:60}
+
+homework:
+  vision:
+    provider: ${HOMEWORK_VISION_PROVIDER:mock}
+
+judge0:
+  base-url: ${JUDGE0_BASE_URL:http://localhost:2358}
+  auth-token: ${JUDGE0_AUTH_TOKEN:}
+  default-timeout-ms: ${JUDGE0_DEFAULT_TIMEOUT_MS:5000}
+  default-memory-kb: ${JUDGE0_DEFAULT_MEMORY_KB:262144}
+
+code-executor:
+  mode: ${CODE_EXECUTOR_MODE:local}
+
+logging:
+  pattern:
+    level: "%5p [trace_id=%X{trace_id:-}]"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true

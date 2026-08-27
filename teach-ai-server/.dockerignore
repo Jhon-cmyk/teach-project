@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.idea/
+tests/
+evaluation/
+static/videos/micro_course/
+static/videos/temp_scene/
+temp.md

@@ -1,0 +1,9 @@
+﻿file,title,category,difficulty,courseName,topic,keywords
+ds_queue_linear_queue_case.docx,数据结构教学案例：队列的入队与出队,course_design,easy,数据结构,队列,队列、Queue、FIFO、入队、出队、顺序队列、链式队列
+ds_circular_queue_case.docx,数据结构教学案例：循环队列与假溢出问题,course_design,medium,数据结构,循环队列,循环队列、Circular Queue、队列、假溢出、front、rear、取模运算
+ds_stack_expression_case.docx,数据结构教学案例：栈与表达式括号匹配,course_design,easy,数据结构,栈,栈、Stack、LIFO、入栈、出栈、括号匹配、表达式求值
+ds_singly_linked_list_case.docx,数据结构教学案例：单链表的插入与删除,course_design,medium,数据结构,单链表,单链表、Linked List、结点、指针、插入、删除、头结点
+ds_bubble_sort_case.docx,数据结构教学案例：冒泡排序过程可视化,course_design,easy,数据结构,冒泡排序,冒泡排序、Bubble Sort、排序算法、相邻元素比较、交换、时间复杂度
+ds_binary_search_case.docx,数据结构教学案例：折半查找的有序性条件,course_design,medium,数据结构,折半查找,折半查找、二分查找、Binary Search、有序表、low、high、mid
+ds_binary_tree_traversal_case.docx,数据结构教学案例：二叉树的三种遍历,course_design,medium,数据结构,二叉树,二叉树、Binary Tree、先序遍历、中序遍历、后序遍历、递归、树结构
+ds_graph_bfs_case.docx,数据结构教学案例：图的广度优先搜索,course_design,hard,数据结构,图的广度优先搜索,图、Graph、广度优先搜索、BFS、队列、邻接表、最短路径

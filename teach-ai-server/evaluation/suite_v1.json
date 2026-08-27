@@ -1,0 +1,276 @@
+{
+  "suiteVersion": "agent-eval-v1",
+  "promptContractVersion": "prepare-agent-2026-07-26",
+  "corpusVersion": "corpus-v1",
+  "executionMode": "offline_deterministic",
+  "model": {
+    "provider": "deepseek",
+    "name": "deepseek-chat",
+    "offlineAdapterVersion": "fixture-model-v1",
+    "temperature": {
+      "plan": 0.45,
+      "quiz": 0.3,
+      "animation": 0.45,
+      "coding": 0.3,
+      "micro_video": 0.45
+    },
+    "maxTokens": {
+      "plan": 7000,
+      "default": 6000,
+      "micro_video": 4200
+    }
+  },
+  "retrieval": {
+    "engine": "offline_keyword",
+    "topK": 4,
+    "chunkSize": 900,
+    "chunkOverlap": 120,
+    "minimumKeywordScore": 0.2
+  },
+  "globalForbiddenSources": [
+    "ai_resource-9001",
+    "ai_resource-9002"
+  ],
+  "tasks": [
+    {
+      "id": "EVAL-001",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "二叉树遍历",
+      "form": {"topic": "二叉树遍历"},
+      "contextSources": ["ai_resource-1011", "graph_node-tree-traversal"],
+      "expectedSources": ["ai_resource-1011", "graph_node-tree-traversal"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-002",
+      "agentType": "quiz",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "二叉树遍历练习",
+      "form": {"topic": "二叉树遍历", "typeCounts": {"single": 2}},
+      "contextSources": ["ai_resource-1012"],
+      "expectedSources": ["ai_resource-1012"],
+      "expectedTools": ["retrieve_course_material"],
+      "formatProfile": "quiz"
+    },
+    {
+      "id": "EVAL-003",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "家族树遍历课堂案例",
+      "form": {"topic": "家族树与二叉树遍历"},
+      "contextSources": ["case-1021"],
+      "expectedSources": ["case-1021"],
+      "expectedTools": ["retrieve_teaching_case"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-004",
+      "agentType": "anim",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "二叉树前序遍历动画",
+      "form": {"topic": "二叉树前序遍历"},
+      "contextSources": [],
+      "expectedSources": [],
+      "expectedTools": [],
+      "formatProfile": "tree"
+    },
+    {
+      "id": "EVAL-005",
+      "agentType": "coding",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "实现二叉树前序遍历",
+      "form": {"topic": "二叉树前序遍历", "languages": ["java", "python"]},
+      "contextSources": [],
+      "expectedSources": [],
+      "expectedTools": [],
+      "formatProfile": "coding"
+    },
+    {
+      "id": "EVAL-006",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "快速排序分区递归",
+      "form": {"topic": "快速排序"},
+      "contextSources": ["ai_resource-1013", "graph_node-quick-sort"],
+      "expectedSources": ["ai_resource-1013", "graph_node-quick-sort"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-007",
+      "agentType": "quiz",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "栈与队列练习",
+      "form": {"topic": "栈与队列", "typeCounts": {"single": 2}},
+      "contextSources": ["ai_resource-1014", "graph_node-stack-queue"],
+      "expectedSources": ["ai_resource-1014", "graph_node-stack-queue"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "quiz"
+    },
+    {
+      "id": "EVAL-008",
+      "agentType": "anim",
+      "teacherId": 1001,
+      "courseId": 101,
+      "query": "栈的入栈出栈动画",
+      "form": {"topic": "栈的基本操作"},
+      "contextSources": [],
+      "expectedSources": [],
+      "expectedTools": [],
+      "formatProfile": "concept"
+    },
+    {
+      "id": "EVAL-009",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 102,
+      "query": "TCP 三次握手",
+      "form": {"topic": "TCP 三次握手"},
+      "contextSources": ["ai_resource-2011", "graph_node-tcp-handshake"],
+      "expectedSources": ["ai_resource-2011", "graph_node-tcp-handshake"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-010",
+      "agentType": "quiz_optimize",
+      "teacherId": 1001,
+      "courseId": 102,
+      "query": "TCP 连接管理练习",
+      "form": {"topic": "TCP 连接管理", "typeCounts": {"single": 2}},
+      "contextSources": ["ai_resource-2012"],
+      "expectedSources": ["ai_resource-2012"],
+      "expectedTools": ["retrieve_course_material"],
+      "formatProfile": "quiz"
+    },
+    {
+      "id": "EVAL-011",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 102,
+      "query": "电话接通类比 TCP 握手",
+      "form": {"topic": "TCP 握手案例教学"},
+      "contextSources": ["case-2021"],
+      "expectedSources": ["case-2021"],
+      "expectedTools": ["retrieve_teaching_case"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-012",
+      "agentType": "micro_video",
+      "teacherId": 1001,
+      "courseId": 102,
+      "query": "TCP 三次握手微课",
+      "form": {"topic": "TCP 三次握手"},
+      "contextSources": ["case-2021", "graph_node-tcp-handshake"],
+      "expectedSources": ["graph_node-tcp-handshake"],
+      "expectedTools": ["retrieve_teaching_case", "query_course_graph"],
+      "formatProfile": "micro_video"
+    },
+    {
+      "id": "EVAL-013",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 103,
+      "query": "进程调度算法",
+      "form": {"topic": "进程调度算法"},
+      "contextSources": ["ai_resource-3011", "graph_node-process-scheduling"],
+      "expectedSources": ["ai_resource-3011", "graph_node-process-scheduling"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-014",
+      "agentType": "quiz",
+      "teacherId": 1001,
+      "courseId": 103,
+      "query": "死锁四个必要条件",
+      "form": {"topic": "死锁必要条件", "typeCounts": {"single": 2}},
+      "contextSources": ["ai_resource-3012", "graph_node-deadlock"],
+      "expectedSources": ["ai_resource-3012", "graph_node-deadlock"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "quiz"
+    },
+    {
+      "id": "EVAL-015",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 103,
+      "query": "银行家算法安全性检查死锁",
+      "form": {"topic": "银行家算法"},
+      "contextSources": ["case-3021", "graph_node-deadlock"],
+      "expectedSources": ["case-3021", "graph_node-deadlock"],
+      "expectedTools": ["retrieve_teaching_case", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-016",
+      "agentType": "anim",
+      "teacherId": 1001,
+      "courseId": 103,
+      "query": "进程调度队列动画",
+      "form": {"topic": "时间片轮转调度"},
+      "contextSources": [],
+      "expectedSources": [],
+      "expectedTools": [],
+      "formatProfile": "concept"
+    },
+    {
+      "id": "EVAL-017",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 104,
+      "query": "数据库事务 ACID 特性",
+      "form": {"topic": "数据库事务 ACID"},
+      "contextSources": ["ai_resource-4011", "graph_node-database-transaction"],
+      "expectedSources": ["ai_resource-4011", "graph_node-database-transaction"],
+      "expectedTools": ["retrieve_course_material", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-018",
+      "agentType": "quiz",
+      "teacherId": 1001,
+      "courseId": 104,
+      "query": "SQL 查询 GROUP BY HAVING",
+      "form": {"topic": "SQL 查询", "typeCounts": {"single": 2}},
+      "contextSources": ["ai_resource-4012"],
+      "expectedSources": ["ai_resource-4012"],
+      "expectedTools": ["retrieve_course_material"],
+      "formatProfile": "quiz"
+    },
+    {
+      "id": "EVAL-019",
+      "agentType": "plan",
+      "teacherId": 1001,
+      "courseId": 104,
+      "query": "图书借阅事务回滚",
+      "form": {"topic": "图书借阅事务"},
+      "contextSources": ["case-4021", "graph_node-database-transaction"],
+      "expectedSources": ["case-4021", "graph_node-database-transaction"],
+      "expectedTools": ["retrieve_teaching_case", "query_course_graph"],
+      "formatProfile": "plan"
+    },
+    {
+      "id": "EVAL-020",
+      "agentType": "micro_video",
+      "teacherId": 1001,
+      "courseId": 104,
+      "query": "数据库事务 ACID 微课",
+      "form": {"topic": "数据库事务 ACID"},
+      "contextSources": ["graph_node-database-transaction"],
+      "expectedSources": ["graph_node-database-transaction"],
+      "expectedTools": ["query_course_graph"],
+      "formatProfile": "micro_video"
+    }
+  ]
+}

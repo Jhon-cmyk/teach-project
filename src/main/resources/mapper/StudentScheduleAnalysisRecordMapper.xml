@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.StudentScheduleAnalysisRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.ruyi.teach.model.entity.StudentScheduleAnalysisRecord">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="source_file_name" property="sourceFileName"/>
+        <result column="source_file_url" property="sourceFileUrl"/>
+        <result column="extracted_json" property="extractedJson"/>
+        <result column="matched_json" property="matchedJson"/>
+        <result column="insights_json" property="insightsJson"/>
+        <result column="semester_label" property="semesterLabel"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_delete" property="isDelete"/>
+    </resultMap>
+
+    <select id="selectLatestByUserId" resultMap="BaseResultMap">
+        select *
+        from student_schedule_analysis_record
+        where user_id = #{userId}
+          and is_delete = 0
+        order by update_time desc, id desc
+        limit 1
+    </select>
+
+    <select id="selectByUserIdAndSemester" resultMap="BaseResultMap">
+        select *
+        from student_schedule_analysis_record
+        where user_id = #{userId}
+          and semester_label = #{semesterLabel}
+          and is_delete = 0
+        limit 1
+    </select>
+
+    <insert id="insertRecord" parameterType="com.ruyi.teach.model.entity.StudentScheduleAnalysisRecord"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into student_schedule_analysis_record
+        (
+            user_id,
+            source_file_name,
+            source_file_url,
+            extracted_json,
+            matched_json,
+            insights_json,
+            semester_label,
+            status,
+            is_delete
+        )
+        values
+            (
+                #{userId},
+                #{sourceFileName},
+                #{sourceFileUrl},
+                #{extractedJson},
+                #{matchedJson},
+                #{insightsJson},
+                #{semesterLabel},
+                #{status},
+                0
+            )
+    </insert>
+
+    <update id="updateRecord" parameterType="com.ruyi.teach.model.entity.StudentScheduleAnalysisRecord">
+        update student_schedule_analysis_record
+        set source_file_name = #{sourceFileName},
+            source_file_url  = #{sourceFileUrl},
+            extracted_json   = #{extractedJson},
+            matched_json     = #{matchedJson},
+            insights_json    = #{insightsJson},
+            semester_label   = #{semesterLabel},
+            status           = #{status},
+            update_time      = now()
+        where id = #{id}
+    </update>
+
+</mapper>
