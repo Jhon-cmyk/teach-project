@@ -1,0 +1,18 @@
+@import './base.css';
+
+/* 1. 确保 html 和 body 占满浏览器窗口，去掉默认边距 */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 让 Vue 的根容器 #app 也占满全屏，不做任何宽度限制 */
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* 注意：千万不要在这里写 display: grid 或 max-width */
+}

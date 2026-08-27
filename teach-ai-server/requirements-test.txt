@@ -1,0 +1,4 @@
+# Importing app.py exercises the runtime web and vision stack, so CI installs the
+# base service dependencies. Agent model weights remain excluded.
+-r requirements.txt
+qdrant-client==1.12.1

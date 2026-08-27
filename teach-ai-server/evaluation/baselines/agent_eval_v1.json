@@ -1,0 +1,31 @@
+{
+  "suiteVersion": "agent-eval-v1",
+  "baselineVersion": "baseline-2026-07-26-v1",
+  "executionMode": "offline_deterministic",
+  "taskCount": 20,
+  "referenceMetrics": {
+    "retrieval_hit_rate": 1.0,
+    "citation_coverage_rate": 1.0,
+    "tool_call_success_rate": 1.0,
+    "format_pass_rate": 1.0,
+    "task_completion_rate": 1.0,
+    "degraded_rate": 0.0,
+    "isolation_violation_count": 0,
+    "failed_task_count": 0
+  },
+  "thresholds": {
+    "retrieval_hit_rate": 1.0,
+    "citation_coverage_rate": 1.0,
+    "tool_call_success_rate": 1.0,
+    "format_pass_rate": 1.0,
+    "task_completion_rate": 1.0,
+    "maximum_degraded_rate": 0.0,
+    "maximum_isolation_violations": 0,
+    "maximum_failed_tasks": 0
+  },
+  "notes": [
+    "Latency is recorded but not used as a hard offline threshold because machine load varies.",
+    "Token cost and real provider latency require an explicitly enabled live evaluation run.",
+    "Any retrieval, citation, tool, format, completion, degradation or isolation regression fails the check."
+  ]
+}

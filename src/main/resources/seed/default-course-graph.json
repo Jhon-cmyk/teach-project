@@ -1,0 +1,3417 @@
+{
+  "categories": [
+    {
+      "id": "cat_core",
+      "name": "专业核心课"
+    },
+    {
+      "id": "cat_basic",
+      "name": "专业基础课"
+    },
+    {
+      "id": "cat_practice",
+      "name": "实践环节"
+    },
+    {
+      "id": "cat_advanced",
+      "name": "前沿方向"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cs_root",
+      "parentId": null,
+      "name": "计算机科学与技术",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养系统掌握计算机科学理论与工程实践能力的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 1
+    },
+    {
+      "id": "ne_root",
+      "parentId": null,
+      "name": "网络工程",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握网络规划、设计与安全运维能力的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 2
+    },
+    {
+      "id": "ce_root",
+      "parentId": null,
+      "name": "通信工程",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握通信系统与信号处理技术的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 3
+    },
+    {
+      "id": "iot_root",
+      "parentId": null,
+      "name": "物联网工程",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握物联网感知层、网络层与应用层技术的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 4
+    },
+    {
+      "id": "se_root",
+      "parentId": null,
+      "name": "软件工程",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握软件全生命周期开发与管理能力的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 5
+    },
+    {
+      "id": "dmt_root",
+      "parentId": null,
+      "name": "数字媒体技术",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握数字内容创作与交互媒体技术的专业人才",
+      "difficulty": "medium",
+      "importance": "high",
+      "sortOrder": 6
+    },
+    {
+      "id": "ds_root",
+      "parentId": null,
+      "name": "数据科学与大数据技术",
+      "category": "专业核心课",
+      "symbolSize": 60,
+      "description": "培养掌握大数据采集、存储、分析与挖掘能力的专业人才",
+      "difficulty": "high",
+      "importance": "high",
+      "sortOrder": 7
+    },
+    {
+      "id": "cs_basic",
+      "parentId": "cs_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "description": "计算机科学与技术专业基础课程群",
+      "sortOrder": 1
+    },
+    {
+      "id": "cs_core",
+      "parentId": "cs_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "description": "计算机科学与技术专业核心课程群",
+      "sortOrder": 2
+    },
+    {
+      "id": "cs_practice",
+      "parentId": "cs_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "description": "计算机科学与技术专业实践教学环节",
+      "sortOrder": 3
+    },
+    {
+      "id": "cs_advanced",
+      "parentId": "cs_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "description": "计算机科学与技术前沿技术方向",
+      "sortOrder": 4
+    },
+    {
+      "id": "ne_basic",
+      "parentId": "ne_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "ne_core",
+      "parentId": "ne_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "ne_practice",
+      "parentId": "ne_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "ne_advanced",
+      "parentId": "ne_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "ce_basic",
+      "parentId": "ce_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "ce_core",
+      "parentId": "ce_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "ce_practice",
+      "parentId": "ce_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "ce_advanced",
+      "parentId": "ce_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "iot_basic",
+      "parentId": "iot_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "iot_core",
+      "parentId": "iot_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "iot_practice",
+      "parentId": "iot_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "iot_advanced",
+      "parentId": "iot_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "se_basic",
+      "parentId": "se_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "se_core",
+      "parentId": "se_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "se_practice",
+      "parentId": "se_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "se_advanced",
+      "parentId": "se_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "dmt_basic",
+      "parentId": "dmt_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "dmt_core",
+      "parentId": "dmt_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "dmt_practice",
+      "parentId": "dmt_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "dmt_advanced",
+      "parentId": "dmt_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "ds_basic",
+      "parentId": "ds_root",
+      "name": "专业基础课",
+      "category": "专业基础课",
+      "symbolSize": 40,
+      "sortOrder": 1
+    },
+    {
+      "id": "ds_core",
+      "parentId": "ds_root",
+      "name": "专业核心课",
+      "category": "专业核心课",
+      "symbolSize": 40,
+      "sortOrder": 2
+    },
+    {
+      "id": "ds_practice",
+      "parentId": "ds_root",
+      "name": "实践环节",
+      "category": "实践环节",
+      "symbolSize": 40,
+      "sortOrder": 3
+    },
+    {
+      "id": "ds_advanced",
+      "parentId": "ds_root",
+      "name": "前沿方向",
+      "category": "前沿方向",
+      "symbolSize": 40,
+      "sortOrder": 4
+    },
+    {
+      "id": "cs_basic_01",
+      "parentId": "cs_basic",
+      "name": "程序设计基础（C语言）",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "C语言程序设计的基本概念、语法和编程方法",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>C语言是计算机科学最基础的编程语言之一，被誉为“编程语言的母语“。本课程系统讲解C语言的基本语法、数据类型、流程控制、函数、指针、数组、结构体以及文件操作等核心内容，为后续学习数据结构、操作系统等课程奠定坚实的编程基础。</p><h3>核心知识点</h3><ul><li>C语言程序结构：预处理指令、主函数、输入输出</li><li>基本数据类型与运算符：整型、浮点型、字符型、运算符优先级</li><li>流程控制：if/else、switch、for、while、do-while</li><li>函数与作用域：函数定义、参数传递、递归函数、变量作用域</li><li>指针与内存管理：指针运算、动态内存分配、数组与指针的关系</li><li>复合类型：结构体、共用体、枚举类型</li><li>文件操作：文件读写、二进制文件与文本文件</li></ul><h3>学习目标</h3><ul><li>掌握C语言的基本语法规则和编程范式</li><li>能够独立编写结构清晰、健壮的C语言程序</li><li>理解指针、内存管理等核心概念，为后续学习奠定基础</li><li>培养良好的编程习惯和调试能力</li></ul>"
+    },
+    {
+      "id": "cs_basic_02",
+      "parentId": "cs_basic",
+      "name": "离散数学",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "集合论、图论、数理逻辑与组合数学基础",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>离散数学是计算机科学的理论基石，研究离散结构及其相互关系。本课程涵盖数理逻辑、集合论、图论、代数系统和组合数学等内容，为算法设计、数据结构、数据库理论、编译原理等课程提供必要的数学工具。</p><h3>核心知识点</h3><ul><li>数理逻辑：命题逻辑、谓词逻辑、推理规则与证明方法</li><li>集合论：集合运算、关系、函数、基数</li><li>图论基础：图的基本概念、图的表示、图的遍历</li><li>树与偏序：树的性质、生成树、哈夫曼树</li><li>代数系统：群、环、域的基本概念</li><li>组合数学：排列组合、鸽巢原理、容斥原理</li></ul><h3>学习目标</h3><ul><li>掌握数理逻辑的基本推理方法，能够进行形式化证明</li><li>理解图论和树的基本概念，能够应用于算法设计</li><li>培养抽象思维和数学建模能力</li><li>为后续理论课程打下坚实的数学基础</li></ul>"
+    },
+    {
+      "id": "cs_basic_03",
+      "parentId": "cs_basic",
+      "name": "数字逻辑",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "数字电路基础、逻辑门与组合时序电路设计",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 4,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数字逻辑是计算机硬件的基础课程，研究数字电路的分析与设计方法。本课程从最基本的逻辑门开始，逐步深入到组合逻辑电路和时序逻辑电路的设计，帮助学生建立从逻辑抽象到硬件实现的完整思维链条。</p><h3>核心知识点</h3><ul><li>数制与编码：二进制、八进制、十六进制转换，原码/反码/补码</li><li>逻辑代数基础：基本逻辑运算、布尔代数、逻辑函数化简</li><li>组合逻辑电路：加法器、译码器、编码器、多路选择器</li><li>时序逻辑电路：触发器、寄存器、计数器、状态机</li><li>可编程逻辑器件：PLD、FPGA基础</li></ul><h3>学习目标</h3><ul><li>掌握数字电路的基本分析和设计方法</li><li>能够设计中等规模的组合逻辑和时序逻辑电路</li><li>理解计算机硬件的基本工作原理</li><li>培养硬件设计与调试的工程能力</li></ul>"
+    },
+    {
+      "id": "cs_basic_04",
+      "parentId": "cs_basic",
+      "name": "计算机科学导论",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "计算机学科概览与前沿介绍",
+      "difficulty": "low",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 1,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>计算机科学导论是计算机专业的入门课程，系统介绍计算机学科的知识体系、发展历程和前沿方向。本课程涵盖计算机硬件、软件、网络、数据、人工智能等核心领域，帮助新生建立对计算机科学的整体认知。</p><h3>核心知识点</h3><ul><li>计算机发展史：从图灵机到现代计算机</li><li>计算机系统组成：CPU、存储器、I/O系统</li><li>软件基础：操作系统、编程语言、数据库</li><li>网络与通信：互联网、Web、网络安全</li><li>数据与智能：人工智能、机器学习、大数据</li><li>计算思维：抽象、分解、算法思维、模式识别</li></ul><h3>学习目标</h3><ul><li>建立对计算机科学学科体系的整体认知</li><li>了解各核心领域的基本概念和发展趋势</li><li>培养计算思维和问题求解能力</li><li>为后续专业课程学习提供知识地图</li></ul>"
+    },
+    {
+      "id": "cs_basic_05",
+      "parentId": "cs_basic",
+      "name": "面向对象程序设计（Java）",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "Java面向对象编程思想、封装/继承/多态",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 2,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>Java是一种面向对象的程序设计语言，广泛应用于企业级应用、Android开发和大型系统构建。本课程深入讲解面向对象编程的核心思想，包括封装、继承、多态、接口、异常处理、泛型和集合框架等，培养学生的面向对象分析与设计能力。</p><h3>核心知识点</h3><ul><li>Java平台概述：JVM、JDK、开发环境搭建</li><li>面向对象基础：类与对象、封装、构造方法</li><li>继承与多态：继承机制、方法重写、抽象类与接口</li><li>异常处理：异常类型、try-catch-finally、自定义异常</li><li>泛型与集合：List、Set、Map、迭代器</li><li>输入输出：流式I/O、序列化、NIO基础</li><li>多线程基础：Thread、Runnable、线程同步</li></ul><h3>学习目标</h3><ul><li>深刻理解面向对象编程的核心思想</li><li>熟练使用Java语言进行面向对象程序开发</li><li>掌握Java集合框架和泛型编程</li><li>具备基本的异常处理和调试能力</li></ul>"
+    },
+    {
+      "id": "cs_core_01",
+      "parentId": "cs_core",
+      "name": "数据结构与算法",
+      "category": "专业核心课",
+      "symbolSize": 35,
+      "description": "线性表、树、图、排序与查找算法",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 72,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>数据结构与算法是计算机科学的核心课程，研究数据的组织方式和高效的算法设计方法。本课程系统讲解线性表、树、图等基本数据结构，以及排序、查找、动态规划等经典算法，培养学生的算法思维和问题求解能力。</p><h3>核心知识点</h3><ul><li>线性结构：顺序表、链表、栈、队列</li><li>树形结构：二叉树、BST、AVL树、堆、并查集</li><li>图结构：图的表示、DFS/BFS遍历、最短路径、最小生成树</li><li>排序算法：插入排序、快速排序、归并排序、堆排序</li><li>查找算法：二分查找、哈希表、Trie树</li><li>算法设计范式：分治、动态规划、贪心、回溯</li><li>复杂度分析：时间/空间复杂度、主定理</li></ul><h3>学习目标</h3><ul><li>掌握常用数据结构的逻辑特性和物理实现</li><li>能够分析算法的时空复杂度，选择合适的数据结构</li><li>熟练运用经典算法解决实际问题</li><li>培养算法思维和递归思维能力</li></ul>"
+    },
+    {
+      "id": "cs_core_02",
+      "parentId": "cs_core",
+      "name": "计算机组成原理",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "CPU架构、存储系统、指令系统与总线",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 4,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>计算机组成原理揭示计算机硬件系统的内部构造和工作原理。本课程从冯·诺依曼体系结构出发，深入讲解CPU的指令系统、数据通路、控制单元、存储层次和I/O系统，帮助学生理解软件与硬件之间的接口关系。</p><h3>核心知识点</h3><ul><li>计算机系统概述：冯·诺依曼体系、计算机性能评价</li><li>数据表示：定点数、浮点数(IEEE754)、字符编码</li><li>指令系统：指令格式、寻址方式、指令流水线</li><li>CPU设计：数据通路、控制器(硬布线/微程序)</li><li>存储系统：SRAM/DRAM、Cache、虚拟存储器</li><li>I/O系统：中断机制、DMA、总线结构</li></ul><h3>学习目标</h3><ul><li>深入理解计算机的层次化体系结构</li><li>掌握CPU的工作原理和数据通路设计</li><li>理解存储层次对程序性能的影响</li><li>建立软硬件协同设计的工程思维</li></ul>"
+    },
+    {
+      "id": "cs_core_03",
+      "parentId": "cs_core",
+      "name": "操作系统",
+      "category": "专业核心课",
+      "symbolSize": 35,
+      "description": "进程管理、内存管理、文件系统与设备管理",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 5,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>操作系统是计算机系统中最重要的系统软件，负责管理硬件资源并为应用程序提供运行环境。本课程涵盖进程管理、内存管理、文件系统和设备管理等核心功能，深入剖析Linux内核的关键实现机制。</p><h3>核心知识点</h3><ul><li>进程与线程：进程状态、PCB、线程模型、上下文切换</li><li>进程调度：调度算法(FSFC/SJF/多级队列/多级反馈队列)</li><li>同步与互斥：临界区、信号量、管程、死锁</li><li>内存管理：分页、分段、虚拟内存、页面置换算法</li><li>文件系统：文件组织、目录结构、磁盘调度</li><li>设备管理：I/O子系统、SPOOLing、缓冲技术</li></ul><h3>学习目标</h3><ul><li>深刻理解操作系统的核心概念和设计原理</li><li>掌握进程同步与死锁处理的经典方法</li><li>理解虚拟内存和文件系统的工作原理</li><li>能够分析操作系统对程序性能的影响</li></ul>"
+    },
+    {
+      "id": "cs_core_04",
+      "parentId": "cs_core",
+      "name": "计算机网络",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "TCP/IP协议栈、网络层、传输层与应用层协议",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3>\n<p>计算机网络是计算机科学与技术专业的核心课程，也是当今信息时代的基石。本课程系统讲解计算机网络的基本概念、体系结构、协议栈和核心算法。以TCP/IP协议族为主线，从物理层到应用层逐层深入，重点掌握网络层和传输层的关键协议原理与实现机制。课程将理论与实验紧密结合，通过Wireshark抓包分析、Socket编程实验和路由配置实践，帮助学生深刻理解计算机网络的工作机理。</p>\n\n<h3>课程大纲</h3>\n\n<h4>第一章 计算机网络概述</h4>\n<p>计算机网络的定义与发展历程：从ARPANET到互联网，从Web 1.0到Web 3.0。网络分类：局域网(LAN)、城域网(MAN)、广域网(WAN)、个人区域网(PAN)。网络拓扑结构：星型、总线型、环形、网状、树型。计算机网络体系结构：分层模型的必要性、OSI七层参考模型、TCP/IP四层体系结构。服务与协议的关系、服务原语、协议数据单元(PDU)。网络性能指标：带宽、时延(RTT)、吞吐量、丢包率、抖动。计算机网络的标准化组织与RFC文档。</p>\n\n<h4>第二章 物理层</h4>\n<p>数据通信基础理论：信息/数据/信号的概念、模拟信号与数字信号。傅里叶分析与信号带宽、奈奎斯特定理与码元速率、香农定理与信道容量。传输介质：双绞线( Cat5e/Cat6/Cat7）、同轴电缆、光纤(单模/多模）、无线电磁波。物理层编码技术：不归零编码(NRZ）、曼彻斯特编码、差分曼彻斯特编码、4B/5B编码。调制技术：ASK/FSK/PSK/QAM。多路复用技术：FDM、TDM、WDM、CDMA。常见的物理层标准：EIA-232、RJ-45接口、光纤接口。</p>\n\n<h4>第三章 数据链路层</h4>\n<p>数据链路层的基本功能：成帧、差错控制、流量控制、媒体访问控制。成帧方法：字符计数法、字符填充法、零比特填充法。差错检测与纠正：奇偶校验、校验和、CRC循环冗余校验(多项式除法实现）。自动重传请求(ARQ）：停等ARQ、后退N帧ARQ(GBN）、选择性重传ARQ(SR）。流量控制：停等协议、滑动窗口协议。介质访问控制(MAC）：信道划分MAC、随机访问MAC(ALOHA/CSMA/CSMA/CD）、轮转访问MAC。以太网：CSMA/CD协议、以太网帧结构、MAC地址、交换机工作原理(自学习/转发/过滤）。VLAN技术：802.1Q帧格式、VLAN划分方式、Trunk链路。生成树协议(STP）：BPDU、根桥选举、端口角色与状态、RSTP/MSTP。PPP协议：PPP帧格式、LCP/NCP、PAP/CHAP认证。无线局域网：CSMA/CA机制、DCF/PCF、隐藏终端/暴露终端问题。</p>\n\n<h4>第四章 网络层</h4>\n<p>网络层的核心功能：转发与路由选择、网络互联、拥塞控制。IP协议：IPv4数据报格式、IP分片与重组、TTL、协议字段。IPv4编址：分类编址(A/B/C/D/E）、无分类编址CIDR、子网划分与VLSM。ICMP协议：ICMP报文类型(差错报告/查询）、Ping/Traceroute原理。ARP协议：ARP请求/响应、ARP缓存、免费ARP、ARP欺骗。DHCP协议：报文交互过程(DISCOVER/OFFER/REQUEST/ACK）、DHCP中继。NAT技术：静态NAT、动态NAT、PAT端口多路复用、NAT穿透。路由算法：距离向量算法(RIP）、链路状态算法(OSPF）、路径向量算法(BGP）。RIP协议：跳数度量、路由更新、慢收敛与计数到无穷、水平分割/毒性反转。OSPF协议：区域划分、LSA类型、邻居发现、DR/BDR选举、SPF算法。BGP协议：AS路径矢量、BGP选路原则、路由反射器。IPv6：IPv6数据报格式、IPv6地址类型、ICMPv6与NDP、IPv4到IPv6过渡技术(双栈/隧道/NAT64）。SDN与OpenFlow：控制平面与数据平面分离、OpenFlow协议、网络虚拟化。</p>\n\n<h4>第五章 传输层</h4>\n<p>传输层的作用：进程间端到端通信、多路复用/分解。UDP协议：UDP数据报格式、UDP校验和、无连接特性。TCP协议：TCP数据报格式、序号与确认号、连接管理(三次握手与四次挥手）。TCP可靠传输：超时重传(RTO计算）、冗余ACK、快速重传、选择性确认(SACK）。TCP流量控制：滑动窗口、通知窗口、零窗口探测。TCP拥塞控制：慢启动、拥塞避免、快速恢复、AIMD算法。TCP拥塞控制算法演进：Tahoe/Reno/NewReno/BIC/CUBIC。TCP性能分析：吞吐量公式、管道效应、窗口缩放选项。QUIC协议：基于UDP的可靠传输、0-RTT连接建立、多路复用、前向纠错。</p>\n\n<h4>第六章 应用层</h4>\n<p>应用层协议的特点：客户-服务器模式、P2P模式。DNS域名系统：域名空间、域名服务器层次结构、DNS解析流程(递归/迭代）、DNS缓存、DNS资源记录。HTTP协议：HTTP/1.0、HTTP/1.1(持久连接/管线化）、HTTP/2(多路复用/头部压缩/服务端推送）、HTTP/3(基于QUIC）。HTTPS协议：SSL/TLS握手过程、证书验证、加密套件。SMTP与电子邮件：SMTP命令/响应、MIME扩展、POP3/IMAP协议。FTP协议：控制连接与数据连接、主动模式与被动模式。P2P应用：BitTorrent协议、DHT分布式哈希表。WebSocket协议：握手过程、数据帧格式。CDN技术：内容分发网络的工作原理、边缘节点、DNS调度。</p>\n\n<h4>第七章 网络安全</h4>\n<p>网络安全概述：CIA三元组(机密性/完整性/可用性）、安全威胁类型。对称加密算法：DES/3DES、AES。非对称加密算法：RSA、ECC。数字签名与数字证书：CA认证中心、PKI体系、X.509证书。网络安全协议：IPSec(AH/ESP/IKE）、SSL/TLS、SSH、VPN。防火墙技术：包过滤防火墙、状态检测防火墙、应用代理防火墙、下一代防火墙。入侵检测系统(IDS）：误用检测与异常检测、Snort规则。无线网络安全：WEP/WPA/WPA2/WPA3、802.1X认证。常见网络攻击：DDoS攻击、中间人攻击、DNS欺骗、ARP欺骗、SYN洪泛。</p>\n\n<h4>第八章 实验与实践</h4>\n<p>实验一：Wireshark抓包分析——HTTP/TCP/IP协议报文结构分析。实验二：Socket编程——实现TCP和UDP客户端/服务器程序。实验三：以太网帧分析——ARP协议抓包与MAC地址表观察。实验四：路由协议配置——基于Cisco Packet Tracer的RIP/OSPF配置。实验五：DHCP与DNS服务搭建——Linux下DHCP服务器和DNS服务器配置。实验六：HTTP服务器实现——基于Python Flask构建简单Web服务器。实验七：网络性能测量——使用iPerf测量TCP/UDP吞吐量。实验八：综合实验——搭建小型企业网络，配置VLAN/STP/OSPF/NAT。</p>\n\n<h3>核心知识点汇总</h3>\n<ul>\n<li>OSI七层模型与TCP/IP四层模型、分层原则与各层功能</li>\n<li>物理层：香农公式、奈奎斯特定理、编码与调制技术</li>\n<li>数据链路层：CRC差错检测、CSMA/CD、MAC地址、交换机转发、VLAN/STP</li>\n<li>网络层：IP协议与编址(VLSM/CIDR）、路由协议(RIP/OSPF/BGP）、ARP/ICMP/DHCP/NAT</li>\n<li>传输层：TCP可靠传输机制、流量/拥塞控制、UDP与QUIC</li>\n<li>应用层：HTTP/HTTPS/DNS/SMTP协议工作原理</li>\n<li>网络安全：加密认证、防火墙、IDS、VPN、常见攻击防御</li>\n<li>IPv6：地址结构、过渡技术、ICMPv6/NDP</li>\n</ul>\n\n<h3>教材与参考资料</h3>\n<ul>\n<li>《计算机网络（第8版）》——谢希仁，电子工业出版社</li>\n<li>《Computer Networking: A Top-Down Approach》（第8版）——James F. Kurose & Keith W. Ross</li>\n<li>《TCP/IP详解 卷1：协议》——Kevin R. Fall & W. Richard Stevens</li>\n<li>RFC文档：RFC 791(IP)、RFC 793(TCP）、RFC 2616(HTTP/1.1）</li>\n</ul>\n\n<h3>学习目标</h3>\n<ul>\n<li>全面理解计算机网络的分层体系结构和各层功能职责</li>\n<li>深入掌握TCP/IP协议族核心协议(IP/TCP/HTTP/DNS)的工作原理和报文结构</li>\n<li>熟练使用Wireshark等工具进行网络协议分析和故障排查</li>\n<li>掌握Socket编程基础，能够实现基本的网络应用程序</li>\n<li>理解路由协议的基本原理，具备网络规划和配置的初步能力</li>\n<li>了解网络安全的基本概念和常用防护技术</li>\n<li>能够分析和解决实际网络应用中的常见问题</li>\n</ul>"
+    },
+    {
+      "id": "cs_core_05",
+      "parentId": "cs_core",
+      "name": "编译原理",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "词法/语法/语义分析、中间代码生成与优化",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 56,
+      "teachingWeek": 6,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>编译原理研究如何将高级语言程序翻译成机器可执行的代码，是计算机科学中最具挑战性和实用价值的课程之一。本课程涵盖词法分析、语法分析、语义分析、中间代码生成、代码优化和目标代码生成等完整编译流程。</p><h3>核心知识点</h3><ul><li>编译系统概述：编译器结构、解释器与编译器的区别</li><li>词法分析：正则表达式、有限自动机、Lex工具</li><li>语法分析：上下文无关文法、LL/LR分析、Yacc工具</li><li>语义分析：属性文法、类型检查、符号表</li><li>中间代码生成：三地址码、控制流翻译</li><li>代码优化：基本块优化、数据流分析、循环优化</li><li>目标代码生成：寄存器分配、指令选择</li></ul><h3>学习目标</h3><ul><li>理解编译器的工作原理和完整架构</li><li>掌握词法分析和语法分析的基本方法</li><li>能够设计和实现简单的编译器</li><li>培养系统级的软件工程思维能力</li></ul>"
+    },
+    {
+      "id": "cs_core_06",
+      "parentId": "cs_core",
+      "name": "数据库系统概论",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "关系模型、SQL语言、事务管理与查询优化",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>数据库系统概论是数据管理的核心课程，研究如何高效地存储、查询和管理数据。本课程从关系模型出发，系统讲解SQL语言、数据库设计、事务管理、并发控制和查询优化等关键技术。</p><h3>核心知识点</h3><ul><li>关系模型：关系代数、关系演算、完整性约束</li><li>SQL语言：DDL/DML/DCL、复杂查询、视图、索引</li><li>数据库设计：ER模型、范式理论(1NF~BCNF)</li><li>事务管理：ACID特性、事务调度、可串行化</li><li>并发控制：封锁协议、MVCC、时间戳排序</li><li>存储与索引：B+树、哈希索引、LSM-Tree</li></ul><h3>学习目标</h3><ul><li>掌握关系数据库的核心理论和设计方法</li><li>熟练使用SQL进行复杂数据查询和操作</li><li>理解事务管理和并发控制机制</li><li>具备数据库应用开发和设计能力</li></ul>"
+    },
+    {
+      "id": "cs_core_07",
+      "parentId": "cs_core",
+      "name": "软件工程",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "软件开发过程、需求分析、设计与测试方法",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>软件工程研究如何运用工程化方法开发和维护高质量软件。本课程涵盖软件开发全过程，从需求分析、系统设计、编码实现到测试交付，同时介绍敏捷开发、DevOps等现代软件工程实践。</p><h3>核心知识点</h3><ul><li>软件过程模型：瀑布模型、迭代模型、敏捷开发(Scrum)</li><li>需求工程：需求获取、用例分析、需求规格说明</li><li>软件设计：模块化设计、设计模式、UML建模</li><li>软件测试：单元测试、集成测试、系统测试、自动化测试</li><li>软件维护：重构、逆向工程、软件演化</li><li>项目管理：估算、进度管理、风险管理、团队协作</li></ul><h3>学习目标</h3><ul><li>掌握软件工程的基本原理和开发流程</li><li>能够运用UML进行软件建模和设计</li><li>理解敏捷开发和测试驱动开发等现代实践</li><li>培养工程化思维和团队协作能力</li></ul>"
+    },
+    {
+      "id": "cs_practice_01",
+      "parentId": "cs_practice",
+      "name": "程序设计课程设计",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "综合运用C语言/Java完成中型项目开发",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>程序设计课程设计是综合运用C语言或Java知识完成中型项目的实践环节。通过完整的项目开发流程，巩固程序设计基础知识，培养独立解决实际问题的能力和工程化编程习惯。</p><h3>核心知识点</h3><ul><li>项目选题与需求分析：可行性研究、功能规划</li><li>系统设计：模块划分、接口设计、数据结构设计</li><li>编码实现：编码规范、版本控制、代码审查</li><li>测试与调试：单元测试、集成测试、Bug追踪</li><li>文档撰写：技术文档、用户手册、项目总结</li><li>项目答辩与演示</li></ul><h3>学习目标</h3><ul><li>能够独立完成中型软件项目的全流程开发</li><li>掌握版本控制工具和团队协作开发方法</li><li>培养规范化的编程习惯和文档撰写能力</li><li>通过项目实践巩固程序设计理论知识</li></ul>"
+    },
+    {
+      "id": "cs_practice_02",
+      "parentId": "cs_practice",
+      "name": "数据结构课程设计",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "算法应用与数据结构综合实践项目",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>数据结构课程设计旨在通过编程实践加深对数据结构与算法的理解。学生需要针对实际问题选择合适的数据结构并设计高效算法，完成从抽象设计到编码实现的全过程训练。</p><h3>核心知识点</h3><ul><li>问题建模：抽象数据类型设计、数据结构选型</li><li>线性结构应用：多项式的表示与运算、大整数运算</li><li>树结构应用：表达式树、哈夫曼编码、搜索树</li><li>图结构应用：最短路径导航、拓扑排序</li><li>算法优化：时空权衡、缓存优化、并行计算基础</li></ul><h3>学习目标</h3><ul><li>能够针对实际问题选择和设计合适的数据结构</li><li>深入理解算法复杂度分析在实际中的应用</li><li>提升程序设计和问题求解能力</li><li>培养独立进行算法研究和实现的能力</li></ul>"
+    },
+    {
+      "id": "cs_practice_03",
+      "parentId": "cs_practice",
+      "name": "操作系统课程设计",
+      "category": "实践环节",
+      "symbolSize": 25,
+      "description": "基于Linux内核模块或并发编程实验",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>操作系统课程设计通过基于Linux内核模块开发或并发编程项目，帮助学生深入理解操作系统的工作原理。实践内容包括进程管理、内存管理、文件系统等核心模块的实验与开发。</p><h3>核心知识点</h3><ul><li>Linux内核编译与环境搭建</li><li>进程管理实验：进程创建、进程调度模拟</li><li>同步互斥实验：生产者-消费者、读者-写者问题</li><li>内存管理实验：页面置换算法模拟、虚拟内存</li><li>文件系统实验：简单文件系统设计与实现</li></ul><h3>学习目标</h3><ul><li>深入理解操作系统核心模块的实现机制</li><li>掌握Linux内核模块的开发和调试方法</li><li>能够分析和解决并发编程中的同步问题</li><li>通过动手实践巩固操作系统理论知识</li></ul>"
+    },
+    {
+      "id": "cs_practice_04",
+      "parentId": "cs_practice",
+      "name": "专业综合实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "多课程融合的企业级项目实战",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 7,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>专业综合实训是毕业前最重要的综合性实践环节，模拟企业级项目开发环境，要求学生综合运用多门课程知识完成一个完整的工程项目。实训涵盖需求分析、系统设计、编码实现、测试部署全流程。</p><h3>核心知识点</h3><ul><li>企业级项目选题：可行性分析、技术选型</li><li>系统架构设计：分层架构、微服务、前后端分离</li><li>数据库设计：ER建模、SQL优化、NoSQL应用</li><li>编码与测试：代码规范、单元测试、CI/CD</li><li>项目部署：服务器配置、容器化、监控</li><li>团队协作：Git工作流、Code Review、敏捷Scrum</li></ul><h3>学习目标</h3><ul><li>综合运用多门专业课程知识解决实际问题</li><li>体验企业级项目开发的完整流程与规范</li><li>培养团队协作和沟通表达能力</li><li>提升工程化思维和项目管理能力</li></ul>"
+    },
+    {
+      "id": "cs_practice_05",
+      "parentId": "cs_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "综合运用所学知识完成毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是本科学习的最后环节，要求学生综合运用四年所学知识，在教师指导下独立完成一项具有一定创新性的课题研究或工程项目。</p><h3>核心知识点</h3><ul><li>选题与开题：文献调研、研究目标确定、技术路线设计</li><li>方案设计：系统架构、技术选型、可行性论证</li><li>系统实现：编码开发、调试测试、性能优化</li><li>论文撰写：学术规范、论文结构、实验数据分析</li><li>答辩准备：演示系统、答辩PPT、问题准备</li></ul><h3>学习目标</h3><ul><li>培养独立进行科学研究和工程实践的能力</li><li>掌握学术论文的规范撰写方法</li><li>综合运用专业知识解决复杂工程问题</li><li>提升表达沟通和学术交流能力</li></ul>"
+    },
+    {
+      "id": "cs_advanced_01",
+      "parentId": "cs_advanced",
+      "name": "机器学习",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "监督学习、无监督学习、集成学习算法",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>机器学习是人工智能的核心领域，研究如何让计算机从数据中自动学习规律和模式。本课程系统讲解监督学习、无监督学习、半监督学习和集成学习等方法，涵盖从理论推导到实践应用的完整链路。</p><h3>核心知识点</h3><ul><li>机器学习基础：基本概念、假设空间、归纳偏好</li><li>线性模型：线性回归、逻辑回归、Softmax回归</li><li>决策树与集成学习：ID3/C4.5/CART、随机森林、XGBoost</li><li>支持向量机：最大间隔、核函数、软间隔</li><li>聚类与降维：K-Means、DBSCAN、PCA、t-SNE</li><li>模型评估：交叉验证、ROC曲线、偏差-方差权衡</li><li>特征工程：特征选择、特征提取、数据预处理</li></ul><h3>学习目标</h3><ul><li>理解机器学习的基本理论和核心算法</li><li>能够使用Scikit-learn等框架进行建模和评估</li><li>掌握模型选择和调优的方法论</li><li>具备将机器学习应用于实际问题的能力</li></ul>"
+    },
+    {
+      "id": "cs_advanced_02",
+      "parentId": "cs_advanced",
+      "name": "深度学习",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "CNN/RNN/Transformer架构与模型训练",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>深度学习是机器学习的重要分支，利用深层神经网络实现强大的表示学习能力。本课程从神经网络基础出发，系统讲解CNN、RNN、Transformer等主流架构，并通过实践项目掌握深度学习框架的使用。</p><h3>核心知识点</h3><ul><li>神经网络基础：感知机、多层感知机、反向传播</li><li>卷积神经网络：卷积层、池化层、经典CNN架构</li><li>循环神经网络：RNN、LSTM、GRU、Seq2Seq</li><li>Transformer架构：自注意力机制、多头注意力、BERT/GPT</li><li>训练技术：正则化、批归一化、学习率调度、迁移学习</li><li>生成模型：VAE、GAN、扩散模型</li><li>深度学习框架：PyTorch/TensorFlow实战</li></ul><h3>学习目标</h3><ul><li>理解深度学习的基本原理和主流架构</li><li>能够使用深度学习框架进行模型开发和训练</li><li>掌握模型优化和调优的实用技术</li><li>了解生成模型和大语言模型的前沿进展</li></ul>"
+    },
+    {
+      "id": "cs_advanced_03",
+      "parentId": "cs_advanced",
+      "name": "自然语言处理",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "文本分类、序列标注、文本生成与预训练模型",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>自然语言处理(NLP)是人工智能的重要方向，研究计算机理解和生成人类语言的技术和方法。本课程涵盖从传统统计方法到基于大模型的现代NLP技术，包括文本分类、序列标注、语义理解和文本生成等任务。</p><h3>核心知识点</h3><ul><li>NLP基础：语言模型、N-gram、词嵌入(Word2Vec/GloVe)</li><li>文本分类：朴素贝叶斯、情感分析、主题模型</li><li>序列标注：HMM、CRF、BiLSTM-CRF</li><li>预训练语言模型：ELMo、BERT、RoBERTa、GPT系列</li><li>命名实体识别与关系抽取</li><li>机器翻译与文本生成</li><li>大语言模型应用：Prompt Engineering、Fine-tuning</li></ul><h3>学习目标</h3><ul><li>理解NLP的核心任务和经典方法</li><li>掌握预训练语言模型的原理和应用</li><li>能够使用HuggingFace等框架进行NLP开发</li><li>了解大语言模型的最新进展和应用场景</li></ul>"
+    },
+    {
+      "id": "cs_advanced_04",
+      "parentId": "cs_advanced",
+      "name": "计算机视觉",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "图像分类、目标检测、语义分割与生成",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>计算机视觉是让计算机获得从图像和视频中理解视觉信息的能力。本课程涵盖图像分类、目标检测、语义分割、实例分割和图像生成等核心任务，系统讲解从传统方法到深度学习的技术演进。</p><h3>核心知识点</h3><ul><li>图像处理基础：滤波、边缘检测、特征提取(SIFT/HOG)</li><li>图像分类：AlexNet、VGG、ResNet、EfficientNet</li><li>目标检测：R-CNN系列、YOLO系列、SSD</li><li>语义分割：FCN、U-Net、DeepLab</li><li>实例分割：Mask R-CNN、YOLACT</li><li>目标跟踪与视频理解</li><li>生成模型在视觉中的应用：图像生成、风格迁移</li></ul><h3>学习目标</h3><ul><li>理解计算机视觉的核心任务和技术框架</li><li>掌握经典CNN架构的设计思想</li><li>能够使用OpenCV和深度学习框架进行视觉应用开发</li><li>了解视觉技术的最新发展趋势</li></ul>"
+    },
+    {
+      "id": "cs_advanced_05",
+      "parentId": "cs_advanced",
+      "name": "大数据分析与处理",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "Hadoop/Spark生态、分布式计算框架",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>大数据分析与处理研究如何对海量数据进行高效存储、处理和分析。本课程系统讲解Hadoop和Spark生态系统的核心技术，包括分布式文件系统、分布式计算框架、数据仓库和实时流处理等。</p><h3>核心知识点</h3><ul><li>大数据技术概述：大数据特征、技术生态、应用场景</li><li>HDFS分布式文件系统：架构、读写流程、副本策略</li><li>MapReduce编程模型：原理、Shuffle过程、词频统计</li><li>Spark计算框架：RDD/DataFrame/Dataset、Spark SQL</li><li>数据仓库与Hive：HiveQL、分区与分桶、ORC格式</li><li>实时流处理：Kafka、Flink、Storm</li><li>大数据平台运维：集群部署、监控、调优</li></ul><h3>学习目标</h3><ul><li>理解大数据处理的核心架构和技术选型</li><li>掌握Hadoop和Spark生态系统的主流框架使用</li><li>能够设计和实现分布式数据处理任务</li><li>具备大数据平台搭建和运维的基本能力</li></ul>"
+    },
+    {
+      "id": "ne_basic_01",
+      "parentId": "ne_basic",
+      "name": "计算机网络原理",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "OSI与TCP/IP体系结构、数据通信基础",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>计算机网络原理是网络工程专业的入门课程，系统讲解数据通信与计算机网络的基本概念、体系结构和核心技术。本课程为后续路由交换、网络安全等专业课程奠定理论基础。</p><h3>核心知识点</h3><ul><li>计算机网络概述：网络分类、拓扑结构、性能指标</li><li>OSI参考模型：七层结构、各层功能、协议数据单元</li><li>TCP/IP协议栈：四层架构、核心协议、封装过程</li><li>数据通信基础：信号编码、调制技术、多路复用</li><li>局域网技术：以太网、CSMA/CD、MAC地址、交换机</li></ul><h3>学习目标</h3><ul><li>理解计算机网络的分层体系结构</li><li>掌握TCP/IP协议族的层次关系</li><li>理解数据通信的基本原理</li><li>为网络工程专业课程学习奠定基础</li></ul>"
+    },
+    {
+      "id": "ne_basic_02",
+      "parentId": "ne_basic",
+      "name": "程序设计基础（C/C++）",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "C/C++语言程序设计基础与网络编程入门",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 1,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>C/C++程序设计是网络工程的重要基础工具，本课程从C语言基础到C++面向对象编程，重点强化指针、内存管理、网络编程接口等与网络工程密切相关的编程技术。</p><h3>核心知识点</h3><ul><li>C语言基础回顾：指针、数组、函数、结构体</li><li>内存管理：堆栈区别、动态内存分配、内存泄漏检测</li><li>C++核心特性：类与对象、继承、多态、模板</li><li>Socket编程基础：TCP/UDP Socket、地址转换</li><li>多线程编程：pthread、线程同步、并发模型</li><li>数据结构与STL：容器、迭代器、算法</li></ul><h3>学习目标</h3><ul><li>掌握C/C++语言的核心编程技巧</li><li>理解Socket编程的基本模式</li><li>能够编写基本的网络通信程序</li><li>培养系统级编程能力</li></ul>"
+    },
+    {
+      "id": "ne_basic_03",
+      "parentId": "ne_basic",
+      "name": "数据结构",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "基础数据结构与算法在网络领域的应用",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数据结构是计算机与网络工程的重要基础课程，研究数据组织和算法设计的基本方法。本课程重点讲解线性表、树、图等数据结构及其在网络算法中的应用。</p><h3>核心知识点</h3><ul><li>线性结构：数组、链表、栈、队列的应用</li><li>树与二叉树：遍历算法、BST、平衡树</li><li>图论算法：网络拓扑中的图遍历、最短路径</li><li>哈希表：散列函数、冲突解决、一致性哈希</li><li>排序与查找：各类排序算法、二分查找</li><li>高级数据结构：堆、并查集、Trie树</li></ul><h3>学习目标</h3><ul><li>掌握常用数据结构的基本原理和实现方法</li><li>能够分析算法效率并选择合适的数据结构</li><li>理解数据结构在网络算法中的典型应用</li><li>提升编程实现和问题求解能力</li></ul>"
+    },
+    {
+      "id": "ne_basic_04",
+      "parentId": "ne_basic",
+      "name": "操作系统基础",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "操作系统原理与网络操作系统基础",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>操作系统基础讲解操作系统的基本原理和核心功能，重点突出与网络工程密切相关的进程管理、内存管理、文件系统和网络I/O等内容。</p><h3>核心知识点</h3><ul><li>操作系统概述：功能、分类、系统调用</li><li>进程与线程：状态转换、调度算法、同步互斥</li><li>内存管理：虚拟内存、分页、分段</li><li>文件系统：Linux文件系统、VFS、inode</li><li>网络I/O：I/O模型(阻塞/非阻塞/异步)、select/epoll</li><li>Linux基础：Shell命令、系统管理、网络配置</li></ul><h3>学习目标</h3><ul><li>理解操作系统的核心功能和设计原理</li><li>掌握进程同步和网络I/O模型</li><li>熟悉Linux系统的基本操作和管理</li><li>为网络编程和系统管理打下基础</li></ul>"
+    },
+    {
+      "id": "ne_basic_05",
+      "parentId": "ne_basic",
+      "name": "数据库原理",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "数据库系统基础与SQL语言",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>数据库原理讲解数据库系统的基本概念和核心技术，重点突出SQL语言、关系数据库设计和事务管理，为网络工程中的数据存储和管理需求提供基础。</p><h3>核心知识点</h3><ul><li>数据库系统概述：数据模型、数据库体系结构</li><li>关系数据库：关系模型、完整性约束</li><li>SQL语言：DDL/DML/DCL、连接查询、子查询、视图</li><li>数据库设计：ER模型、范式理论、规范化</li><li>事务管理：ACID、并发控制、封锁协议</li><li>NoSQL数据库：Redis、MongoDB在网络中的应用</li></ul><h3>学习目标</h3><ul><li>掌握关系数据库的基本理论和SQL语言</li><li>能够进行合理的数据库设计</li><li>理解事务管理和并发控制的基本原理</li><li>了解NoSQL数据库在网络场景中的应用</li></ul>"
+    },
+    {
+      "id": "ne_core_01",
+      "parentId": "ne_core",
+      "name": "路由与交换技术",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "路由协议(OSPF/BGP)、VLAN、STP等交换技术",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 4,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>路由与交换技术是网络工程最核心的专业课程，深入讲解企业网络中路由器和交换机的配置与管理。本课程涵盖静态路由、动态路由协议(OSPF/BGP)、VLAN、STP等关键技术，培养学生的大中型网络规划设计与实施能力。</p><h3>核心知识点</h3><ul><li>路由基础：路由原理、静态路由、默认路由、浮动路由</li><li>OSPF协议：区域划分、LSA类型、邻居状态机、虚链路</li><li>BGP协议：AS路径、选路原则、路由反射器、联盟</li><li>VLAN技术：Access/Trunk端口、VLAN间路由、VTP</li><li>STP协议：BPDU、根桥选举、端口状态、RSTP/MSTP</li><li>DHCP与NAT：DHCP中继、静态/动态NAT、PAT</li><li>网络高可用：VRRP、链路聚合、堆叠技术</li></ul><h3>学习目标</h3><ul><li>掌握路由协议的工作原理和配置方法</li><li>能够规划和实施多区域OSPF和BGP网络</li><li>理解VLAN和STP在企业网络中的应用</li><li>具备大中型企业网络的规划设计能力</li></ul>"
+    },
+    {
+      "id": "ne_core_02",
+      "parentId": "ne_core",
+      "name": "网络协议分析",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "Wireshark抓包分析、协议状态机与报文结构",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>网络协议分析是理解网络运行机制的关键课程，通过使用Wireshark等抓包工具对网络协议进行深入分析，帮助学生从报文级别理解TCP/IP协议族的工作细节。</p><h3>核心知识点</h3><ul><li>抓包工具使用：Wireshark过滤语法、统计功能、追踪流</li><li>ARP协议：ARP请求/响应、ARP缓存、ARP欺骗</li><li>IP协议：IP首部、分片与重组、TTL、路由选项</li><li>TCP详解：三次握手/四次挥手、窗口机制、重传算法</li><li>UDP与QUIC：UDP首部、新型传输协议</li><li>HTTP/HTTPS：请求/响应格式、Cookie、SSL握手</li><li>协议排错：TCP连接故障、DNS解析问题分析</li></ul><h3>学习目标</h3><ul><li>深入理解TCP/IP协议族的报文级工作细节</li><li>掌握Wireshark抓包分析的核心技能</li><li>能够通过协议分析排查网络故障</li><li>理解HTTP/HTTPS等应用层协议的工作机制</li></ul>"
+    },
+    {
+      "id": "ne_core_03",
+      "parentId": "ne_core",
+      "name": "网络安全技术",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "加密认证、防火墙、入侵检测与VPN技术",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>网络安全技术是保障网络系统安全运行的核心课程，系统讲解网络安全的基础理论、攻击方法和防护技术。涵盖密码学基础、身份认证、防火墙、入侵检测、VPN等关键技术。</p><h3>核心知识点</h3><ul><li>密码学基础：对称加密(AES/DES)、非对称加密(RSA/ECC)、哈希</li><li>身份认证：数字证书、PKI体系、Kerberos、多因素认证</li><li>防火墙技术：包过滤、状态检测、应用代理、下一代防火墙</li><li>入侵检测与防御：IDS/IPS、Snort、Suricata、态势感知</li><li>VPN技术：IPSec VPN、SSL VPN、MPLS VPN</li><li>Web安全：SQL注入、XSS、CSRF、OWASP Top 10</li><li>渗透测试：信息收集、漏洞扫描、利用、后渗透</li></ul><h3>学习目标</h3><ul><li>理解网络安全的整体架构和核心防护技术</li><li>掌握常见网络攻击的原理和防御方法</li><li>能够配置防火墙、IDS等安全设备</li><li>建立安全运维的工程思维</li></ul>"
+    },
+    {
+      "id": "ne_core_04",
+      "parentId": "ne_core",
+      "name": "网络规划与设计",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "网络拓扑设计、IP地址规划与网络性能优化",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 6,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>网络规划与设计研究如何根据业务需求设计高效、可靠、可扩展的企业网络。本课程涵盖网络需求分析、拓扑设计、IP地址规划、设备选型和性能优化等全流程内容。</p><h3>核心知识点</h3><ul><li>网络规划方法论：PPDIOO模型、需求分析、现状调研</li><li>层次化网络设计：核心层、汇聚层、接入层设计原则</li><li>IP地址规划：VLSM、CIDR、子网划分、地址汇总</li><li>高可用设计：冗余链路、负载均衡、故障切换</li><li>QoS设计：流量分类、标记、队列管理、拥塞避免</li><li>数据中心网络：Spine-Leaf架构、VXLAN、SDN</li><li>网络文档管理：拓扑图、设备清单、配置基线</li></ul><h3>学习目标</h3><ul><li>掌握企业网络规划与设计的系统方法论</li><li>能够独立完成中型企业网络的方案设计</li><li>理解层次化网络架构和IP地址规划策略</li><li>具备网络方案评估和优化的能力</li></ul>"
+    },
+    {
+      "id": "ne_core_05",
+      "parentId": "ne_core",
+      "name": "无线网络技术",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "WiFi/LTE/5G无线网络原理与部署",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>无线网络技术研究无线通信环境下的网络接入和传输技术。本课程涵盖WLAN、LTE、5G等主流无线技术，重点讲解无线信道特性、MAC协议、漫游切换和无线网络安全等内容。</p><h3>核心知识点</h3><ul><li>无线传播基础：无线电波传播特性、路径损耗、多径效应</li><li>WLAN技术：802.11标准族、CSMA/CA、帧聚合、MIMO</li><li>无线AP部署：信号覆盖规划、信道规划、漫游设计</li><li>无线网络安全：WPA3、802.1X、Captive Portal、Rogue AP检测</li><li>LTE/5G核心网：EPC、5GC、网络切片、MEC</li><li>无线网络优化：干扰分析、容量规划、性能调优</li></ul><h3>学习目标</h3><ul><li>理解无线网络的基本原理和关键技术</li><li>掌握WLAN的规划、部署和优化方法</li><li>了解蜂窝网络技术的基本架构</li><li>能够进行无线网络故障排查</li></ul>"
+    },
+    {
+      "id": "ne_core_06",
+      "parentId": "ne_core",
+      "name": "网络性能分析",
+      "category": "专业核心课",
+      "symbolSize": 25,
+      "description": "网络测量、性能建模与QoS保障",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 6,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>网络性能分析研究如何度量、建模和优化网络系统的性能。本课程涵盖网络测量方法、性能指标体系、排队论基础和性能优化策略等内容。</p><h3>核心知识点</h3><ul><li>性能指标体系：带宽、时延、抖动、丢包率、吞吐量</li><li>网络测量技术：主动测量、被动测量、NetFlow/sFlow</li><li>排队论基础：M/M/1、M/M/k队列模型、Little定律</li><li>端到端性能分析：TCP吞吐量模型、瓶颈链路分析</li><li>网络仿真：NS-3、OMNeT++仿真平台使用</li><li>性能优化：TCP调优、缓存策略、CDN加速</li></ul><h3>学习目标</h3><ul><li>掌握网络性能度量和分析的基本方法</li><li>理解排队论在网络性能建模中的应用</li><li>能够使用网络仿真工具进行性能评估</li><li>具备网络性能诊断和优化的能力</li></ul>"
+    },
+    {
+      "id": "ne_core_07",
+      "parentId": "ne_core",
+      "name": "服务器管理与配置",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "Linux/Windows服务器部署、虚拟化与容器技术",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 5,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>服务器管理与配置是网络运维管理的核心技能课程。本课程系统讲解Linux和Windows Server的安装、配置、管理和维护，包括Web、DNS、DHCP等常见网络服务的部署。</p><h3>核心知识点</h3><ul><li>Linux系统管理：用户管理、权限控制、Systemd、计划任务</li><li>Web服务器：Nginx/Apache配置、虚拟主机、反向代理、HTTPS</li><li>DNS服务：BIND配置、域名解析、主从同步、缓存</li><li>DHCP服务：地址池管理、DHCP中继、选项配置</li><li>邮件服务：Postfix/Dovecot、SMTP/POP3/IMAP</li><li>监控与日志：Zabbix/Prometheus、ELK Stack、Grafana</li><li>自动化运维：Ansible/SaltStack、Shell脚本、Cron</li></ul><h3>学习目标</h3><ul><li>掌握主流服务器操作系统的安装和配置方法</li><li>能够独立部署和管理常见网络服务</li><li>理解自动化运维的基本理念和工具使用</li><li>具备服务器安全加固和日常运维能力</li></ul>"
+    },
+    {
+      "id": "ne_practice_01",
+      "parentId": "ne_practice",
+      "name": "网络工程综合实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "企业网络规划设计、设备配置与调试综合实践",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 6,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>网络工程综合实训模拟真实企业网络环境，要求学生独立完成从需求分析、方案设计到设备配置调试的全流程网络工程项目。</p><h3>核心知识点</h3><ul><li>企业网络需求分析与方案设计</li><li>网络设备选型与拓扑规划</li><li>VLAN/STP/VRRP配置与验证</li><li>OSPF/BGP路由协议配置与优化</li><li>网络安全策略部署：ACL、防火墙、VPN</li><li>网络管理与监控部署：SNMP、Syslog、NMS</li><li>项目文档撰写与验收答辩</li></ul><h3>学习目标</h3><ul><li>掌握企业网络工程项目的完整实施流程</li><li>熟练使用主流网络设备进行配置调试</li><li>培养网络工程实践和故障排查能力</li><li>积累项目文档撰写和方案呈现经验</li></ul>"
+    },
+    {
+      "id": "ne_practice_02",
+      "parentId": "ne_practice",
+      "name": "网络管理实训",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "网络监控、故障排查与自动化运维实践",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>网络管理实训聚焦网络运维管理实践，通过真实网络管理平台的配置和使用，培养学生的网络监控、故障管理和性能分析能力。</p><h3>核心知识点</h3><ul><li>网络监控平台部署：Zabbix/Prometheus安装配置</li><li>SNMP协议配置：MIB浏览、Trap接收、OID查询</li><li>网络拓扑发现与资产管理</li><li>性能阈值设置与告警处理</li><li>日志收集与分析：ELK Stack部署</li><li>故障管理流程：事件记录、分析、升级、关闭</li><li>运维报表与容量规划</li></ul><h3>学习目标</h3><ul><li>掌握主流网络管理平台的使用方法</li><li>能够配置网络监控和告警机制</li><li>理解ITIL运维管理的基本流程</li><li>培养规范化网络运维管理的能力</li></ul>"
+    },
+    {
+      "id": "ne_practice_03",
+      "parentId": "ne_practice",
+      "name": "网络安全实训",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "渗透测试、安全加固与应急响应实战",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>网络安全实训通过模拟真实网络攻防场景，让学生掌握渗透测试、安全加固和应急响应的实战技能。</p><h3>核心知识点</h3><ul><li>渗透测试方法论：PTES/OWASP标准流程</li><li>信息收集：子域名枚举、端口扫描、服务识别</li><li>漏洞扫描与利用：Nessus、Metasploit、Burp Suite</li><li>Web应用渗透：SQL注入、XSS、文件上传、命令执行</li><li>内网渗透：横向移动、权限提升、隧道技术</li><li>安全加固：系统加固、网络设备安全、应用安全</li><li>应急响应：事件分析、溯源、取证、恢复</li></ul><h3>学习目标</h3><ul><li>掌握渗透测试的标准流程和工具使用</li><li>理解常见安全漏洞的原理和利用方法</li><li>能够进行系统安全加固配置</li><li>建立网络安全攻防对抗的实践认知</li></ul>"
+    },
+    {
+      "id": "ne_practice_04",
+      "parentId": "ne_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "网络工程方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是网络工程专业本科学习的综合实践环节，要求学生在教师指导下独立完成网络工程方向的课题研究或工程项目。</p><h3>核心知识点</h3><ul><li>选题与开题：网络工程方向前沿课题调研</li><li>方案设计：技术路线论证、实验环境搭建</li><li>项目实施：网络设计与配置、功能验证</li><li>性能测试与优化：指标测试、瓶颈分析</li><li>论文撰写：学术规范、实验数据呈现</li><li>答辩准备：成果演示、问题准备</li></ul><h3>学习目标</h3><ul><li>培养独立从事网络工程研究与实践的能力</li><li>掌握学术论文的规范撰写方法</li><li>综合运用专业知识解决网络工程问题</li><li>提升项目管理和技术表达能力</li></ul>"
+    },
+    {
+      "id": "ne_advanced_01",
+      "parentId": "ne_advanced",
+      "name": "云计算技术",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "虚拟化、容器编排、云原生架构",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>云计算技术是IT基础设施演进的重要方向，本课程系统讲解云计算的核心技术体系，包括虚拟化技术、容器化部署、云原生架构和主流云平台的使用。</p><h3>核心知识点</h3><ul><li>云计算概述：服务模型(IaaS/PaaS/SaaS)、部署模式</li><li>虚拟化技术：KVM/VMware/Xen、CPU/内存/IO虚拟化</li><li>容器技术：Docker原理、镜像构建、网络模式、存储卷</li><li>容器编排：Kubernetes架构、Pod/Service/Deployment</li><li>云原生应用：微服务、Serverless、FaaS、12-Factor App</li><li>云平台实践：AWS/阿里云核心服务、Terraform编排</li><li>云安全：责任共担模型、IAM、安全组、密钥管理</li></ul><h3>学习目标</h3><ul><li>理解云计算的核心技术与服务模型</li><li>掌握Docker和Kubernetes的部署和使用</li><li>了解云原生应用的架构设计原则</li><li>具备主流云平台的基本操作能力</li></ul>"
+    },
+    {
+      "id": "ne_advanced_02",
+      "parentId": "ne_advanced",
+      "name": "软件定义网络（SDN）",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "OpenFlow协议、网络虚拟化与白盒交换机",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>软件定义网络(SDN)是网络领域最具变革性的技术之一，将网络控制平面与数据平面分离，实现网络的集中控制和可编程性。本课程涵盖OpenFlow协议、SDN控制器和网络虚拟化等关键技术。</p><h3>核心知识点</h3><ul><li>SDN架构：控制/数据/应用平面分离、OpenFlow协议</li><li>SDN控制器：ONOS、OpenDaylight、Ryu、Floodlight</li><li>网络虚拟化：VXLAN、NVGRE、Geneve隧道技术</li><li>网络功能虚拟化(NFV)：虚拟CPE、虚拟防火墙</li><li>P4数据平面编程：可编程交换机、数据包处理</li><li>白盒交换机：Open Network Linux、SONiC系统</li><li>SDN应用：流量工程、数据中心网络优化</li></ul><h3>学习目标</h3><ul><li>理解SDN的核心思想和架构设计</li><li>掌握OpenFlow协议和主流控制器的使用</li><li>了解网络虚拟化和NVF的基本原理</li><li>能够搭建SDN实验环境并进行编程实验</li></ul>"
+    },
+    {
+      "id": "ne_advanced_03",
+      "parentId": "ne_advanced",
+      "name": "网络自动化与运维",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "Ansible/Netmiko自动化配置、NetDevOps",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>网络自动化与运维(NetDevOps)将DevOps理念引入网络管理领域，通过自动化工具和流程提升网络运维的效率和质量。本课程涵盖自动化配置管理、CI/CD和网络测试自动化等内容。</p><h3>核心知识点</h3><ul><li>网络自动化基础：CLI解析、API接口、NetConf/YANG</li><li>Ansible网络自动化：Playbook编写、网络模块、Tower</li><li>Python网络编程：Netmiko/NAPALM自动化库、REST API</li><li>CI/CD流水线：GitLab CI/Jenkins、自动化测试</li><li>基础设施即代码：Terraform、CloudFormation</li><li>NetDevOps实践：变更管理、配置审计、合规检查</li></ul><h3>学习目标</h3><ul><li>掌握网络自动化的核心理念和工具链</li><li>能够使用Ansible进行批量网络设备配置</li><li>理解CI/CD在网络运维中的应用</li><li>培养NetDevOps工程实践能力</li></ul>"
+    },
+    {
+      "id": "ne_advanced_04",
+      "parentId": "ne_advanced",
+      "name": "IPv6下一代互联网",
+      "category": "前沿方向",
+      "symbolSize": 25,
+      "description": "IPv6协议、地址架构与过渡技术",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 7,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>IPv6是下一代互联网的核心协议，旨在解决IPv4地址枯竭问题并提供更优的网络性能和安全特性。本课程深入讲解IPv6协议、地址架构、路由技术和过渡机制。</p><h3>核心知识点</h3><ul><li>IPv6协议基础：报头格式、扩展首部、地址类型</li><li>IPv6地址架构：全球单播地址、链路本地地址、任播</li><li>ICMPv6与NDP：邻居发现、地址自动配置、重定向</li><li>IPv6路由：OSPFv3、EIGRPv6、BGP4+</li><li>IPv6过渡技术：双栈、隧道(6to4/Teredo/ISATAP)、NAT64/DNS64</li><li>IPv6安全：IPSec、RA Guard、SEND协议</li><li>IPv6应用：DNS AAAA记录、IPv6 Web服务器部署</li></ul><h3>学习目标</h3><ul><li>深入理解IPv6协议和地址体系</li><li>掌握IPv6路由协议的配置方法</li><li>了解IPv4到IPv6的主流过渡技术</li><li>具备IPv6网络规划和部署能力</li></ul>"
+    },
+    {
+      "id": "ce_basic_01",
+      "parentId": "ce_basic",
+      "name": "电路分析基础",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "电阻电路、动态电路分析与基本定律",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>电路分析基础是通信工程最重要的专业基础课程之一，研究线性电路的基本规律和分析方法。本课程涵盖电路基本定律、电路等效变换、动态电路分析和正弦稳态分析等核心内容。</p><h3>核心知识点</h3><ul><li>电路基本概念：电流、电压、功率、参考方向</li><li>基本定律：欧姆定律、基尔霍夫定律(KCL/KVL)</li><li>电路等效变换：电阻串并联、星三角变换、电源等效</li><li>电路分析方法：节点法、网孔法、叠加定理、戴维南定理</li><li>动态电路：电容电感特性、一阶/二阶电路响应</li><li>正弦稳态分析：相量法、阻抗、功率、谐振</li></ul><h3>学习目标</h3><ul><li>掌握电路分析的基本理论和方法</li><li>熟练运用等效变换和电路定律分析电路</li><li>理解动态电路的时域分析方法</li><li>为后续电子技术和通信课程奠定基础</li></ul>"
+    },
+    {
+      "id": "ce_basic_02",
+      "parentId": "ce_basic",
+      "name": "模拟电子技术",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "放大器、运算放大器、反馈与频率特性",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 2,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>模拟电子技术研究模拟信号的处理和放大电路设计。本课程系统讲解半导体器件特性、基本放大电路、运算放大器和反馈电路等核心内容，是通信电子线路设计的理论基础。</p><h3>核心知识点</h3><ul><li>半导体器件：PN结、二极管、BJT、MOSFET特性</li><li>基本放大电路：共射/共基/共集放大器、偏置电路</li><li>多级放大：级联耦合、频率响应、带宽</li><li>运算放大器：理想运放、放大/加减/积分/微分电路</li><li>反馈电路：反馈类型判断、负反馈对性能的影响</li><li>功率放大器：A/B/AB/D类功放</li><li>信号发生器与滤波器：振荡器、有源滤波器</li></ul><h3>学习目标</h3><ul><li>理解半导体器件的工作原理和特性</li><li>掌握各类放大电路的分析和设计方法</li><li>熟悉运算放大器的典型应用电路</li><li>为通信电子线路设计打下基础</li></ul>"
+    },
+    {
+      "id": "ce_basic_03",
+      "parentId": "ce_basic",
+      "name": "数字电子技术",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "逻辑门、触发器和时序逻辑电路设计",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数字电子技术研究数字信号的处理和逻辑电路设计。本课程涵盖逻辑代数基础、组合逻辑电路、时序逻辑电路和可编程逻辑器件等内容，是数字通信系统设计的重要基础。</p><h3>核心知识点</h3><ul><li>逻辑代数基础：基本运算、逻辑函数化简(卡诺图)</li><li>组合逻辑电路：加法器、比较器、编码器、译码器、MUX</li><li>触发器：RS/JK/D/T触发器、时序参数</li><li>时序逻辑电路：寄存器、计数器、序列检测器</li><li>时序逻辑设计：状态机设计、状态分配、自启动</li><li>脉冲电路：施密特触发器、单稳态/多谐振荡器</li></ul><h3>学习目标</h3><ul><li>掌握数字电路的基本分析和设计方法</li><li>能够设计中等规模的组合和时序逻辑电路</li><li>理解数字系统设计的基本流程</li><li>为数字通信系统学习奠定基础</li></ul>"
+    },
+    {
+      "id": "ce_basic_04",
+      "parentId": "ce_basic",
+      "name": "电磁场与电磁波",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "静电场、恒定磁场、平面电磁波与传输线理论",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>电磁场与电磁波研究电磁场的基本规律和电磁波的传播特性，是通信工程的核心理论基础之一。本课程涵盖静电场、恒定磁场、时变电磁场和电磁波传播等内容。</p><h3>核心知识点</h3><ul><li>矢量分析：梯度、散度、旋度、拉普拉斯算子</li><li>静电场：库仑定律、高斯定理、电位、电场能量</li><li>恒定磁场：安培定律、磁矢位、磁场能量、电感</li><li>时变电磁场：法拉第定律、位移电流、麦克斯韦方程组</li><li>平面电磁波：波动方程、均匀平面波、极化特性</li><li>电磁波传播：反射与折射、传输线理论、波导</li></ul><h3>学习目标</h3><ul><li>理解电磁场的基本定律和麦克斯韦方程组</li><li>掌握电磁波传播的基本特性</li><li>理解传输线理论和天线基础</li><li>为无线通信和射频技术课程奠定理论基础</li></ul>"
+    },
+    {
+      "id": "ce_basic_05",
+      "parentId": "ce_basic",
+      "name": "高级语言程序设计",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "C/C++语言在通信仿真中的应用",
+      "difficulty": "low",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 1,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>高级语言程序设计(C/C++)为通信工程专业学生提供必要的编程技能训练。本课程重点培养学生运用编程语言解决通信领域数值计算和仿真问题的能力。</p><h3>核心知识点</h3><ul><li>C语言核心：指针、数组、函数、结构体</li><li>C++面向对象：类、继承、多态、模板</li><li>数值计算：矩阵运算、复数运算、FFT算法实现</li><li>文件I/O与数据处理：CSV解析、二进制数据读写</li><li>MATLAB基础：矩阵操作、绘图、M文件编程</li><li>通信仿真初步：信号生成、调制解调仿真</li></ul><h3>学习目标</h3><ul><li>掌握C/C++语言的核心编程技术</li><li>能够使用MATLAB进行通信系统仿真</li><li>培养运用编程解决通信工程问题的能力</li><li>为后续通信课程的仿真实验提供工具基础</li></ul>"
+    },
+    {
+      "id": "ce_core_01",
+      "parentId": "ce_core",
+      "name": "通信原理",
+      "category": "专业核心课",
+      "symbolSize": 35,
+      "description": "调制解调、信道编码、复用与多址技术",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 72,
+      "teachingWeek": 4,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>通信原理是通信工程最核心的专业课程，系统讲解通信系统的基本原理和关键技术。本课程涵盖信号分析、调制解调技术、信道编码和复用多址等内容，是通信工程知识体系的基石。</p><h3>核心知识点</h3><ul><li>信号分析基础：傅里叶变换、信号能量与功率、相关函数</li><li>模拟调制：AM/DSB/SSB/VSB、FM/PM调制解调</li><li>数字基带传输：PCM编码、线路编码、码间串扰</li><li>数字调制：ASK/FSK/PSK/QAM的调制解调原理</li><li>最佳接收：匹配滤波器、相关接收、误码率分析</li><li>信道编码：线性分组码、卷积码、Turbo码、LDPC码</li><li>复用与多址：FDM/TDM/CDMA/OFDM</li></ul><h3>学习目标</h3><ul><li>深入理解通信系统的整体架构和工作原理</li><li>掌握模拟和数字调制解调技术的基本原理</li><li>理解信道编码的作用和常用编码方法</li><li>具备通信系统性能分析和评估能力</li></ul>"
+    },
+    {
+      "id": "ce_core_02",
+      "parentId": "ce_core",
+      "name": "信号与系统",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "连续/离散信号分析与系统响应",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 3,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>信号与系统是通信工程的核心理论基础，研究信号的表示和系统的响应特性。本课程建立从时域到变换域的信号分析框架，为通信原理、数字信号处理等课程提供理论支撑。</p><h3>核心知识点</h3><ul><li>信号分类：连续/离散、周期/非周期、能量/功率信号</li><li>系统特性：线性时不变系统(LTI)、因果性、稳定性</li><li>卷积与相关：卷积积分、卷积和、互相关函数</li><li>傅里叶分析：傅里叶级数、FT/DTFT/DFS/DFT</li><li>拉普拉斯变换：收敛域、极点/零点、系统函数</li><li>Z变换：收敛域、逆Z变换、离散系统分析</li><li>采样定理：Nyquist采样、混叠、信号重建</li></ul><h3>学习目标</h3><ul><li>建立信号与系统的时域-变换域分析框架</li><li>掌握傅里叶变换和拉普拉斯变换的分析方法</li><li>理解采样定理及其在通信中的应用</li><li>为数字信号处理和通信原理课程奠定数学基础</li></ul>"
+    },
+    {
+      "id": "ce_core_03",
+      "parentId": "ce_core",
+      "name": "数字信号处理",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "DFT/FFT、数字滤波器设计与多速率处理",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 4,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数字信号处理(DSP)研究数字化的信号处理理论与实现方法。本课程从离散信号与系统出发，深入讲解DFT/FFT算法、数字滤波器设计和多速率信号处理等核心技术。</p><h3>核心知识点</h3><ul><li>离散信号与系统：序列表示、差分方程、系统函数</li><li>DFT与FFT：DFT性质、基-2 FFT算法、DIT/DIF</li><li>Z变换深入：系统函数极点分析、频率响应</li><li>IIR滤波器设计：冲激响应不变法、双线性变换</li><li>FIR滤波器设计：窗函数法、频率采样法、等波纹设计</li><li>滤波器实现：直接/级联/并联型结构、量化效应</li><li>多速率信号处理：抽取、插值、多相滤波结构</li></ul><h3>学习目标</h3><ul><li>理解数字信号处理的基本理论和算法</li><li>掌握DFT/FFT的原理和应用</li><li>能够设计IIR和FIR数字滤波器</li><li>了解多速率信号处理的基本方法</li></ul>"
+    },
+    {
+      "id": "ce_core_04",
+      "parentId": "ce_core",
+      "name": "移动通信",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "蜂窝网络、多址接入、切换与功率控制",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>移动通信研究蜂窝移动网络的关键技术，从第一代到第五代移动通信系统的技术演进。本课程重点讲解移动信道特性、多址接入、切换管理和无线资源管理等核心技术。</p><h3>核心知识点</h3><ul><li>移动通信发展史：1G到5G的技术演进路线</li><li>移动信道特性：路径损耗、阴影衰落、多径衰落</li><li>蜂窝网络基础：频率复用、小区规划、干扰控制</li><li>多址接入：FDMA/TDMA/CDMA/OFDMA</li><li>切换与位置管理：硬切换/软切换、位置更新</li><li>功率控制：开环/闭环功率控制、远近效应</li><li>4G LTE：OFDMA/SC-FDMA、MIMO、HARQ</li></ul><h3>学习目标</h3><ul><li>理解移动通信系统的技术演进和发展趋势</li><li>掌握移动信道特性和多址接入技术</li><li>理解蜂窝网络的基本设计原理</li><li>为5G/6G前沿技术学习奠定基础</li></ul>"
+    },
+    {
+      "id": "ce_core_05",
+      "parentId": "ce_core",
+      "name": "光纤通信",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "光纤传输原理、光器件与波分复用系统",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 5,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>光纤通信研究以光纤为传输介质的通信技术，是现代骨干通信网络的核心。本课程涵盖光纤传输原理、光器件、光传输系统和波分复用技术等内容。</p><h3>核心知识点</h3><ul><li>光纤传输原理：全反射、数值孔径、模式理论</li><li>光纤特性：衰减、色散(材料/波导/色散斜率)、非线性效应</li><li>光发射机：LD/LED光源、直接调制/外调制</li><li>光接收机：PIN/APD光电检测器、灵敏度、噪声</li><li>光放大器：EDFA掺铒光纤放大器、拉曼放大器</li><li>WDM技术：DWDM/CWDM、波长分配、ROADM</li><li>光网络：OTN、PON、光传送网保护</li></ul><h3>学习目标</h3><ul><li>理解光纤通信系统的基本原理和组成</li><li>掌握光传输器件的特性与选型</li><li>理解WDM波分复用的工作原理</li><li>了解光传送网的发展趋势</li></ul>"
+    },
+    {
+      "id": "ce_core_06",
+      "parentId": "ce_core",
+      "name": "通信网络基础",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "交换技术、信令系统与通信协议体系",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 5,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>通信网络基础研究通信网络的交换、信令和协议体系，是理解现代通信组网技术的入门课程。本课程涵盖电路交换、分组交换、软交换和IMS等核心技术。</p><h3>核心知识点</h3><ul><li>交换技术：电路交换、分组交换、报文交换</li><li>交换网络：Time/Space交换、Clos网络、Banyan网络</li><li>信令系统：No.7信令、信令点编码、信令连接</li><li>PSTN网络：电话网络等级结构、编号计划、路由</li><li>分组交换网：X.25、帧中继、ATM</li><li>软交换与IMS：SIP协议、H.248、下一代网络架构</li><li>通信网同步：主从同步、互同步、时钟等级</li></ul><h3>学习目标</h3><ul><li>理解通信网络的基本交换原理</li><li>掌握电路交换和分组交换的异同</li><li>了解信令系统在网络中的作用</li><li>为下一代通信网络学习奠定基础</li></ul>"
+    },
+    {
+      "id": "ce_core_07",
+      "parentId": "ce_core",
+      "name": "信息论与编码",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "信源/信道编码理论、熵与信道容量",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>信息论与编码是通信工程的理论基石，研究信息的量化、压缩和可靠传输的理论极限。本课程由香农信息论奠基，涵盖信源编码、信道容量和信道编码三大支柱。</p><h3>核心知识点</h3><ul><li>信息度量：自信息、熵、联合熵、条件熵、互信息</li><li>信源编码定理：定长/变长编码、Huffman编码、算术编码</li><li>信道容量：离散无记忆信道容量、高斯信道容量</li><li>率失真理论：率失真函数、标量量化</li><li>线性分组码：生成矩阵、校验矩阵、伴随式译码</li><li>卷积码：状态图、维特比译码</li><li>Turbo码与LDPC码：迭代译码、置信传播</li></ul><h3>学习目标</h3><ul><li>理解信息论的基本概念和核心定理</li><li>掌握信源编码和信道编码的基本方法</li><li>理解信道容量的概念和实际意义</li><li>培养通信系统设计的理论思维能力</li></ul>"
+    },
+    {
+      "id": "ce_practice_01",
+      "parentId": "ce_practice",
+      "name": "通信系统仿真实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "基于MATLAB/Simulink的通信系统建模与仿真",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 6,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>通信系统仿真实训使用MATLAB/Simulink等工具对各种通信系统进行建模和仿真验证，是理论与实践结合的重要教学环节。</p><h3>核心知识点</h3><ul><li>MATLAB通信工具箱：信号处理函数、调制解调函数</li><li>Simulink通信模块集：信道模型、调制器、编解码器</li><li>模拟通信系统仿真：AM/FM调制解调仿真</li><li>数字通信系统仿真：QPSK/16QAM仿真、误码率曲线</li><li>信道编码仿真：卷积码编解码、Turbo码仿真</li><li>OFDM系统仿真：子载波分配、循环前缀、同步</li><li>系统性能评估：BER/BLER吞吐量分析、链路预算</li></ul><h3>学习目标</h3><ul><li>掌握通信系统仿真的基本方法和工具使用</li><li>能够建立通信链路的仿真模型并分析性能</li><li>通过仿真加深对通信原理的理解</li><li>培养通信系统设计和验证的工程能力</li></ul>"
+    },
+    {
+      "id": "ce_practice_02",
+      "parentId": "ce_practice",
+      "name": "高频电子线路设计",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "高频放大器、振荡器与混频器设计与实现",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>高频电子线路设计是通信电子线路设计与实现的重要实践环节，通过设计、制作和调试高频电路，培养学生的射频电路设计能力。</p><h3>核心知识点</h3><ul><li>高频电路基础：S参数、Smith圆图、阻抗匹配</li><li>高频小信号放大器设计：增益、噪声系数、稳定性</li><li>功率放大器设计：Load-pull、效率优化、线性化技术</li><li>振荡器设计：LC/VCO振荡器、相位噪声优化</li><li>混频器设计：吉尔伯特单元、镜像抑制</li><li>PCB设计与Layout：射频布局、接地、屏蔽</li><li>网络分析仪测量：S参数测试、阻抗测量</li></ul><h3>学习目标</h3><ul><li>掌握高频电路的基本设计方法</li><li>能够使用EDA工具进行射频电路仿真</li><li>理解射频电路Layout的工程要点</li><li>培养通信射频电路的工程实践能力</li></ul>"
+    },
+    {
+      "id": "ce_practice_03",
+      "parentId": "ce_practice",
+      "name": "通信电路综合实验",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "通信系统各模块的硬件实现与调试",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>通信电路综合实验通过多个通信模块的硬件实现与系统联调，培养学生的通信系统硬件设计和调试能力。</p><h3>核心知识点</h3><ul><li>基础实验：放大器、滤波器、振荡器电路实现</li><li>调制解调器实验：AM/FM/QPSK调制解调电路</li><li>PLL频率合成器实验：锁相环、频率锁定</li><li>编解码器实验：PCM编解码、信道编解码</li><li>通信系统联调：发射-接收链路综合调试</li><li>实验报告撰写：测试数据分析、问题总结</li></ul><h3>学习目标</h3><ul><li>掌握通信电路模块的设计和调试方法</li><li>能够独立完成通信电路的硬件实现</li><li>培养系统联调和故障排查能力</li><li>积累通信电路设计的工程经验</li></ul>"
+    },
+    {
+      "id": "ce_practice_04",
+      "parentId": "ce_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "通信工程方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是通信工程专业本科学习的综合实践环节，要求学生在教师指导下独立完成通信工程方向的课题研究或工程项目。</p><h3>核心知识点</h3><ul><li>选题与开题：通信工程前沿课题文献调研</li><li>方案设计：系统架构设计、关键技术论证</li><li>仿真与实现：通信系统仿真、硬件设计或软件实现</li><li>性能测试：指标测试、对比分析、优化改进</li><li>论文撰写：学术论文规范、实验数据呈现</li><li>答辩准备：成果演示、技术讲解</li></ul><h3>学习目标</h3><ul><li>培养独立从事通信工程研究与实践的能力</li><li>掌握学术论文的规范撰写方法</li><li>综合运用专业知识解决通信工程问题</li><li>提升科学研究和技术表达能力</li></ul>"
+    },
+    {
+      "id": "ce_advanced_01",
+      "parentId": "ce_advanced",
+      "name": "5G/6G通信技术",
+      "category": "前沿方向",
+      "symbolSize": 32,
+      "description": "毫米波、大规模MIMO、超密集组网与空天地一体化",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>5G/6G通信技术是当前移动通信发展的前沿方向。本课程深入讲解5G新空口、网络切片、边缘计算等关键技术，并展望6G的愿景与潜在技术方向。</p><h3>核心知识点</h3><ul><li>5G标准与频谱：ITU愿景、3GPP标准进程、毫米波/Sub-6G</li><li>5G新空口：OFDM参数集、灵活子载波间隔、mini-slot</li><li>大规模MIMO：波束赋形、信道估计、导频设计</li><li>网络切片：切片标识、资源隔离、端到端编排</li><li>MEC移动边缘计算：业务本地化、超低时延</li><li>6G展望：太赫兹通信、智能超表面、通感一体化</li><li>空天地一体化：卫星通信与5G融合</li></ul><h3>学习目标</h3><ul><li>深入理解5G核心技术和网络架构</li><li>掌握大规模MIMO和网络切片的原理</li><li>了解6G的研究方向和候选技术</li><li>跟踪移动通信技术最新发展动态</li></ul>"
+    },
+    {
+      "id": "ce_advanced_02",
+      "parentId": "ce_advanced",
+      "name": "卫星通信系统",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "LEO/MEO/GEO卫星通信、星链与星间链路",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>卫星通信系统研究利用人造卫星进行通信的技术。本课程涵盖卫星轨道力学、卫星通信链路设计、多址接入和典型卫星通信系统等内容。</p><h3>核心知识点</h3><ul><li>卫星轨道：LEO/MEO/GEO轨道、轨道摄动、星座设计</li><li>卫星链路设计：链路预算、EIRP、G/T值、传播损耗</li><li>多址接入：FDMA/TDMA/CDMA/DAMA</li><li>卫星转发器：透明转发/处理转发、星上交换</li><li>VSAT系统：小站架构、协议、组网方式</li><li>卫星互联网：Starlink/OneWeb系统架构</li><li>星间链路：激光通信、星间路由</li></ul><h3>学习目标</h3><ul><li>理解卫星通信的基本原理和系统组成</li><li>掌握卫星链路预算的基本方法</li><li>了解典型卫星通信系统的架构</li><li>关注卫星互联网的最新发展</li></ul>"
+    },
+    {
+      "id": "ce_advanced_03",
+      "parentId": "ce_advanced",
+      "name": "通信网络安全",
+      "category": "前沿方向",
+      "symbolSize": 25,
+      "description": "通信加密、身份认证与无线安全协议",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>通信网络安全研究通信系统中的安全威胁与防护技术。本课程涵盖通信加密、身份认证、无线安全协议和安全态势感知等内容。</p><h3>核心知识点</h3><ul><li>通信加密技术：流密码、分组密码、公钥密码在通信中的应用</li><li>身份认证：SIM认证、AKA协议、证书认证</li><li>GSM/LTE/5G安全机制：空口加密、完整性保护</li><li>WLAN安全：WPA3、SAE握手、OWE</li><li>物联网安全：轻量级密码、安全启动、固件安全</li><li>安全协议分析：TLS 1.3、IPSec、SSH协议</li><li>通信安全态势感知：异常检测、威胁情报</li></ul><h3>学习目标</h3><ul><li>理解通信系统的安全威胁模型</li><li>掌握通信加密和身份认证的基本方法</li><li>了解蜂窝网和WLAN的安全机制</li><li>具备通信安全分析和评估的基本能力</li></ul>"
+    },
+    {
+      "id": "ce_advanced_04",
+      "parentId": "ce_advanced",
+      "name": "量子通信基础",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "量子密钥分发、量子纠缠与量子隐形传态",
+      "difficulty": "high",
+      "importance": "low",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>量子通信基础基于量子力学原理研究信息传输的新范式。本课程涵盖量子比特、量子密钥分发、量子纠缠和量子隐形传态等核心概念。</p><h3>核心知识点</h3><ul><li>量子力学基础：态矢量、叠加原理、测量、不确定性原理</li><li>量子比特与量子门：单/双量子比特门、量子线路</li><li>量子密钥分发：BB84协议、E91协议、诱骗态协议</li><li>量子纠缠：EPR悖论、贝尔不等式、纠缠交换</li><li>量子隐形传态：经典通信与量子纠缠的结合</li><li>量子通信网络：量子中继器、量子路由器</li><li>量子密码分析：攻击模型、安全性证明</li></ul><h3>学习目标</h3><ul><li>理解量子通信的基本物理原理</li><li>掌握量子密钥分发的核心协议</li><li>了解量子通信网络的基本架构</li><li>建立量子信息科学的基本认知</li></ul>"
+    },
+    {
+      "id": "iot_basic_01",
+      "parentId": "iot_basic",
+      "name": "程序设计基础（C/Java）",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "C与Java语言程序设计基础",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>C/Java程序设计是物联网工程的基础编程技能课程，培养学生同时掌握面向过程和面向对象的编程范式，为嵌入式开发和物联网应用层开发奠定基础。</p><h3>核心知识点</h3><ul><li>C语言核心：数据类型、流程控制、函数、指针、结构体</li><li>内存管理：堆栈、动态分配、内存操作</li><li>Java基础：语法基础、面向对象编程</li><li>Java高级：集合框架、IO流、多线程</li><li>网络编程：TCP/UDP Socket编程基础</li></ul><h3>学习目标</h3><ul><li>掌握C语言和Java语言的基本编程能力</li><li>理解面向过程和面向对象两种编程范式</li><li>能够编写基本的串口通信和网络通信程序</li><li>为嵌入式系统和物联网应用开发打下基础</li></ul>"
+    },
+    {
+      "id": "iot_basic_02",
+      "parentId": "iot_basic",
+      "name": "计算机网络",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "TCP/IP协议栈与IoT网络基础",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>计算机网络是物联网的通信基础。本课程从TCP/IP协议体系出发，重点讲解与物联网密切相关的网络协议和技术，为物联网通信技术学习提供理论基础。</p><h3>核心知识点</h3><ul><li>网络体系结构：OSI/RM、TCP/IP模型</li><li>IP协议：IPv4/IPv6、子网划分、路由基础</li><li>TCP/UDP协议：可靠传输、流量控制</li><li>应用层协议：HTTP、MQTT、CoAP</li><li>无线网络基础：WiFi、蓝牙、ZigBee概览</li><li>网络安全基础：加密、认证、防火墙</li></ul><h3>学习目标</h3><ul><li>理解计算机网络的基本体系结构</li><li>掌握TCP/IP核心协议的工作原理</li><li>了解物联网场景下的无线网络技术</li><li>为物联网通信技术课程奠定基础</li></ul>"
+    },
+    {
+      "id": "iot_basic_03",
+      "parentId": "iot_basic",
+      "name": "数据库原理",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "数据库系统与SQL在IoT中的应用",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数据库原理为物联网海量数据管理提供理论基础。本课程重点讲解关系数据库和NoSQL数据库的核心技术，为物联网数据存储与管理提供技术支撑。</p><h3>核心知识点</h3><ul><li>关系数据库：关系模型、完整性约束</li><li>SQL语言：DDL/DML/DCL、复杂查询、事务</li><li>数据库设计：ER模型、范式理论</li><li>索引与优化：B+树、查询优化</li><li>NoSQL数据库：Redis、MongoDB、InfluxDB</li><li>时序数据库：TSDB在IoT中的应用</li></ul><h3>学习目标</h3><ul><li>掌握SQL语言和关系数据库设计方法</li><li>理解NoSQL和时序数据库在IoT场景中的应用</li><li>能够设计物联网数据存储方案</li><li>具备基本的数据管理能力</li></ul>"
+    },
+    {
+      "id": "iot_basic_04",
+      "parentId": "iot_basic",
+      "name": "电子技术基础",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "模拟/数字电子技术及其在传感中的应用",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 2,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>电子技术基础是物联网硬件设计的重要基础，涵盖模拟电子和数字电子两大核心领域。本课程帮助物联网专业学生建立必要的电路设计与分析能力。</p><h3>核心知识点</h3><ul><li>电路基础：欧姆定律、KCL/KVL、电路分析方法</li><li>模拟电子：二极管、三极管、运算放大器基础</li><li>数字电子：逻辑门、触发器、组合/时序电路</li><li>传感器接口电路：信号调理、放大、滤波</li><li>电源电路：稳压、DC-DC转换、LDO</li><li>PCB设计基础：原理图绘制、布局布线</li></ul><h3>学习目标</h3><ul><li>掌握基本电路的分析方法</li><li>理解模拟和数字电子技术的基本概念</li><li>能够设计简单的传感器接口电路</li><li>为物联网硬件开发奠定基础</li></ul>"
+    },
+    {
+      "id": "iot_basic_05",
+      "parentId": "iot_basic",
+      "name": "传感技术基础",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "传感器原理、分类与选型基础",
+      "difficulty": "low",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 4,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>传感技术基础是物联网感知层的入门课程，系统讲解各类传感器的基本原理、特性参数和选型方法，为学生后续学习传感器与检测技术奠定基础。</p><h3>核心知识点</h3><ul><li>传感器概述：定义、分类、静态/动态特性</li><li>温度传感器：热电阻、热电偶、集成温度传感器</li><li>压力与力传感器：压阻式、电容式、压电式</li><li>光学传感器：光电二极管、CCD/CMOS图像传感器</li><li>湿度与气体传感器：湿敏电阻、气体传感器</li><li>MEMS传感器：加速度计、陀螺仪、磁力计</li><li>传感器选型与接口：量程、精度、输出接口</li></ul><h3>学习目标</h3><ul><li>理解各类传感器的基本原理和特性参数</li><li>掌握传感器的选型和接口设计方法</li><li>了解MEMS传感器的原理和应用</li><li>为物联网感知层系统设计奠定基础</li></ul>"
+    },
+    {
+      "id": "iot_core_01",
+      "parentId": "iot_core",
+      "name": "物联网技术概论",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "物联网体系架构、关键技术与行业应用概览",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 32,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>物联网技术概论是物联网工程专业的入门导论课程，系统介绍物联网的体系架构、关键技术和行业应用，帮助学生建立对物联网技术的整体认知框架。</p><h3>核心知识点</h3><ul><li>物联网定义与发展：概念演进、技术动因、产业现状</li><li>三层体系架构：感知层、网络层、应用层</li><li>感知技术：传感器、RFID、二维码、GPS</li><li>网络技术：短距通信、蜂窝网络、LPWAN</li><li>应用技术：中间件、云计算、大数据、AI</li><li>典型应用：智能家居、智慧城市、工业物联网</li><li>物联网标准与安全：IEEE/IETF标准、安全挑战</li></ul><h3>学习目标</h3><ul><li>建立物联网技术的整体知识框架</li><li>理解物联网三层架构及各层关键技术</li><li>了解物联网典型应用场景和产业现状</li><li>激发对物联网技术的学习和研究兴趣</li></ul>"
+    },
+    {
+      "id": "iot_core_02",
+      "parentId": "iot_core",
+      "name": "传感器与检测技术",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "各类传感器原理、信号调理与数据采集",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 4,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>传感器与检测技术是物联网感知层的核心课程，深入讲解各类传感器的工作原理、信号调理电路和数据采集方法，培养学生传感器应用系统设计能力。</p><h3>核心知识点</h3><ul><li>传感器特性分析：静态特性(线性度/灵敏度/迟滞)、动态特性</li><li>温度检测：热电偶冷端补偿、RTD测量电路、数字温度传感器</li><li>力与压力检测：应变片、惠斯通电桥、压力传感器校准</li><li>位置与位移检测：电感式、电容式、霍尔效应、编码器</li><li>图像传感：CCD/CMOS驱动、图像采集、预处理</li><li>多传感器融合：数据融合算法、卡尔曼滤波、加权平均</li><li>传感器网络：分布式传感、时间同步、数据汇聚</li></ul><h3>学习目标</h3><ul><li>掌握各类传感器的工作原理和应用电路设计</li><li>能够设计传感器信号调理和采集系统</li><li>理解多传感器数据融合的基本方法</li><li>具备物联网感知系统设计的工程能力</li></ul>"
+    },
+    {
+      "id": "iot_core_03",
+      "parentId": "iot_core",
+      "name": "RFID原理与应用",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "RFID射频识别技术、标签/读写器原理与应用",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>RFID原理与应用是物联网自动识别技术的核心课程，系统讲解射频识别技术的原理、标准和系统设计方法。涵盖RFID标签、读写器、天线和防碰撞协议等关键技术。</p><h3>核心知识点</h3><ul><li>RFID系统组成：标签(Tag)、读写器(Reader)、后端系统</li><li>RFID工作原理：电感耦合、反向散射耦合、工作频段</li><li>RFID标签：有源/无源/半无源标签、芯片架构</li><li>RFID读写器：发射/接收链路、读写器协议</li><li>RFID天线设计：天线参数、近场/远场天线</li><li>防碰撞协议：ALOHA类、二进制树搜索、Q算法</li><li>RFID标准：ISO/IEC 18000系列、EPC Class 1 Gen 2</li><li>RFID应用：仓储管理、供应链追溯、门禁系统</li></ul><h3>学习目标</h3><ul><li>理解RFID系统的基本工作原理</li><li>掌握RFID标签和读写器的主要技术指标</li><li>了解RFID防碰撞协议和标准体系</li><li>具备RFID应用系统设计和集成能力</li></ul>"
+    },
+    {
+      "id": "iot_core_04",
+      "parentId": "iot_core",
+      "name": "嵌入式系统设计",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "ARM/STM32微控制器开发、RTOS与驱动设计",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>嵌入式系统设计是物联网终端设备开发的核心课程，以ARM/STM32微控制器为主线，系统讲解嵌入式软件开发、外设驱动、RTOS和低功耗设计等内容。</p><h3>核心知识点</h3><ul><li>嵌入式系统概述：嵌入式处理器分类、Cortex-M架构</li><li>STM32开发：HAL库/LL库开发、时钟树、GPIO</li><li>中断系统：NVIC、中断优先级、中断延迟</li><li>定时器：SysTick、通用/高级定时器、PWM、输入捕获</li><li>串行通信：UART、I2C、SPI、CAN总线</li><li>ADC与DAC：逐次逼近型ADC、DMA传输</li><li>RTOS基础：FreeRTOS任务调度、同步、内存管理</li><li>低功耗设计：睡眠/停止/待机模式、功耗优化</li></ul><h3>学习目标</h3><ul><li>掌握ARM Cortex-M微控制器的开发方法</li><li>熟悉常见外设接口的驱动开发</li><li>理解RTOS的任务调度和同步机制</li><li>具备嵌入式系统软硬件设计和调试能力</li></ul>"
+    },
+    {
+      "id": "iot_core_05",
+      "parentId": "iot_core",
+      "name": "物联网通信技术",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "LoRa/ZigBee/NB-IoT/BLE短距与长距通信",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>物联网通信技术研究物联网场景下的各种通信技术和协议。本课程涵盖短距无线通信(ZigBee/BLE/WiFi)、LPWAN(LoRa/NB-IoT)和蜂窝物联网技术，帮助学生掌握物联网通信方案的设计与选型。</p><h3>核心知识点</h3><ul><li>物联网通信概述：通信范围分类、技术选型因素</li><li>ZigBee协议：ZigBee协议栈、网络拓扑、绑定机制</li><li>BLE技术：BLE协议栈、GAP/GATT、广播/连接</li><li>WiFi在IoT中应用：WiFi Direct、低功耗WiFi、ESP8266</li><li>LoRa技术：扩频调制、LoRaWAN协议、ADR机制</li><li>NB-IoT技术：窄带物联网、PSM/eDRX省电模式</li><li>通信技术对比：速率/距离/功耗/成本综合对比</li></ul><h3>学习目标</h3><ul><li>掌握物联网主流通信技术的工作原理和特性</li><li>能够根据应用场景选择合适的通信技术</li><li>具备物联网通信系统的设计和调试能力</li><li>理解LPWAN技术在物联网中的重要作用</li></ul>"
+    },
+    {
+      "id": "iot_core_06",
+      "parentId": "iot_core",
+      "name": "无线传感网络",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "WSN组网协议、定位技术与能量优化",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>无线传感网络(WSN)研究由大量传感器节点自组织形成的网络系统。本课程涵盖WSN的组网协议、定位技术、时间同步和能量优化等核心技术。</p><h3>核心知识点</h3><ul><li>WSN概述：节点结构、网络特性、制约因素</li><li>MAC协议：S-MAC、T-MAC、B-MAC、X-MAC</li><li>路由协议：LEACH、PEGASIS、DSR、AODV</li><li>拓扑控制：功率控制、层次分簇、唤醒调度</li><li>定位技术：RSSI、TOA/TDOA、AOA、质心定位</li><li>时间同步：RBS、TPSN、FTSP协议</li><li>数据融合：簇内融合、路径融合、压缩感知</li><li>能量优化：占空比调度、数据压缩、能量收集</li></ul><h3>学习目标</h3><ul><li>理解WSN的基本组网原理和协议栈</li><li>掌握WSN路由协议和MAC协议的工作机制</li><li>了解WSN定位和时间同步的基本方法</li><li>具备WSN系统设计和性能分析能力</li></ul>"
+    },
+    {
+      "id": "iot_core_07",
+      "parentId": "iot_core",
+      "name": "物联网中间件技术",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "IoT平台架构、数据接入与云端协同",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>物联网中间件技术研究物联网平台软件架构和数据处理的核心技术。本课程涵盖IoT平台架构、数据接入、设备管理、规则引擎和云端协同等内容。</p><h3>核心知识点</h3><ul><li>物联网中间件概述：功能需求、架构模式、主流平台</li><li>设备接入：MQTT Broker、CoAP Server、协议转换网关</li><li>设备管理：设备注册、OTA升级、远程配置、状态监控</li><li>数据管理：时序数据存储、数据清洗、聚合计算</li><li>规则引擎：事件处理、条件触发、动作执行</li><li>云端协同：边缘计算、数据上云、本地自治</li><li>安全与权限：设备认证、数据加密、访问控制</li></ul><h3>学习目标</h3><ul><li>理解物联网中间件的架构设计和核心功能</li><li>掌握IoT平台设备接入和数据处理的基本方法</li><li>了解MQTT/CoAP等IoT协议的应用</li><li>具备物联网平台开发和集成能力</li></ul>"
+    },
+    {
+      "id": "iot_practice_01",
+      "parentId": "iot_practice",
+      "name": "物联网系统综合设计",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "从感知到应用的完整IoT系统开发实践",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>物联网系统综合设计是物联网工程专业最重要的综合实践课程，要求学生综合运用感知、通信、数据处理等技术，完成一个完整的物联网应用系统设计与开发。</p><h3>核心知识点</h3><ul><li>系统需求分析与总体方案设计</li><li>感知层开发：传感器选型、数据采集节点设计</li><li>网络层部署：无线通信模块配置、网关设计</li><li>应用层开发：云平台接入、数据可视化、控制逻辑</li><li>系统联调：端到端通信测试、功能验证</li><li>性能评估：时延、可靠性、功耗测试</li></ul><h3>学习目标</h3><ul><li>掌握物联网系统从感知到应用的完整开发流程</li><li>能够独立完成物联网项目需求分析和方案设计</li><li>具备传感器节点、通信网关和应用平台的集成能力</li><li>培养物联网工程项目的综合实践能力</li></ul>"
+    },
+    {
+      "id": "iot_practice_02",
+      "parentId": "iot_practice",
+      "name": "智能硬件开发实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "基于ESP32/Raspberry Pi的智能硬件开发",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 6,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>智能硬件开发实训以ESP32或Raspberry Pi等主流平台为载体，通过实际项目开发训练学生的智能硬件设计和开发能力。涵盖硬件选型、电路设计、固件开发和移动端控制等环节。</p><h3>核心知识点</h3><ul><li>硬件平台选型：MCU选型、传感器选型、通信模块选型</li><li>电路设计：原理图绘制、PCB布局、电源设计</li><li>固件开发：外设驱动、通信协议栈、网络连接</li><li>移动端开发：手机APP/小程序开发、云平台对接</li><li>产品级测试：功能/可靠性/功耗/兼容性测试</li><li>项目文档：设计文档、测试报告、用户手册</li></ul><h3>学习目标</h3><ul><li>掌握智能硬件产品开发的全流程</li><li>能够独立完成电路设计和固件开发</li><li>具备软硬件协同开发和调试能力</li><li>培养产品化思维和项目管理能力</li></ul>"
+    },
+    {
+      "id": "iot_practice_03",
+      "parentId": "iot_practice",
+      "name": "嵌入式系统课程设计",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "嵌入式系统软硬件协同设计项目",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>嵌入式系统课程设计通过实际嵌入式项目开发，巩固嵌入式系统理论知识，培养学生在嵌入式软件设计、硬件接口调试和系统优化方面的工程实践能力。</p><h3>核心知识点</h3><ul><li>需求分析与系统设计：功能划分、硬件选型</li><li>Bootloader开发：启动流程、Flash分区、固件升级</li><li>外设驱动开发：GPIO/UART/I2C/SPI驱动编程</li><li>RTOS移植与应用：任务创建、同步、通信</li><li>用户接口开发：LCD显示、触摸屏、按键</li><li>系统测试与优化：功能验证、性能分析、功耗优化</li></ul><h3>学习目标</h3><ul><li>掌握嵌入式系统开发的完整流程</li><li>能够进行RTOS的移植和应用开发</li><li>具备常见外设驱动的开发和调试能力</li><li>培养嵌入式系统的工程实践能力</li></ul>"
+    },
+    {
+      "id": "iot_practice_04",
+      "parentId": "iot_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "物联网工程方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是物联网工程专业本科学习的综合实践环节，要求学生在教师指导下独立完成物联网方向的课题研究或工程项目。</p><h3>核心知识点</h3><ul><li>选题与开题：物联网前沿课题调研、技术路线确定</li><li>方案设计：系统架构、硬件选型、软件框架</li><li>硬件开发：电路设计、原型制作</li><li>软件开发：嵌入式程序、通信、云平台</li><li>系统测试：功能/性能/可靠性测试</li><li>论文与答辩：论文撰写、成果展示</li></ul><h3>学习目标</h3><ul><li>培养独立从事物联网工程研究与实践的能力</li><li>综合运用物联网感知、通信和应用技术</li><li>掌握学术论文的规范撰写方法</li><li>提升工程项目管理和技术表达能力</li></ul>"
+    },
+    {
+      "id": "iot_advanced_01",
+      "parentId": "iot_advanced",
+      "name": "智能家居系统",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "家居自动化、语音控制与智能家电互联",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>智能家居系统研究物联网技术在家庭场景中的综合应用。本课程涵盖智能家居体系架构、智能设备互联、场景自动化和语音控制等关键技术。</p><h3>核心知识点</h3><ul><li>智能家居架构：设备层、网络层、控制层、云服务层</li><li>智能设备互联：家庭网关、ZigBee/BLE/WiFi组网</li><li>场景自动化：条件触发、联动规则、场景编辑</li><li>语音控制：ASR语音识别、NLU自然语言理解</li><li>智能安防：门磁/摄像头/烟雾传感器联动</li><li>能源管理：智能照明、温控、能耗监测</li></ul><h3>学习目标</h3><ul><li>理解智能家居系统的体系架构</li><li>掌握智能设备互联和场景自动化的实现方法</li><li>了解语音控制在智能家居中的应用</li><li>具备智能家居系统设计和集成能力</li></ul>"
+    },
+    {
+      "id": "iot_advanced_02",
+      "parentId": "iot_advanced",
+      "name": "智慧城市技术",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "城市物联网感知、数字孪生与智能交通",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>智慧城市技术研究物联网和ICT技术在城市管理和服务中的综合应用。本课程涵盖城市物联网感知、数字孪生、智能交通和智慧政务等核心技术。</p><h3>核心知识点</h3><ul><li>智慧城市架构：感知层、网络层、平台层、应用层</li><li>城市感知网络：环境监测、基础设施监测、视频监控</li><li>数字孪生城市：三维建模、GIS/BIM融合、实时映射</li><li>智能交通：交通流感知、信号控制、智慧停车</li><li>智慧政务：政务云、一网通办、数据共享交换</li><li>城市大数据：城市运行指标、数据分析、决策支持</li></ul><h3>学习目标</h3><ul><li>理解智慧城市的多层体系架构和核心应用</li><li>了解数字孪生和城市感知网络的技术原理</li><li>掌握智能交通和智慧政务的基本概念</li><li>培养智慧城市系统设计的宏观视野</li></ul>"
+    },
+    {
+      "id": "iot_advanced_03",
+      "parentId": "iot_advanced",
+      "name": "工业物联网（IIoT）",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "工业4.0、OPC UA、工业以太网与预测性维护",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>工业物联网(IIoT)是物联网技术在工业领域的重要应用方向，研究如何通过连接工业设备实现智能制造和工业4.0。本课程涵盖工业通信协议、工业数据采集和预测性维护等核心技术。</p><h3>核心知识点</h3><ul><li>工业4.0概述：智能制造、CPS信息物理系统、工业互联网</li><li>工业通信协议：Modbus、PROFINET、EtherCAT、OPC UA</li><li>工业数据采集：PLC数据采集、SCADA系统、边缘网关</li><li>数字孪生与仿真：设备数字孪生、虚拟调试</li><li>预测性维护：振动分析、温度监测、故障预测算法</li><li>工业安全：OT安全、工控系统防护、网络安全等级保护</li></ul><h3>学习目标</h3><ul><li>理解工业物联网的体系架构和核心技术</li><li>掌握工业通信协议和数据采集方法</li><li>了解数字孪生在工业中的应用</li><li>具备工业物联网系统方案设计的基本能力</li></ul>"
+    },
+    {
+      "id": "iot_advanced_04",
+      "parentId": "iot_advanced",
+      "name": "车联网技术",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "V2X通信、车载网络与自动驾驶协同",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>车联网技术研究车辆与一切(V2X)通信的技术体系，是智能网联汽车和自动驾驶的重要支撑。本课程涵盖V2X通信技术、车载网络和自动驾驶协同等内容。</p><h3>核心知识点</h3><ul><li>车联网概述：V2X概念(V2V/V2I/V2P/V2N)、应用场景</li><li>C-V2X技术：LTE-V2X、NR-V2X、PC5接口</li><li>DSRC技术：802.11p、WAVE协议栈</li><li>车载网络：CAN/CAN FD、车载以太网、DoIP</li><li>自动驾驶协同：感知共享、协同决策、意图协商</li><li>高精定位与地图：GNSS+IMU融合、高精度地图</li><li>车联网安全：通信加密、身份认证、隐私保护</li></ul><h3>学习目标</h3><ul><li>理解车联网V2X通信技术的基本原理</li><li>掌握C-V2X和DSRC两种技术路线</li><li>了解智能网联汽车的技术体系</li><li>培养车联网系统的跨领域工程思维</li></ul>"
+    },
+    {
+      "id": "iot_advanced_05",
+      "parentId": "iot_advanced",
+      "name": "边缘计算",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "边缘节点部署、数据处理与云端协同架构",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 8,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>边缘计算是物联网数据处理的重要技术范式，将计算和数据存储推向网络边缘。本课程涵盖边缘计算架构、边缘节点部署、数据处理和云边协同等关键技术。</p><h3>核心知识点</h3><ul><li>边缘计算概述：定义、驱动力、与云计算的关系</li><li>边缘计算架构：终端设备层、边缘节点层、云端层</li><li>边缘节点部署：边缘服务器、边缘网关、边缘云</li><li>边缘数据处理：实时流处理、数据过滤聚合、本地决策</li><li>云边协同：任务卸载、模型同步、状态同步</li><li>边缘AI：模型压缩、推理优化、联邦学习</li><li>边缘安全：物理安全、数据安全、隐私保护</li></ul><h3>学习目标</h3><ul><li>理解边缘计算的核心概念和技术架构</li><li>掌握边缘节点部署和数据处理方法</li><li>了解云边协同的工作机制</li><li>具备边缘计算系统设计的基本能力</li></ul>"
+    },
+    {
+      "id": "se_basic_01",
+      "parentId": "se_basic",
+      "name": "程序设计基础（Java）",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "Java程序设计基础与面向对象编程思想",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>Java程序设计是软件工程专业最重要的基础编程课程。本课程从Java基础语法开始，逐步深入到面向对象编程、集合框架、异常处理和IO流等核心内容，培养学生的企业级应用开发能力。</p><h3>核心知识点</h3><ul><li>Java基础：数据类型、运算符、流程控制、数组</li><li>面向对象：类与对象、封装、继承、多态、接口</li><li>常用类库：String、集合框架(Collection/Map)、日期处理</li><li>异常处理：异常类型、try-catch-finally、自定义异常</li><li>IO流与序列化：字节流/字符流、缓冲流、对象序列化</li><li>泛型与注解：泛型类/方法、自定义注解、反射基础</li><li>Lambda与Stream：函数式编程、Stream API</li></ul><h3>学习目标</h3><ul><li>熟练使用Java语言进行面向对象程序开发</li><li>掌握Java集合框架和IO流的使用</li><li>理解泛型和反射的基本原理</li><li>为企业级Java开发奠定坚实基础</li></ul>"
+    },
+    {
+      "id": "se_basic_02",
+      "parentId": "se_basic",
+      "name": "数据结构与算法",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "常用数据结构与算法设计分析",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 3,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>数据结构与算法是软件工程的核心基础课程，研究如何高效组织和处理数据。本课程系统讲解线性表、树、图、哈希表等数据结构以及经典算法，培养学生的算法设计和分析能力。</p><h3>核心知识点</h3><ul><li>线性结构：动态数组、链表、栈、队列、双端队列</li><li>树形结构：二叉树、二叉搜索树、AVL树、红黑树、堆</li><li>图结构：邻接矩阵/邻接表、DFS/BFS、最短路径、MST</li><li>哈希表：散列函数设计与冲突解决、一致性哈希</li><li>字符串算法：KMP、Rabin-Karp、Trie树</li><li>算法设计：分治、回溯、动态规划、贪心、分支限界</li></ul><h3>学习目标</h3><ul><li>掌握各类数据结构的原理和实现方法</li><li>能够分析和设计高效的算法</li><li>熟练运用数据结构和算法解决实际问题</li><li>为系统设计和性能优化提供理论基础</li></ul>"
+    },
+    {
+      "id": "se_basic_03",
+      "parentId": "se_basic",
+      "name": "数据库原理与应用",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "SQL语言、关系数据库设计与事务处理",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数据库原理与应用是软件开发中数据持久化的基础课程。本课程从关系数据库理论出发，系统讲解SQL语言、数据库设计、事务管理和性能优化等内容。</p><h3>核心知识点</h3><ul><li>关系数据库基础：关系模型、键与约束、完整性</li><li>高级SQL：复杂连接、子查询、窗口函数、CTE、递归查询</li><li>数据库设计：ER建模、范式与反范式化、设计工具</li><li>索引优化：B+树索引、位图索引、执行计划分析</li><li>事务与并发控制：ACID、隔离级别、MVCC、锁机制</li><li>存储过程与触发器：PL/SQL编程、事件驱动逻辑</li><li>备份与恢复：逻辑备份、物理备份、PITR恢复</li></ul><h3>学习目标</h3><ul><li>精通SQL语言和数据库设计方法</li><li>能够进行SQL性能优化和索引调优</li><li>理解事务管理和并发控制机制</li><li>具备数据库应用开发和运维管理能力</li></ul>"
+    },
+    {
+      "id": "se_basic_04",
+      "parentId": "se_basic",
+      "name": "操作系统基础",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "操作系统原理与Linux基础",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>操作系统基础讲解操作系统的基本原理，重点突出与软件开发密切相关的进程管理、内存管理、文件系统和I/O等内容，帮助软件工程学生理解程序运行的环境和系统调用机制。</p><h3>核心知识点</h3><ul><li>操作系统的功能与分类：批处理、分时、实时、分布式</li><li>进程与线程：进程状态、PCB、线程模型、调度算法</li><li>进程同步：临界区、信号量、管程、经典同步问题</li><li>内存管理：分页、分段、虚拟内存、页面置换算法</li><li>文件系统：文件组织、目录实现、磁盘调度</li><li>I/O管理：缓冲技术、SPOOLing、DMA</li><li>Linux编程环境：系统调用、gcc/gdb、Makefile</li></ul><h3>学习目标</h3><ul><li>理解操作系统的基本原理和核心功能</li><li>掌握进程管理和同步互斥的基本方法</li><li>理解虚拟内存和文件系统的实现机制</li><li>熟悉Linux开发环境和基础工具使用</li></ul>"
+    },
+    {
+      "id": "se_basic_05",
+      "parentId": "se_basic",
+      "name": "计算机网络",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "计算机网络协议与Web技术基础",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>计算机网络帮助软件工程学生理解分布式应用和Web技术的底层网络基础。本课程以TCP/IP协议族为核心，重点讲解应用层和传输层协议，为Web开发和分布式系统学习提供基础。</p><h3>核心知识点</h3><ul><li>计算机网络体系结构：分层模型、服务与协议</li><li>应用层协议：HTTP/HTTPS、WebSocket、DNS、FTP</li><li>传输层：TCP可靠传输、流量/拥塞控制、UDP</li><li>网络层：IP协议、子网划分、CIDR、路由基础</li><li>RESTful API设计：HTTP方法、状态码、资源设计</li><li>网络安全基础：HTTPS/TLS、认证授权、API安全</li></ul><h3>学习目标</h3><ul><li>理解计算机网络的分层体系和工作原理</li><li>掌握HTTP/HTTPS等Web核心协议</li><li>理解TCP可靠传输和拥塞控制机制</li><li>为Web开发和分布式系统学习奠定基础</li></ul>"
+    },
+    {
+      "id": "se_core_01",
+      "parentId": "se_core",
+      "name": "软件工程导论",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "软件工程基本概念、过程模型与开发方法",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>软件工程导论是软件工程专业的入门核心课程，系统介绍软件工程的基本概念、过程模型和开发方法论。帮助学生建立工程化软件开发的专业思维。</p><h3>核心知识点</h3><ul><li>软件工程概述：软件危机、软件工程定义、知识体系(SWEBOK)</li><li>软件过程模型：瀑布、增量、迭代、原型、敏捷</li><li>敏捷开发：Scrum框架、Sprint、用户故事、看板</li><li>统一过程：RUP、4+1视图、迭代式开发</li><li>软件质量：ISO/IEC 25010质量模型、CMMI能力成熟度</li><li>软件工程工具：IDE、版本控制、项目管理、CI/CD</li></ul><h3>学习目标</h3><ul><li>建立软件工程的系统化思维方式</li><li>理解不同软件过程模型的适用场景</li><li>掌握敏捷开发的核心实践方法</li><li>了解软件质量保证的基本概念</li></ul>"
+    },
+    {
+      "id": "se_core_02",
+      "parentId": "se_core",
+      "name": "软件需求工程",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "需求获取、建模、文档化与验证管理",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 4,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>软件需求工程研究如何系统化地获取、分析、规约和管理软件需求。本课程从需求获取技术到需求建模方法，从需求文档编写到需求变更管理，帮助学生掌握需求工程的全流程。</p><h3>核心知识点</h3><ul><li>需求工程概述：需求层次(业务/用户/功能/非功能)、需求类型</li><li>需求获取：用户访谈、问卷调查、观察、原型法</li><li>需求分析：用例建模、活动图、领域建模</li><li>需求规约：需求规格说明书(SRS)、用户故事、验收标准</li><li>需求建模：UML用例图、活动图、状态图</li><li>非功能性需求：性能、安全、可用性、可扩展性</li><li>需求管理：优先级排序、变更控制、需求追踪</li></ul><h3>学习目标</h3><ul><li>掌握软件需求分析的系统化方法</li><li>能够使用UML进行需求建模</li><li>编写清晰规范的需求文档</li><li>理解需求变更管理和需求验证流程</li></ul>"
+    },
+    {
+      "id": "se_core_03",
+      "parentId": "se_core",
+      "name": "软件设计与架构",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "设计模式、架构风格、微服务与DDD设计",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>软件设计与架构是软件工程的高级核心课程，研究如何设计高质量的软件系统。本课程涵盖设计模式、架构风格、模块化设计和质量属性分析等内容。</p><h3>核心知识点</h3><ul><li>设计原则：SOLID原则、DRY、KISS、YAGNI、组合优于继承</li><li>创建型设计模式：单例、工厂、抽象工厂、建造者、原型</li><li>结构型设计模式：适配器、装饰器、代理、外观、组合</li><li>行为型设计模式：观察者、策略、模板方法、职责链</li><li>架构风格：分层架构、MVC/MVP/MVVM、微服务、事件驱动</li><li>模块化设计：包管理、模块依赖、OSGi/Jigsaw模块化</li><li>软件质量属性：性能、可维护性、可测试性、可扩展性</li></ul><h3>学习目标</h3><ul><li>深刻理解面向对象设计原则和设计模式</li><li>掌握多种架构风格及其适用场景</li><li>能够进行软件架构设计和质量属性分析</li><li>培养架构思维和系统设计决策能力</li></ul>"
+    },
+    {
+      "id": "se_core_04",
+      "parentId": "se_core",
+      "name": "软件测试与质量保证",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "测试用例设计、自动化测试、CI持续集成",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>软件测试与质量保证研究如何通过系统化的测试方法和过程保障软件质量。本课程从测试理论基础到自动化测试实践，涵盖测试用例设计、测试管理和持续集成等核心内容。</p><h3>核心知识点</h3><ul><li>测试理论基础：验证与确认、测试层次、V模型</li><li>测试用例设计：等价类划分、边界值分析、判定表、正交实验</li><li>单元测试：JUnit/TestNG、Mock框架、测试覆盖率</li><li>集成测试：接口测试、集成策略、契约测试</li><li>系统测试：功能测试、性能测试、安全测试、兼容性测试</li><li>自动化测试：Selenium、Cypress、Appium、Test Automation Framework</li><li>CI/CD持续集成：Jenkins/GitLab CI、自动化流水线、质量门禁</li></ul><h3>学习目标</h3><ul><li>掌握软件测试的系统化方法和测试用例设计</li><li>熟练使用测试框架进行自动化测试</li><li>理解持续集成和测试左移的理念</li><li>具备软件质量保障和测试管理能力</li></ul>"
+    },
+    {
+      "id": "se_core_05",
+      "parentId": "se_core",
+      "name": "软件项目管理",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "项目计划、估算、风险管理与敏捷项目管理",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>软件项目管理研究如何有效地计划、组织和管理软件项目。本课程涵盖项目估算、进度管理、风险管理、质量管理和团队协作等核心领域。</p><h3>核心知识点</h3><ul><li>项目管理基础：项目三角、PMBOK知识体系</li><li>项目估算：LOC/FP估算、COCOMO模型、专家判断</li><li>进度管理：WBS分解、网络图、关键路径法、甘特图</li><li>风险管理：风险识别、评估、应对策略、监控</li><li>质量管理：质量规划、质量保证(QA)、质量控制(QC)</li><li>配置管理：版本控制、变更管理、配置审计</li><li>团队管理：团队组建、激励、沟通、冲突管理</li></ul><h3>学习目标</h3><ul><li>掌握软件项目管理的核心知识体系</li><li>能够进行项目估算和进度计划编制</li><li>理解风险管理和质量管理的核心方法</li><li>培养项目管理和团队领导的基本能力</li></ul>"
+    },
+    {
+      "id": "se_core_06",
+      "parentId": "se_core",
+      "name": "人机交互技术",
+      "category": "专业核心课",
+      "symbolSize": 25,
+      "description": "用户研究、交互设计原则与可用性评估",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 6,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>人机交互技术研究人与计算机之间的交互方式与用户体验。本课程涵盖用户研究、交互设计原则、原型设计和可用性评估等内容，帮助学生设计以用户为中心的软件产品。</p><h3>核心知识点</h3><ul><li>人机交互基础：交互范式、交互风格、用户模型</li><li>用户研究：用户访谈、问卷调查、用户画像、用户旅程图</li><li>交互设计原则：尼尔森启发式、Fitts定律、格式塔原则</li><li>信息架构：内容组织、导航设计、搜索设计</li><li>原型设计：线框图、低保真/高保真原型、交互原型</li><li>可用性评估：启发式评估、用户测试、A/B测试</li><li>UI设计：色彩、排版、图标、设计系统</li></ul><h3>学习目标</h3><ul><li>理解以用户为中心的设计理念</li><li>掌握用户研究和交互设计的基本方法</li><li>能够进行原型设计和可用性评估</li><li>培养用户体验驱动的产品设计思维</li></ul>"
+    },
+    {
+      "id": "se_core_07",
+      "parentId": "se_core",
+      "name": "软件过程与管理",
+      "category": "专业核心课",
+      "symbolSize": 25,
+      "description": "CMMI、敏捷过程与DevOps体系",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 6,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>软件过程与管理研究软件开发和维护过程的规范化和持续改进。本课程涵盖CMMI模型、敏捷过程、DevOps体系以及软件过程度量与改进等内容。</p><h3>核心知识点</h3><ul><li>软件过程框架：ISO/IEC 12207、软件过程定义与裁剪</li><li>敏捷过程深入：Scrum、XP、Kanban、SAFe规模化敏捷</li><li>CMMI能力成熟度模型：ML1~5、过程域、表示方法</li><li>DevOps体系：文化、原则、工具链、持续交付</li><li>软件度量：度量指标(GQM)、过程度量、产品质量度量</li><li>过程改进：IDEAL模型、六西格玛、精益软件开发</li><li>软件资产管理：开源治理、许可证管理、代码复用</li></ul><h3>学习目标</h3><ul><li>理解软件过程管理的重要性和基本方法</li><li>掌握敏捷和DevOps的核心实践</li><li>了解CMMI等过程改进模型</li><li>具备软件过程度量和分析的基本能力</li></ul>"
+    },
+    {
+      "id": "se_practice_01",
+      "parentId": "se_practice",
+      "name": "软件开发综合实训",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "全栈Web/Mobile项目开发实战",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 6,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>软件开发综合实训是软件工程最重要的实践环节，以企业级项目为载体，模拟真实开发环境，让学生体验从需求到上线的全流程软件开发过程。</p><h3>核心知识点</h3><ul><li>项目启动：技术选型、脚手架搭建、开发环境配置</li><li>敏捷开发：Sprint规划、每日站会、任务分配</li><li>后端开发：REST API设计、业务逻辑实现、ORM框架</li><li>前端开发：组件化开发、状态管理、路由设计</li><li>测试与集成：单元测试、API测试、持续集成</li><li>部署上线：容器化、部署流水线、域名配置</li></ul><h3>学习目标</h3><ul><li>体验企业级软件开发的完整流程</li><li>掌握主流开发框架和工具的使用</li><li>培养敏捷开发和团队协作的能力</li><li>提升工程化思维和技术实践水平</li></ul>"
+    },
+    {
+      "id": "se_practice_02",
+      "parentId": "se_practice",
+      "name": "软件测试实训",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "自动化测试框架搭建、性能测试与安全测试",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>软件测试实训通过真实的测试项目，训练学生掌握自动化测试框架搭建、性能测试工具使用和安全测试方法。</p><h3>核心知识点</h3><ul><li>测试策略制定：测试范围、测试计划、环境准备</li><li>接口测试自动化：Postman/Newman、RestAssured、契约测试</li><li>UI自动化测试：Selenium WebDriver、Cypress、Page Object</li><li>性能测试：JMeter/Locust脚本开发、负载模型、瓶颈分析</li><li>安全测试：OWASP ZAP/Burp Suite、漏洞扫描、安全报告</li><li>测试报告：测试度量、缺陷分析、质量报告</li></ul><h3>学习目标</h3><ul><li>掌握自动化测试框架的搭建和使用</li><li>能够独立进行接口和UI自动化测试</li><li>理解性能测试和安全测试的基本方法</li><li>培养测试工程化和测试管理的思维</li></ul>"
+    },
+    {
+      "id": "se_practice_03",
+      "parentId": "se_practice",
+      "name": "团队项目实践",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "多人协作开发项目，实践Scrum敏捷开发",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>团队项目实践是软件工程专业重要的综合实践课程，以团队形式完成一个中等规模的软件项目，重点训练团队协作、敏捷开发和项目管理能力。</p><h3>核心知识点</h3><ul><li>项目选题：需求调研、可行性分析、产品定位</li><li>Scrum团队组建：角色分工(PO/SM/Dev)、Backlog梳理</li><li>Sprint开发：Sprint计划、开发执行、Daily Standup、Sprint Review</li><li>版本控制与协作：Git Flow/Trunk-Based、Pull Request、Code Review</li><li>项目管理：任务追踪、燃尽图、风险管理</li><li>项目交付：演示准备、用户培训、运维交接</li></ul><h3>学习目标</h3><ul><li>体验Scrum敏捷开发的完整流程</li><li>培养团队协作和沟通协调能力</li><li>掌握项目管理工具和版本控制协作</li><li>提升项目交付和展示的实战经验</li></ul>"
+    },
+    {
+      "id": "se_practice_04",
+      "parentId": "se_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "软件工程方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是软件工程专业本科学习的最后综合实践环节，要求学生独立完成一个完整的软件项目或课题研究，综合运用四年所学知识。</p><h3>核心知识点</h3><ul><li>选题与开题：市场调研、技术可行性分析</li><li>系统设计：架构设计、数据库设计、接口设计</li><li>编码实现：模块开发、单元测试、集成调试</li><li>质量保障：自动化测试、性能优化、安全加固</li><li>论文撰写：背景、方案、实现、测试、总结</li><li>答辩：演示系统、关键技术讲解、问题回答</li></ul><h3>学习目标</h3><ul><li>综合运用软件工程知识完成完整的软件项目</li><li>培养独立研发和解决复杂工程问题的能力</li><li>掌握学术论文和项目文档的规范撰写</li><li>提升技术表达和项目管理能力</li></ul>"
+    },
+    {
+      "id": "se_advanced_01",
+      "parentId": "se_advanced",
+      "name": "Web应用开发技术",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "前后端分离、Spring Boot/React框架",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>Web应用开发技术研究现代Web应用的开发框架和最佳实践。本课程系统讲解前后端分离架构、Spring Boot后端框架、React前端框架以及全栈开发技术。</p><h3>核心知识点</h3><ul><li>Web技术演进：MVC → 前后端分离 → SSR/SSG/ISR</li><li>Spring Boot框架：IoC/AOP、自动配置、数据访问(JPA/MyBatis)</li><li>RESTful API设计：资源建模、版本管理、Swagger文档</li><li>React框架：组件化开发、Hooks、状态管理(Redux/Zustand)</li><li>前端工程化：Webpack/Vite打包、ESLint代码规范</li><li>全栈安全：CORS、XSS防御、CSRF防护、认证JWT/OAuth2</li><li>包管理与构建：Maven/Gradle、npm、CI构建流水线</li></ul><h3>学习目标</h3><ul><li>掌握Spring Boot和React主流框架的开发</li><li>理解前后端分离架构的设计和实现</li><li>能够独立开发全栈Web应用</li><li>具备Web应用安全防护的基本意识</li></ul>"
+    },
+    {
+      "id": "se_advanced_02",
+      "parentId": "se_advanced",
+      "name": "移动应用开发",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "Android/iOS原生或跨平台(Flutter)开发",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>移动应用开发研究原生和跨平台移动应用开发技术。本课程涵盖Android原生开发(Kotlin/Java)和跨平台框架(Flutter/React Native)，帮助学生掌握移动应用的全栈开发能力。</p><h3>核心知识点</h3><ul><li>移动开发概述：平台对比、开发模式、App架构</li><li>Android开发：Activity/Fragment、Jetpack组件、MVVM架构</li><li>Flutter框架：Dart语言、Widget树、状态管理</li><li>跨平台对比：Flutter vs React Native vs 原生开发</li><li>移动UI设计：Material Design、自适应布局、动画</li><li>移动网络与数据：REST/GraphQL客户端、本地存储、缓存</li><li>App发布：打包签名、应用商店上架、版本更新</li></ul><h3>学习目标</h3><ul><li>掌握主流移动应用开发框架的使用</li><li>理解原生和跨平台开发的技术特点</li><li>能够独立完成移动App的需求分析和开发</li><li>了解App上架发布和版本管理流程</li></ul>"
+    },
+    {
+      "id": "se_advanced_03",
+      "parentId": "se_advanced",
+      "name": "微服务架构设计",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "Spring Cloud/Dubbo、服务治理与分布式事务",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>微服务架构设计研究如何将大型应用拆分为一组小型、自治的服务。本课程涵盖服务拆分、服务通信、数据一致性、服务治理和分布式事务等核心技术。</p><h3>核心知识点</h3><ul><li>微服务设计原则：单一职责、有界上下文、去中心化治理</li><li>服务拆分策略：按业务能力/子域拆分、拆分的粒度</li><li>服务通信：REST/gRPC通信协议、异步消息(Kafka/RabbitMQ)</li><li>服务发现与负载均衡：Consul/Nacos、Spring Cloud Gateway</li><li>分布式配置：配置中心、配置热更新、Apollo/Nacos Config</li><li>分布式事务：TCC、Saga模式、Seata框架、最终一致性</li><li>链路追踪与监控：SkyWalking/Zipkin、Prometheus + Grafana</li></ul><h3>学习目标</h3><ul><li>理解微服务架构的设计原则和适用场景</li><li>掌握服务拆分和通信的核心技术</li><li>了解分布式事务和数据一致性的解决方案</li><li>具备微服务系统设计和问题排查能力</li></ul>"
+    },
+    {
+      "id": "se_advanced_04",
+      "parentId": "se_advanced",
+      "name": "DevOps与持续交付",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "Docker/Kubernetes、CI/CD流水线设计",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>DevOps与持续交付研究如何通过文化、实践和工具实现软件的高频可靠交付。本课程涵盖容器化、Kubernetes编排、CI/CD流水线以及站点可靠性工程(SRE)。</p><h3>核心知识点</h3><ul><li>DevOps文化与理念：打破壁垒、自动化一切、度量驱动</li><li>Docker容器化：镜像构建(Dockerfile)、多阶段构建、镜像仓库</li><li>Kubernetes编排：Pod/Deployment/Service/Ingress/HPA</li><li>CI/CD流水线：Jenkins/GitLab CI、构建/测试/部署流水线</li><li>基础设施即代码：Terraform/Ansible/Pulumi、不可变基础设施</li><li>监控与告警：Prometheus、Grafana、Alertmanager、PagerDuty</li><li>SRE实践：SLI/SLO/SLA、错误预算、运维工单</li></ul><h3>学习目标</h3><ul><li>理解DevOps文化和持续交付的核心实践</li><li>掌握Docker和Kubernetes容器化部署</li><li>能够搭建CI/CD自动化部署流水线</li><li>了解SRE和站点可靠性保障的基本方法</li></ul>"
+    },
+    {
+      "id": "se_advanced_05",
+      "parentId": "se_advanced",
+      "name": "云原生应用开发",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "云原生12因子、Serverless与FaaS架构",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 8,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>云原生应用开发研究如何充分利用云计算平台的弹性和分布式优势来构建应用。本课程涵盖云原生架构设计、Serverless计算、服务网格和云数据库等核心技术。</p><h3>核心知识点</h3><ul><li>云原生概述：CNCF云原生定义、云原生技术图谱</li><li>云原生架构：12-Factor App、松耦合、可观测性</li><li>Serverless计算：AWS Lambda/函数计算、FaaS/BaaS、事件驱动</li><li>服务网格：Istio架构、Sidecar代理、流量管理、安全策略</li><li>云数据库：云原生数据库(Aurora/TiDB)、NoSQL云服务</li><li>消息队列云服务：AWS SQS/SNS、阿里云RocketMQ</li><li>云成本优化：资源预留、竞价实例、自动伸缩</li></ul><h3>学习目标</h3><ul><li>理解云原生应用的架构设计原则</li><li>掌握Serverless和Kubernetes的云上实践</li><li>了解服务网格和云数据库的核心概念</li><li>具备云原生应用开发和部署的基本能力</li></ul>"
+    },
+    {
+      "id": "dmt_basic_01",
+      "parentId": "dmt_basic",
+      "name": "程序设计基础（Python）",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "Python编程基础及其在数字媒体中的应用",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>Python程序设计是数字媒体技术专业的基础编程课程。本课程针对数字媒体专业的特点，重点讲解Python在图像处理、数据分析、自动化脚本等方面的应用。</p><h3>核心知识点</h3><ul><li>Python基础：语法、数据类型、流程控制、函数</li><li>数据结构：列表、元组、字典、集合、推导式</li><li>面向对象编程：类、继承、多态、特殊方法</li><li>文件与异常处理：文件读写、异常处理、上下文管理</li><li>NumPy科学计算：数组运算、矩阵操作、随机数</li><li>Pandas数据分析：DataFrame、数据清洗、统计分析</li><li>Matplotlib可视化：折线图/柱状图/散点图、图形定制</li></ul><h3>学习目标</h3><ul><li>掌握Python编程的核心语法和编程范式</li><li>能够使用NumPy和Pandas进行数据处理</li><li>掌握数据可视化的基本方法</li><li>为数字媒体数据处理和分析奠定基础</li></ul>"
+    },
+    {
+      "id": "dmt_basic_02",
+      "parentId": "dmt_basic",
+      "name": "数据结构",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "基础数据结构与算法",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 3,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>数据结构为数字媒体技术专业提供必要的算法和数据结构基础。本课程结合数字媒体领域的实际案例，讲解常用数据结构和算法的原理与应用。</p><h3>核心知识点</h3><ul><li>线性结构：列表、栈、队列在媒体数据处理中的应用</li><li>树与二叉树：二叉树遍历、图像四叉树、BSP树</li><li>图结构：场景图、依赖图、图的遍历</li><li>哈希表与索引：哈希在图像检索中的应用</li><li>排序与查找：各种排序算法的可视化对比</li><li>字符串与匹配：文本检索、正则表达式</li></ul><h3>学习目标</h3><ul><li>掌握常用数据结构的基本原理</li><li>理解数据结构在数字媒体领域的应用场景</li><li>能够分析和选择合适的数据结构解决问题</li><li>为图形学和图像处理算法学习奠定基础</li></ul>"
+    },
+    {
+      "id": "dmt_basic_03",
+      "parentId": "dmt_basic",
+      "name": "设计基础（色彩/构成）",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "色彩原理、平面/立体构成与视觉设计语言",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 1,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>设计基础(色彩/构成)是数字媒体技术的艺术基础课程，培养学生的视觉审美和设计表达能力。本课程涵盖色彩原理、平面构成、立体构成和视觉传达设计等内容。</p><h3>核心知识点</h3><ul><li>色彩原理：色相/饱和度/明度、色彩对比与调和、色彩心理</li><li>平面构成：点线面构成、重复/渐变/发射/特异构成形式</li><li>立体构成：空间感、体量感、材质与肌理</li><li>排版设计：网格系统、字体排印、版式原则</li><li>视觉传达：视觉层次、视觉动线、信息设计</li><li>设计思维：用户研究、头脑风暴、原型迭代</li></ul><h3>学习目标</h3><ul><li>掌握色彩理论和构成设计的基本方法</li><li>培养视觉审美能力和设计表达能力</li><li>理解版式设计和视觉传达的基本原则</li><li>为数字媒体内容创作提供设计基础</li></ul>"
+    },
+    {
+      "id": "dmt_basic_04",
+      "parentId": "dmt_basic",
+      "name": "摄影与摄像技术",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "摄影用光、构图、摄像机操作与视频拍摄",
+      "difficulty": "low",
+      "importance": "medium",
+      "estimatedHours": 32,
+      "teachingWeek": 2,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>摄影与摄像技术是数字媒体内容创作的基础技能课程。本课程涵盖摄影曝光控制、构图技巧、光线运用和视频拍摄等核心内容，培养学生的影像创作能力。</p><h3>核心知识点</h3><ul><li>曝光控制：光圈/快门/ISO的互易关系、曝光补偿</li><li>构图技巧：三分法则、引导线、框式构图、对称</li><li>光线运用：自然光/人造光、光质/光位/光比</li><li>镜头语言：景别、角度、运动镜头、蒙太奇</li><li>视频拍摄：稳定器使用、跟焦、色彩预设</li><li>后期基础：Lightroom调色、Premiere剪辑入门</li></ul><h3>学习目标</h3><ul><li>掌握摄影曝光和构图的基本技术</li><li>理解镜头语言和视频拍摄的基本技巧</li><li>能够独立完成摄影和短视频拍摄</li><li>具备基本的影像后期处理能力</li></ul>"
+    },
+    {
+      "id": "dmt_basic_05",
+      "parentId": "dmt_basic",
+      "name": "数字媒体导论",
+      "category": "专业基础课",
+      "symbolSize": 25,
+      "description": "数字媒体技术综述与行业趋势",
+      "difficulty": "low",
+      "importance": "medium",
+      "estimatedHours": 24,
+      "teachingWeek": 1,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>数字媒体导论是数字媒体技术专业的入门课程，系统介绍数字媒体的技术体系、产业生态和前沿趋势。涵盖数字图像、数字音频、数字视频、交互媒体等核心技术领域。</p><h3>核心知识点</h3><ul><li>数字媒体概述：定义、发展历程、技术体系</li><li>数字图像基础：像素/分辨率、色彩空间、图像格式</li><li>数字音频基础：采样/量化、音频编码、MIDI</li><li>数字视频基础：帧率/码率、视频编码(H.264/H.265)</li><li>交互媒体：人机交互、VR/AR/MR基本概念</li><li>数字媒体产业：影视、游戏、广告、教育行业应用</li><li>AIGC与数字媒体：AI绘画、AI视频生成、数字人</li></ul><h3>学习目标</h3><ul><li>建立数字媒体技术的知识体系框架</li><li>理解数字图像/音频/视频的基本原理</li><li>了解交互媒体和VR/AR的基本概念</li><li>关注AIGC等前沿技术在数字媒体中的应用</li></ul>"
+    },
+    {
+      "id": "dmt_core_01",
+      "parentId": "dmt_core",
+      "name": "计算机图形学",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "图形渲染管线、OpenGL编程与几何建模",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 4,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>计算机图形学研究使用计算机生成和处理图像的算法与技术。本课程涵盖图形渲染管线、几何建模、光照模型和纹理映射等核心内容，是游戏开发和影视特效的重要基础。</p><h3>核心知识点</h3><ul><li>图形系统概述：GPU架构、OpenGL/Vulkan/WebGL图形API</li><li>图形渲染管线：顶点处理、光栅化、片段处理、输出合并</li><li>几何建模：贝塞尔曲线、B样条曲面、多边形网格</li><li>变换与坐标：模型/视图/投影变换、齐次坐标</li><li>光照与着色：Phong/Blinn-Phong模型、PBR物理着色</li><li>纹理映射：UV映射、纹理过滤、法线贴图、环境贴图</li><li>阴影与全局光照：Shadow Map、光线追踪基础、环境光遮蔽</li></ul><h3>学习目标</h3><ul><li>理解计算机图形渲染管线的工作流程</li><li>掌握三维几何变换和光照模型的基本原理</li><li>能够使用图形API进行基本图形程序开发</li><li>为游戏开发和影视特效学习奠定基础</li></ul>"
+    },
+    {
+      "id": "dmt_core_02",
+      "parentId": "dmt_core",
+      "name": "数字图像处理",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "图像增强、滤波、分割与特征提取算法",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 4,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>数字图像处理研究使用计算机算法对图像进行分析和加工的技术。本课程涵盖图像增强、滤波、分割、特征提取和图像压缩等核心内容。</p><h3>核心知识点</h3><ul><li>图像数字化：采样/量化、分辨率、色彩空间转换</li><li>空域图像增强：直方图均衡化、对比度拉伸、平滑/锐化</li><li>频域处理：傅里叶变换、频域滤波(低通/高通/带通)</li><li>图像复原：退化模型、维纳滤波、去噪算法</li><li>图像分割：阈值分割、边缘检测(Canny/Sobel)、区域生长</li><li>形态学处理：膨胀/腐蚀、开闭运算、形态学重建</li><li>特征提取：SIFT/SURF/ORB特征、HOG描述符</li><li>图像压缩：JPEG标准、DCT变换、量化、熵编码</li></ul><h3>学习目标</h3><ul><li>掌握数字图像处理的基本理论和算法</li><li>能够使用OpenCV进行图像处理编程</li><li>理解图像增强、分割和特征提取的方法</li><li>具备图像处理应用系统开发的能力</li></ul>"
+    },
+    {
+      "id": "dmt_core_03",
+      "parentId": "dmt_core",
+      "name": "数字音视频处理",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "音频编解码、视频压缩与流媒体技术",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 5,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数字音视频处理研究数字音频和视频信号的编码、处理和分析技术。本课程涵盖音频编解码、视频压缩标准、流媒体技术和音视频编辑等内容。</p><h3>核心知识点</h3><ul><li>音频数字化：采样定理、量化量化噪声、音频格式</li><li>音频编解码：PCM、MP3、AAC编解码原理、感知编码</li><li>音频处理：滤波、均衡、混响、变调、降噪</li><li>视频数字化：色彩空间(YUV/RGB)、扫描格式、帧率</li><li>视频编码：预测编码、变换编码、运动估计/补偿</li><li>视频压缩标准：H.264/AVC、H.265/HEVC、H.266/VVC</li><li>流媒体技术：RTMP/HLS/DASH协议、自适应码率</li><li>音视频编辑：非线性编辑、时间线、转场、关键帧</li></ul><h3>学习目标</h3><ul><li>理解数字音频和视频的编解码原理</li><li>掌握视频压缩标准的技术特点</li><li>了解流媒体传输协议和工作原理</li><li>具备音视频编辑和处理的实践能力</li></ul>"
+    },
+    {
+      "id": "dmt_core_04",
+      "parentId": "dmt_core",
+      "name": "人机交互技术",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "交互设计原则、可用性工程与用户体验评估",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>人机交互技术研究用户与数字媒体系统的交互方式与设计方法。本课程涵盖交互设计原则、用户研究方法、交互原型和交互评估等核心内容。</p><h3>核心知识点</h3><ul><li>交互设计基础：交互范式、交互框架、交互风格</li><li>用户研究：访谈、问卷、观察法、用户测试</li><li>交互设计原则：尼尔森原则、Norman设计原则、Fitts定律</li><li>信息架构：内容组织、导航设计、搜索设计、标签系统</li><li>交互原型：低保真/高保真原型、交互式原型工具</li><li>可用性评估：启发式评估、认知走查、用户测试</li><li>多模态交互：手势交互、语音交互、眼动交互</li></ul><h3>学习目标</h3><ul><li>理解以用户为中心的交互设计理念</li><li>掌握用户研究和交互设计的基本方法</li><li>能够使用原型工具进行交互设计</li><li>具备可用性测试和评估的基本能力</li></ul>"
+    },
+    {
+      "id": "dmt_core_05",
+      "parentId": "dmt_core",
+      "name": "三维建模与动画技术",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "三维几何建模、骨骼动画与渲染技术",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>三维建模与动画技术研究三维数字内容的创建和动画制作技术。本课程涵盖三维建模方法、材质与纹理、骨骼绑定、角色动画和渲染输出等全流程内容。</p><h3>核心知识点</h3><ul><li>三维建模基础：多边形建模、NURBS建模、雕刻建模</li><li>曲面建模：细分曲面、贝塞尔曲面、放样/旋转建模</li><li>材质与纹理：PBR材质参数、UV展开、贴图烘焙</li><li>灯光与渲染：三点照明、HDRI环境光、全局光照渲染</li><li>骨骼绑定：骨骼层级、IK/FK解算器、蒙皮权重</li><li>关键帧动画：关键帧插值、动画曲线、动画状态机</li><li>角色动画：走路循环、动作捕捉数据应用、面部动画</li><li>渲染输出：渲染设置、分层渲染、后期合成</li></ul><h3>学习目标</h3><ul><li>掌握三维建模的基本方法和技巧</li><li>理解材质纹理和渲染的工作流程</li><li>掌握角色动画和关键帧动画的基本原理</li><li>具备三维数字内容创作的综合能力</li></ul>"
+    },
+    {
+      "id": "dmt_core_06",
+      "parentId": "dmt_core",
+      "name": "数字影视制作",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "非线性编辑、视觉特效与后期合成",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>数字影视制作研究数字技术在影视制作全流程中的应用。本课程涵盖前期策划、拍摄、后期剪辑、视觉特效和调色等各个环节。</p><h3>核心知识点</h3><ul><li>影视制作流程：策划、拍摄、剪辑、特效、调色、输出</li><li>影视叙事：镜头语言、蒙太奇、节奏控制</li><li>剪辑艺术：Premiere Pro时间线编辑、多机位剪辑</li><li>视觉特效：After Effects合成、跟踪稳定、抠像、粒子系统</li><li>调色技术：一级/二级调色、LUT应用、风格化调色</li><li>音频处理：配音配乐、音频编辑、混音处理</li><li>成片输出：导出格式、压缩参数、分发渠道适配</li></ul><h3>学习目标</h3><ul><li>了解数字影视制作的全流程</li><li>掌握视频剪辑和视觉特效的基本技能</li><li>理解影视叙事和镜头语言的运用</li><li>具备独立完成短片制作的能力</li></ul>"
+    },
+    {
+      "id": "dmt_core_07",
+      "parentId": "dmt_core",
+      "name": "用户界面设计（UI/UX）",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "界面设计原则、原型设计工具与设计系统",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 5,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>用户界面设计(UI/UX)研究数字产品界面的视觉设计和用户体验优化。本课程涵盖UI设计原则、设计系统、原型工具和用户测试等核心内容。</p><h3>核心知识点</h3><ul><li>UI设计基础：设计原则、视觉层次、色彩系统、字体系统</li><li>设计工具：Figma/Sketch使用、组件库、自动布局</li><li>设计系统：原子设计方法论、设计Token、组件规范</li><li>UX设计流程：用户研究、信息架构、交互设计、原型测试</li><li>响应式设计：断点系统、栅格布局、自适应组件</li><li>动效设计：微交互动效、转场动画、Lottie动画</li><li>设计交付：设计标注、切图导出、开发协作</li></ul><h3>学习目标</h3><ul><li>掌握UI/UX设计的核心原则和方法</li><li>熟练使用Figma等设计工具进行界面设计</li><li>理解设计系统和组件化设计思维</li><li>具备从用户研究到设计交付的全流程能力</li></ul>"
+    },
+    {
+      "id": "dmt_practice_01",
+      "parentId": "dmt_practice",
+      "name": "数字媒体创作实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "综合运用多种数字媒体工具完成创作项目",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 6,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>数字媒体创作实训是数字媒体技术专业的综合实践课程，要求学生综合运用多种数字媒体技术完成创意创作项目。</p><h3>核心知识点</h3><ul><li>项目策划：创意构思、故事板、风格确定</li><li>素材采集：拍摄、录音、素材整理</li><li>内容创作：图像处理、音视频编辑、动画制作</li><li>交互设计：界面设计、交互原型、动效实现</li><li>项目整合：多媒体合成、输出优化</li><li>作品展示：作品发布、展板设计、创作说明</li></ul><h3>学习目标</h3><ul><li>综合运用数字媒体技术进行创意创作</li><li>掌握多媒体项目制作的全流程</li><li>培养创意思维和艺术表达能力</li><li>积累数字媒体作品集创作经验</li></ul>"
+    },
+    {
+      "id": "dmt_practice_02",
+      "parentId": "dmt_practice",
+      "name": "游戏开发项目实践",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "基于Unity/Unreal引擎的游戏开发实践",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 80,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>游戏开发项目实践以Unity或Unreal引擎为载体，让学生体验从游戏概念到可玩产品的完整开发过程，培养游戏设计与开发能力。</p><h3>核心知识点</h3><ul><li>游戏设计：玩法设计、关卡设计、游戏平衡</li><li>引擎基础：Unity/Unreal编辑器、场景搭建、资源管理</li><li>脚本编程：C#/蓝图、游戏逻辑、输入控制</li><li>2D/3D游戏开发：精灵动画、物理引擎、碰撞检测</li><li>UI系统：游戏界面、HUD设计、交互反馈</li><li>音效集成：背景音乐、音效触发、混音</li><li>构建发布：平台适配、性能优化、打包发布</li></ul><h3>学习目标</h3><ul><li>掌握游戏引擎的基本使用方法</li><li>理解游戏开发的核心流程和设计模式</li><li>具备独立完成小型游戏开发的能力</li><li>培养游戏设计和用户体验意识</li></ul>"
+    },
+    {
+      "id": "dmt_practice_03",
+      "parentId": "dmt_practice",
+      "name": "虚拟现实项目实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "VR/AR内容开发与交互设计实践",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>虚拟现实项目实训通过VR/AR内容开发实践，让学生掌握沉浸式交互内容的创作流程和开发技术。</p><h3>核心知识点</h3><ul><li>VR/AR设备使用：头显、手柄、追踪设备</li><li>3D内容制作：场景建模、材质贴图、优化烘焙</li><li>交互开发：射线交互、手柄输入、UI交互</li><li>空间定位：SLAM定位、空间锚点、平面检测</li><li>性能优化：渲染优化、Draw Call控制、LOD</li><li>发布测试：设备部署、性能测试、用户体验评估</li></ul><h3>学习目标</h3><ul><li>掌握VR/AR应用开发的核心技术</li><li>能够独立完成VR/AR交互内容开发</li><li>理解沉浸式交互的设计原则</li><li>培养空间计算和虚拟现实应用的工程思维</li></ul>"
+    },
+    {
+      "id": "dmt_practice_04",
+      "parentId": "dmt_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "数字媒体技术方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是数字媒体技术专业本科学习的综合实践环节，要求学生独立完成数字媒体技术方向的创新性课题或作品。</p><h3>核心知识点</h3><ul><li>选题与开题：行业调研、技术可行性、创作方向确定</li><li>方案设计：技术路线、创作风格、制作计划</li><li>内容创作：素材制作、技术实现、迭代优化</li><li>作品整合：系统集成、测试调试、成品输出</li><li>论文撰写：创作思路、技术分析、创新点总结</li><li>作品展示：展映准备、演示文档、答辩</li></ul><h3>学习目标</h3><ul><li>综合运用数字媒体技术完成创新性作品或课题</li><li>培养独立创作和技术研发的能力</li><li>掌握学术论文和作品说明的规范撰写</li><li>提升作品展示和技术表达能力</li></ul>"
+    },
+    {
+      "id": "dmt_advanced_01",
+      "parentId": "dmt_advanced",
+      "name": "虚拟现实（VR）技术",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "VR头显、空间定位、手势交互与沉浸式体验",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>虚拟现实(VR)技术研究如何利用计算机生成沉浸式三维环境。本课程涵盖VR系统架构、立体显示、空间定位、交互技术和VR内容开发等核心内容。</p><h3>核心知识点</h3><ul><li>VR技术概述：发展历程、系统组成、3I特性(沉浸/交互/构想)</li><li>立体显示：双目视差、头显光学、视场角、刷新率</li><li>空间定位：Inside-Out/Outside-In追踪、SLAM、IMU融合</li><li>VR交互：手柄交互、手势识别、眼动追踪、触觉反馈</li><li>VR渲染：注视点渲染、异步时间扭曲、多分辨率渲染</li><li>VR开发：Unity XR Toolkit、SteamVR、OpenXR标准</li><li>VR应用：游戏、教育、医疗、建筑可视化</li></ul><h3>学习目标</h3><ul><li>理解VR系统的技术架构和核心原理</li><li>掌握VR交互和渲染的关键技术</li><li>能够进行VR内容开发和优化</li><li>了解VR在不同行业的应用场景</li></ul>"
+    },
+    {
+      "id": "dmt_advanced_02",
+      "parentId": "dmt_advanced",
+      "name": "增强现实（AR）技术",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "AR眼镜、SLAM定位与虚实融合技术",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>增强现实(AR)技术研究将计算机生成的虚拟信息叠加到真实世界的技术。本课程涵盖AR显示技术、跟踪注册、虚实融合和AR开发等内容。</p><h3>核心知识点</h3><ul><li>AR技术概述：AR vs VR/MR、AR系统架构、关键技术</li><li>AR显示技术：光学透视、视频透视、投影AR</li><li>跟踪注册：视觉SLAM、平面检测、图像识别与追踪</li><li>3D注册：PNP算法、姿态估计、坐标系对齐</li><li>AR交互：空中手势、平面交互、虚实遮挡</li><li>AR开发：ARCore/ARKit、WebAR、AR云</li><li>AR应用：教育、营销、导航、工业维修</li></ul><h3>学习目标</h3><ul><li>理解AR系统的技术原理和体系架构</li><li>掌握视觉跟踪和3D注册的基本技术</li><li>能够进行AR应用开发和部署</li><li>了解AR在不同领域的应用和前景</li></ul>"
+    },
+    {
+      "id": "dmt_advanced_03",
+      "parentId": "dmt_advanced",
+      "name": "游戏引擎与应用",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "Unity/Unreal Engine深度开发与游戏优化",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>游戏引擎与应用深入研究Unity或Unreal Engine等游戏引擎的底层机制和高级开发技术。本课程涵盖引擎架构、渲染管线、物理系统和性能优化等内容。</p><h3>核心知识点</h3><ul><li>引擎架构：引擎模块划分、资源管理、插件系统</li><li>渲染管线：Command Buffer、后处理栈、自定义Shader</li><li>物理系统：碰撞检测算法、物理材质、刚体与布料</li><li>动画系统：动画状态机、Blend Tree、IK、Timeline</li><li>AI系统：行为树、寻路算法(NavMesh)、感知系统</li><li>网络同步：帧同步/状态同步、预测插值、RPC</li><li>性能优化：Profiler工具、CPU/GPU优化、内存管理</li></ul><h3>学习目标</h3><ul><li>深入理解游戏引擎的内部工作机制</li><li>掌握高级渲染和物理系统的开发技术</li><li>能够进行游戏性能分析和优化</li><li>具备使用引擎开发中大型游戏的能力</li></ul>"
+    },
+    {
+      "id": "dmt_advanced_04",
+      "parentId": "dmt_advanced",
+      "name": "交互装置与新媒体艺术",
+      "category": "前沿方向",
+      "symbolSize": 25,
+      "description": "传感器交互、投影映射与数字艺术创作",
+      "difficulty": "medium",
+      "importance": "low",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>交互装置与新媒体艺术研究艺术与科技融合的创作实践。本课程涵盖传感器交互、投影映射、生成艺术和数字装置设计等内容。</p><h3>核心知识点</h3><ul><li>新媒体艺术概述：数字艺术发展、交互艺术特征</li><li>传感器交互：动作捕捉、距离传感、触摸感应</li><li>投影映射：投影校正、投影融合、Mapping技术</li><li>生成艺术：Processing/p5.js编程、算法艺术</li><li>声音交互：声控交互、数据声音化、互动音效</li><li>数字装置设计：空间设计、观众互动、装置集成</li><li>展览与呈现：展陈设计、设备选型、安装调试</li></ul><h3>学习目标</h3><ul><li>理解新媒体艺术的技术与艺术融合方式</li><li>掌握交互装置的核心技术实现方法</li><li>能够独立设计和制作交互艺术装置</li><li>培养跨学科的艺术与技术创新能力</li></ul>"
+    },
+    {
+      "id": "dmt_advanced_05",
+      "parentId": "dmt_advanced",
+      "name": "AI生成内容（AIGC）",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "AI绘画、视频生成、大模型在创意领域应用",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 8,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>AI生成内容(AIGC)研究人工智能技术在数字内容创作领域的应用。本课程涵盖AI绘画、AI视频生成、大语言模型创意应用和数字人技术等内容。</p><h3>核心知识点</h3><ul><li>AIGC概述：技术演进、应用场景、产业影响</li><li>AI绘画：Stable Diffusion、Midjourney原理、提示工程</li><li>ControlNet与图像控制：姿态控制、深度图引导、线稿上色</li><li>AI视频生成：Runway/Pika、Frame Interpolation、视频风格化</li><li>大语言模型创意：ChatGPT文案生成、剧本创作、NPC对话</li><li>数字人技术：形象创建、声音克隆、动作驱动</li><li>版权与伦理：AI创作版权、深度伪造监管、伦理准则</li></ul><h3>学习目标</h3><ul><li>理解AIGC的核心技术原理和发展趋势</li><li>掌握AI绘画和图像生成的工具使用与提示技巧</li><li>了解AI视频生成和数字人技术的原理</li><li>关注AIGC的版权和伦理议题</li></ul>"
+    },
+    {
+      "id": "ds_basic_01",
+      "parentId": "ds_basic",
+      "name": "程序设计基础（Python）",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "Python编程基础、NumPy/Pandas数据处理库",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 1,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>Python程序设计是数据科学最核心的编程工具。本课程从Python基础语法开始，重点讲解NumPy、Pandas、Matplotlib等数据科学生态的核心库，培养学生的数据编程能力。</p><h3>核心知识点</h3><ul><li>Python核心：数据类型、控制流、函数、面向对象编程</li><li>NumPy科学计算：ndarray、向量化运算、线性代数、随机数</li><li>Pandas数据分析：Series/DataFrame、数据清洗、分组聚合</li><li>数据可视化：Matplotlib、Seaborn图表定制与美化</li><li>文件与数据IO：CSV/Excel/JSON读写、数据库连接</li><li>正则表达式与文本处理：模式匹配、文本清洗</li></ul><h3>学习目标</h3><ul><li>掌握Python编程的核心技能</li><li>熟练使用NumPy和Pandas进行数据处理</li><li>能够使用Matplotlib进行数据可视化</li><li>为后续数据科学课程提供编程工具基础</li></ul>"
+    },
+    {
+      "id": "ds_basic_02",
+      "parentId": "ds_basic",
+      "name": "概率论与数理统计",
+      "category": "专业基础课",
+      "symbolSize": 30,
+      "description": "概率分布、假设检验、回归分析与贝叶斯统计",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 2,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>概率论与数理统计是数据科学的重要理论基础。本课程涵盖概率分布、随机变量、统计推断、假设检验和回归分析等核心内容，为机器学习与数据分析提供数学支撑。</p><h3>核心知识点</h3><ul><li>概率论基础：随机事件、概率公理、条件概率、贝叶斯公式</li><li>随机变量：离散/连续型变量、分布函数、期望与方差</li><li>常见分布：二项/泊松/正态/指数/均匀分布</li><li>大数定律与中心极限定理</li><li>统计推断：点估计(矩估计/MLE)、区间估计</li><li>假设检验：t检验/卡方检验/F检验、p值、第一/二类错误</li><li>相关与回归：线性回归、相关系数、多元回归分析</li></ul><h3>学习目标</h3><ul><li>掌握概率论的基本概念和计算方法</li><li>理解统计推断和假设检验的原理</li><li>能够运用统计方法进行数据分析</li><li>为机器学习算法学习奠定数学基础</li></ul>"
+    },
+    {
+      "id": "ds_basic_03",
+      "parentId": "ds_basic",
+      "name": "线性代数",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "矩阵运算、特征值分解与SVD分解",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 1,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>线性代数是数据科学的数学基础，为机器学习算法和数据处理提供核心工具。本课程涵盖矩阵运算、向量空间、特征值分解和矩阵分解等内容。</p><h3>核心知识点</h3><ul><li>线性方程组：高斯消元法、矩阵秩、齐次/非齐次方程组</li><li>矩阵代数：矩阵运算、逆矩阵、行列式、分块矩阵</li><li>向量空间：向量空间、基与维数、内积空间、正交性</li><li>特征值与特征向量：特征分解、对角化、谱分解</li><li>SVD分解：奇异值分解、降维与压缩、伪逆</li><li>矩阵微积分：梯度、Hessian矩阵、矩阵求导</li><li>线性代数应用：PCA、线性回归、推荐系统矩阵分解</li></ul><h3>学习目标</h3><ul><li>掌握线性代数的核心概念和计算方法</li><li>理解特征值分解和SVD分解的数学原理</li><li>能够运用线性代数理解机器学习算法</li><li>掌握Python实现线性代数运算的方法</li></ul>"
+    },
+    {
+      "id": "ds_basic_04",
+      "parentId": "ds_basic",
+      "name": "数据库原理",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "关系数据库、NoSQL数据库与SQL语言",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 3,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>数据库原理为数据科学提供数据存储和管理的基础知识。本课程涵盖关系数据库和NoSQL数据库的核心技术，重点讲解SQL数据查询和数据操作。</p><h3>核心知识点</h3><ul><li>关系模型：关系、元组、属性、键、完整性约束</li><li>SQL查询：SELECT、JOIN、子查询、聚合函数、窗口函数</li><li>数据管理：DDL表定义、索引创建、视图、权限管理</li><li>数据库设计：ER图、范式、规范化实践</li><li>NoSQL数据库：MongoDB文档数据库、Redis缓存数据库</li><li>数据仓库基础：OLTP vs OLAP、维度建模、ETL流程</li></ul><h3>学习目标</h3><ul><li>精通SQL数据查询语言</li><li>掌握关系数据库设计的基本方法</li><li>了解NoSQL数据库的特性和应用场景</li><li>为大数据存储和处理奠定基础</li></ul>"
+    },
+    {
+      "id": "ds_basic_05",
+      "parentId": "ds_basic",
+      "name": "数据结构",
+      "category": "专业基础课",
+      "symbolSize": 28,
+      "description": "基础数据结构与算法设计与分析",
+      "difficulty": "medium",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 3,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>数据结构为数据科学专业提供算法设计和数据组织的基础。本课程结合数据科学实际需求，讲解常用数据结构和算法，重点强调其在数据处理和分析中的应用。</p><h3>核心知识点</h3><ul><li>线性结构：数组、链表、栈、队列在数据处理中的应用</li><li>树形结构：二叉树、B树/B+树在数据库索引中的应用</li><li>哈希表：散列设计、一致性哈希在分布式系统中的应用</li><li>堆与优先队列：Top-K问题、流数据处理</li><li>排序与查找：外排序、并行排序在大数据场景中的应用</li><li>图结构：图数据处理、PageRank算法</li></ul><h3>学习目标</h3><ul><li>理解常用数据结构在数据场景中的应用</li><li>掌握算法复杂度分析的基本方法</li><li>了解大数据场景下的数据结构选择</li><li>为算法设计与分析奠定基础</li></ul>"
+    },
+    {
+      "id": "ds_core_01",
+      "parentId": "ds_core",
+      "name": "数据科学导论",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "数据科学全流程：采集、清洗、探索与建模",
+      "difficulty": "low",
+      "importance": "high",
+      "estimatedHours": 32,
+      "teachingWeek": 3,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>数据科学导论是数据科学与大数据技术专业的入门核心课程，系统介绍数据科学的工作流程、核心方法和工具生态。涵盖数据采集、清洗、探索、建模、部署全链路。</p><h3>核心知识点</h3><ul><li>数据科学流程：CRISP-DM、数据获取、准备、建模、评估、部署</li><li>数据采集：Web爬虫、API调用、数据库查询、日志采集</li><li>数据清洗：缺失值处理、异常值检测、数据标准化</li><li>探索性数据分析(EDA)：统计摘要、分布分析、相关性分析</li><li>特征工程：特征编码、特征选择、特征提取</li><li>模型建立：机器学习建模流程、模型选择、交叉验证</li><li>结果呈现：数据可视化、分析报告、决策建议</li></ul><h3>学习目标</h3><ul><li>建立数据科学完整工作流程的认知</li><li>掌握数据预处理和探索性分析的基本方法</li><li>了解特征工程和机器学习建模的基本概念</li><li>培养数据驱动决策的思维方式</li></ul>"
+    },
+    {
+      "id": "ds_core_02",
+      "parentId": "ds_core",
+      "name": "大数据存储技术（Hadoop/Spark）",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "HDFS、MapReduce、HBase与Spark计算框架",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>大数据存储技术(Hadoop/Spark)研究海量数据的分布式存储和计算技术。本课程深入讲解HDFS、MapReduce、HBase、YARN等Hadoop生态系统核心组件，以及Spark大数据计算框架。</p><h3>核心知识点</h3><ul><li>HDFS分布式文件系统：Block复制策略、NameNode HA、联邦机制</li><li>MapReduce编程：Split/Map/Shuffle/Reduce流程、Partitioner</li><li>YARN资源调度：Container管理、调度器(FIFO/Capacity/Fair)</li><li>HBase列式存储：Region拆分、MemStore、HFile、LSM-Tree</li><li>Spark Core：RDD依赖/血统、Stage划分、DAG调度</li><li>Spark SQL：DataFrame/Dataset、Catalyst优化器、Tungsten</li><li>Spark Streaming：DStream、Structured Streaming、状态管理</li></ul><h3>学习目标</h3><ul><li>理解Hadoop和Spark的核心架构设计</li><li>掌握HDFS存储和MapReduce计算模型</li><li>能够使用Spark进行大数据处理和分析</li><li>具备大数据平台组件选型和集成能力</li></ul>"
+    },
+    {
+      "id": "ds_core_03",
+      "parentId": "ds_core",
+      "name": "数据挖掘",
+      "category": "专业核心课",
+      "symbolSize": 32,
+      "description": "分类、聚类、关联规则与异常检测算法",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 5,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数据挖掘研究从大量数据中发现有价值模式和知识的技术。本课程涵盖分类、聚类、关联规则、异常检测和序列模式挖掘等核心算法。</p><h3>核心知识点</h3><ul><li>数据预处理：数据清洗、集成、变换、规约</li><li>分类算法：决策树(C4.5/CART)、朴素贝叶斯、KNN、SVM</li><li>聚类分析：K-Means、层次聚类、DBSCAN、GMM</li><li>关联规则：Apriori算法、FP-Growth、关联评估</li><li>异常检测：统计方法、LOF、孤立森林、One-Class SVM</li><li>序列模式：AprioriAll/GSP算法、序列分类</li><li>Web挖掘：Web使用挖掘、社交网络分析、推荐系统</li></ul><h3>学习目标</h3><ul><li>掌握数据挖掘的核心算法和建模流程</li><li>能够应用数据挖掘算法解决实际问题</li><li>理解不同算法的适用场景和参数调优</li><li>具备数据挖掘项目的实施能力</li></ul>"
+    },
+    {
+      "id": "ds_core_04",
+      "parentId": "ds_core",
+      "name": "机器学习",
+      "category": "专业核心课",
+      "symbolSize": 35,
+      "description": "监督/无监督/半监督学习、模型评估与调优",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 64,
+      "teachingWeek": 5,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>机器学习是数据科学的核心课程，研究计算机从数据中学习模式的方法。本课程系统讲解监督学习、无监督学习和模型评估等核心内容，培养机器学习建模和调优能力。</p><h3>核心知识点</h3><ul><li>机器学习概述：类型、术语、模型选择、偏差-方差权衡</li><li>线性模型：线性回归、岭回归、Lasso、逻辑回归</li><li>决策树与集成：RF、AdaBoost、GBDT、XGBoost、LightGBM</li><li>支持向量机：最大间隔、核技巧、软间隔SVM</li><li>聚类：K-Means、DBSCAN、层次聚类、聚类评估</li><li>降维：PCA、LDA、t-SNE、UMAP</li><li>模型评估与调优：交叉验证、网格搜索、贝叶斯优化</li><li>模型解释：特征重要性、SHAP、LIME</li></ul><h3>学习目标</h3><ul><li>掌握机器学习核心算法原理和应用方法</li><li>能够使用Scikit-learn等框架建立机器学习模型</li><li>具备模型评估和超参数调优的能力</li><li>理解模型可解释性和特征重要性的分析方法</li></ul>"
+    },
+    {
+      "id": "ds_core_05",
+      "parentId": "ds_core",
+      "name": "数据可视化",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "可视化编码、交互设计、D3/ECharts/Tableau",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 6,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>数据可视化研究如何将数据以图形方式有效呈现和传达。本课程涵盖可视化编码原理、图表类型选择、交互设计和可视化工具使用等内容。</p><h3>核心知识点</h3><ul><li>可视化编码：标记、视觉通道、图表类型分类</li><li>数据分布可视化：直方图、箱线图、密度图、小提琴图</li><li>比较与趋势可视化：折线图、柱状图、面积图、瀑布图</li><li>关系可视化：散点图、气泡图、相关性矩阵、网络图</li><li>地理空间可视化：地图、热力图、流线图、等值线</li><li>交互与动效：Brushing、联动、动画过渡、钻取</li><li>可视化工具：ECharts/D3.js、Tableau/Power BI、Plotly</li><li>可视化设计：色彩选择、标签优化、叙事引导</li></ul><h3>学习目标</h3><ul><li>掌握数据可视化的核心编码原理和设计原则</li><li>能够使用主流可视化工具创建有效的图表</li><li>理解交互式可视化的设计方法</li><li>具备数据叙事和信息传达的能力</li></ul>"
+    },
+    {
+      "id": "ds_core_06",
+      "parentId": "ds_core",
+      "name": "大数据分析技术",
+      "category": "专业核心课",
+      "symbolSize": 30,
+      "description": "数据仓库、OLAP分析与BI工具",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 6,
+      "sortOrder": 6,
+      "learningContent": "<h3>课程概述</h3><p>大数据分析技术研究如何利用大数据工具进行全量数据分析。本课程涵盖数据仓库建模、OLAP分析、BI工具使用和大数据分析方法等内容。</p><h3>核心知识点</h3><ul><li>数据仓库建模：星型/雪花型模型、维度建模、缓慢变化维</li><li>ETL数据集成：数据抽取、清洗、转换、加载流程</li><li>OLAP分析：多维数据模型、CUBE、Roll-up/Drill-down</li><li>BI工具：Apache Superset/Tableau/Looker、看板设计</li><li>用户行为分析：留存分析、漏斗分析、路径分析</li><li>A/B测试：实验设计、假设检验、效果评估</li><li>数据驱动决策：指标体系、数据产品、增长分析</li></ul><h3>学习目标</h3><ul><li>掌握数据仓库建模和OLAP分析方法</li><li>能够使用BI工具进行数据分析和看板制作</li><li>理解用户行为分析和A/B测试的统计方法</li><li>培养数据驱动业务决策的思维方式</li></ul>"
+    },
+    {
+      "id": "ds_core_07",
+      "parentId": "ds_core",
+      "name": "分布式计算系统",
+      "category": "专业核心课",
+      "symbolSize": 28,
+      "description": "分布式原理、一致性算法与并行计算框架",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 48,
+      "teachingWeek": 6,
+      "sortOrder": 7,
+      "learningContent": "<h3>课程概述</h3><p>分布式计算系统研究大规模计算的分布式算法和系统架构。本课程涵盖分布式系统基础理论、一致性算法、分布式计算框架和分布式存储系统等内容。</p><h3>核心知识点</h3><ul><li>分布式系统基础：CAP理论、FLP不可能定理、时钟与顺序</li><li>一致性算法：Paxos、Raft、ZAB协议、Gossip协议</li><li>分布式存储：GFS/BigTable设计、Ceph架构、对象存储</li><li>分布式计算：MapReduce模型、数据倾斜、推测执行</li><li>分布式协调：ZooKeeper/Etcd、分布式锁、Leader选举</li><li>分布式消息：Kafka架构、存储机制、ISR复制</li><li>分布式事务：2PC/3PC、TCC、Saga模式</li></ul><h3>学习目标</h3><ul><li>理解分布式系统的核心理论和设计挑战</li><li>掌握一致性算法和分布式协调的工作原理</li><li>了解主流分布式计算和存储系统的架构</li><li>具备分布式系统设计和问题排查的基本能力</li></ul>"
+    },
+    {
+      "id": "ds_practice_01",
+      "parentId": "ds_practice",
+      "name": "大数据平台部署实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "Hadoop/Spark集群搭建、配置与数仓建设",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>大数据平台部署实训通过实际搭建Hadoop/Spark大数据平台，训练学生的大数据集群规划、部署配置和运维管理能力。</p><h3>核心知识点</h3><ul><li>集群规划：硬件配置、网络拓扑、角色分配</li><li>Hadoop部署：HDFS/YARN集群搭建、配置文件、高可用部署</li><li>Spark部署：Spark on YARN模式、配置优化</li><li>Hive数据仓库：Hive安装、MySQL元数据、分区表设计</li><li>Kafka部署：Broker配置、Topic管理、生产者/消费者配置</li><li>平台监控：Ambari/Cloudera Manager、Grafana监控</li><li>性能调优：参数优化、资源分配、并行度调整</li></ul><h3>学习目标</h3><ul><li>掌握大数据平台的架构规划和集群搭建方法</li><li>能够独立部署Hadoop/Spark生态系统组件</li><li>具备大数据平台监控和性能调优能力</li><li>培养大数据运维管理的工程实践能力</li></ul>"
+    },
+    {
+      "id": "ds_practice_02",
+      "parentId": "ds_practice",
+      "name": "数据分析综合实训",
+      "category": "实践环节",
+      "symbolSize": 30,
+      "description": "真实数据集的全流程分析与报告撰写",
+      "difficulty": "medium",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>数据分析综合实训使用真实数据集进行从数据清洗到分析报告的全流程分析实践，培养学生的数据分析思维和工具使用能力。</p><h3>核心知识点</h3><ul><li>业务理解：行业背景、分析目标、评估标准</li><li>数据获取与清洗：多数据源整合、数据质量评估</li><li>探索性分析：统计描述、分布分析、异常检测</li><li>分析与建模：假设检验、回归分析、分类/聚类建模</li><li>洞察与建议：分析结论、业务建议、行动方案</li><li>报告撰写：分析报告、可视化看板、演示</li></ul><h3>学习目标</h3><ul><li>掌握数据分析项目的完整工作流程</li><li>能够独立完成从数据获取到分析报告的全过程</li><li>培养数据驱动决策的分析思维能力</li><li>提升数据表达和技术沟通能力</li></ul>"
+    },
+    {
+      "id": "ds_practice_03",
+      "parentId": "ds_practice",
+      "name": "数据挖掘项目实践",
+      "category": "实践环节",
+      "symbolSize": 28,
+      "description": "从数据预处理到模型部署的完整项目",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>数据挖掘项目实践通过完整的数据挖掘项目，让学生经历从业务理解到模型部署的全流程，培养数据挖掘工程化实践能力。</p><h3>核心知识点</h3><ul><li>项目选题：实际业务场景、问题定义、成功标准</li><li>数据探索与预处理：数据质量分析、特征构造, 样本平衡</li><li>建模：算法选择、模型训练、超参数调优</li><li>模型评估：交叉验证、混淆矩阵、AUC-ROC、KS值</li><li>模型解释：特征重要性、SHAP分析、部分依赖图</li><li>模型部署：模型序列化、API服务、容器化部署</li><li>项目总结：技术方案、实验结果、经验教训</li></ul><h3>学习目标</h3><ul><li>掌握数据挖掘项目的完整实施流程</li><li>能够独立完成从数据预处理到模型构建的全过程</li><li>具备模型评估和解释的分析能力</li><li>了解模型工程化部署的基本方法</li></ul>"
+    },
+    {
+      "id": "ds_practice_04",
+      "parentId": "ds_practice",
+      "name": "毕业设计",
+      "category": "实践环节",
+      "symbolSize": 32,
+      "description": "数据科学方向综合毕业课题研究",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 240,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>毕业设计是数据科学与大数据技术专业本科学习的综合实践环节，要求学生在教师指导下独立完成数据科学方向的课题研究或工程项目。</p><h3>核心知识点</h3><ul><li>选题与开题：文献调研、研究问题定义、技术路线</li><li>数据准备：数据采集、数据清洗、特征工程</li><li>模型构建：算法选型、模型训练、调优迭代</li><li>实验分析：对比实验、结果分析、论证</li><li>论文撰写：研究方法、实验结果、创新点总结</li><li>答辩：关键技术讲解、成果演示</li></ul><h3>学习目标</h3><ul><li>培养独立从事数据科学研究与实践的能力</li><li>综合运用数据采集、分析、建模全流程技术</li><li>掌握学术论文的规范撰写方法</li><li>提升科学研究和技术表达能力</li></ul>"
+    },
+    {
+      "id": "ds_advanced_01",
+      "parentId": "ds_advanced",
+      "name": "深度学习框架应用",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "TensorFlow/PyTorch框架、模型训练与推理优化",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 56,
+      "teachingWeek": 7,
+      "sortOrder": 1,
+      "learningContent": "<h3>课程概述</h3><p>深度学习框架应用研究如何使用TensorFlow和PyTorch等主流框架构建和训练深度学习模型。本课程涵盖框架核心API、模型构建、训练优化和推理部署等内容。</p><h3>核心知识点</h3><ul><li>PyTorch核心：Tensor运算、Autograd自动求导、nn.Module</li><li>数据加载：Dataset/DataLoader、数据增强、分布式数据</li><li>模型构建：CNN/RNN/Transformer模型搭建、参数初始化</li><li>训练优化：优化器(SGD/Adam)、学习率调度、正则化</li><li>GPU训练：CUDA编程、多GPU训练、混合精度训练</li><li>模型部署：ONNX导出、TensorRT推理加速、TorchServe</li><li>分布式训练：DataParallel/DDP/FSDP、ZeRO优化</li></ul><h3>学习目标</h3><ul><li>掌握PyTorch深度学习框架的核心功能</li><li>能够构建和训练CNN/RNN/Transformer等常见模型</li><li>掌握模型优化和部署的实用技术</li><li>具备深度学习工程化开发和调优能力</li></ul>"
+    },
+    {
+      "id": "ds_advanced_02",
+      "parentId": "ds_advanced",
+      "name": "自然语言处理技术",
+      "category": "前沿方向",
+      "symbolSize": 30,
+      "description": "BERT/GPT系列模型、大语言模型微调与应用",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 48,
+      "teachingWeek": 7,
+      "sortOrder": 2,
+      "learningContent": "<h3>课程概述</h3><p>自然语言处理技术(NLP)研究计算机理解和生成人类语言的技术。本课程从传统统计方法到基于大模型的前沿技术，涵盖文本分类、序列标注、语义理解和文本生成等任务。</p><h3>核心知识点</h3><ul><li>文本预处理：分词、词性标注、实体识别、依存分析</li><li>词表示方法：词嵌入(Word2Vec/GloVe)、ELMo、BERT嵌入</li><li>文本分类：CNN/RNN分类模型、预训练模型微调</li><li>序列标注：BiLSTM-CRF、Span预测、嵌套实体识别</li><li>机器阅读理解：MRC模型、答案抽取、推理</li><li>文本生成：Seq2Seq + Attention、Transformer、GPT</li><li>大语言模型：LLM微调(LoRA/QLoRA)、Prompt Engineering、RAG</li><li>NLP应用：对话系统、信息抽取、文本摘要</li></ul><h3>学习目标</h3><ul><li>理解NLP的核心任务和技术路线</li><li>掌握预训练语言模型的使用和微调方法</li><li>了解大语言模型的原理和应用范式</li><li>具备NLP应用系统开发的基本能力</li></ul>"
+    },
+    {
+      "id": "ds_advanced_03",
+      "parentId": "ds_advanced",
+      "name": "推荐系统设计",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "协同过滤、内容推荐、多目标排序与冷启动",
+      "difficulty": "high",
+      "importance": "medium",
+      "estimatedHours": 40,
+      "teachingWeek": 8,
+      "sortOrder": 3,
+      "learningContent": "<h3>课程概述</h3><p>推荐系统设计研究如何在海量信息中为用户主动推荐感兴趣的内容。本课程涵盖协同过滤、内容推荐、排序模型、多目标优化和冷启动等核心技术。</p><h3>核心知识点</h3><ul><li>推荐系统概述：推荐问题定义、评估指标(精确率/召回率/NDCG)</li><li>协同过滤：User-based/Item-based协同过滤、矩阵分解(SVD++)</li><li>内容推荐：基于内容/标签/知识图谱的推荐</li><li>深度学习推荐：Wide & Deep、DeepFM、DIN、DIEN</li><li>多目标排序：MMOE/PLE多任务学习、样本权重</li><li>特征工程：用户/物品特征、上下文特征、交叉特征</li><li>冷启动：用户冷启动、物品冷启动、Explore-Exploit</li><li>推荐系统评估：离线评估、在线A/B测试、效果监控</li></ul><h3>学习目标</h3><ul><li>掌握推荐系统的核心算法和架构设计</li><li>能够实现协同过滤和深度推荐模型</li><li>理解多目标优化和冷启动问题的解决方案</li><li>具备推荐系统评估和迭代优化的能力</li></ul>"
+    },
+    {
+      "id": "ds_advanced_04",
+      "parentId": "ds_advanced",
+      "name": "金融大数据分析",
+      "category": "前沿方向",
+      "symbolSize": 25,
+      "description": "量化交易策略、风控模型与金融数据挖掘",
+      "difficulty": "high",
+      "importance": "low",
+      "estimatedHours": 32,
+      "teachingWeek": 8,
+      "sortOrder": 4,
+      "learningContent": "<h3>课程概述</h3><p>金融大数据分析研究大数据技术在金融领域的应用。本课程涵盖量化交易策略、风险模型、金融时间序列分析和金融数据挖掘等内容。</p><h3>核心知识点</h3><ul><li>金融市场基础：市场结构、金融产品、市场微观结构</li><li>金融时间序列：平稳性、自相关、ARIMA/GARCH模型</li><li>量化交易策略：趋势跟踪、均值回归、统计套利</li><li>风险模型：VaR/CVaR计算、风险管理、压力测试</li><li>信贷风控：评分卡模型、违约预测、反欺诈</li><li>金融NLP：财报分析、舆情分析、事件驱动策略</li><li>智能投顾：资产配置、组合优化、再平衡策略</li></ul><h3>学习目标</h3><ul><li>理解金融大数据分析的核心应用场景</li><li>掌握金融时间序列分析和量化策略方法</li><li>了解风险建模和信贷风控的基本技术</li><li>具备金融科技领域数据分析的基本能力</li></ul>"
+    },
+    {
+      "id": "ds_advanced_05",
+      "parentId": "ds_advanced",
+      "name": "实时数据处理（流计算）",
+      "category": "前沿方向",
+      "symbolSize": 28,
+      "description": "Kafka/Flink/Storm流式计算框架与CEP",
+      "difficulty": "high",
+      "importance": "high",
+      "estimatedHours": 40,
+      "teachingWeek": 7,
+      "sortOrder": 5,
+      "learningContent": "<h3>课程概述</h3><p>实时数据处理(流计算)研究如何对持续到达的数据进行实时处理和分析。本课程涵盖流式计算框架、事件时间处理、状态管理和实时数仓等核心技术。</p><h3>核心知识点</h3><ul><li>流计算概述：流处理 vs 批处理、实时计算的应用场景</li><li>Kafka消息队列：架构、分区、副本、消费者Rebalance</li><li>Flink计算框架：DataStream API、算子链、Checkpoint机制</li><li>事件时间处理：Event Time/Processing Time、水位线(Watermark)</li><li>Flink状态管理：Keyed State/Operator State、状态后端</li><li>CEP复杂事件处理：事件模式匹配、时序检测</li><li>实时数仓：实时ETL、实时OLAP(Druid/ClickHouse)</li><li>实时应用：实时大屏、实时风控、实时推荐</li></ul><h3>学习目标</h3><ul><li>理解流式计算的核心概念和设计范式</li><li>掌握Flink流处理框架的核心API</li><li>了解实时数仓和实时应用的架构设计</li><li>具备实时数据处理系统的开发和运维能力</li></ul>"
+    }
+  ],
+  "links": [
+    {
+      "source": "cs_root",
+      "target": "cs_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "cs_root",
+      "target": "cs_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "cs_root",
+      "target": "cs_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "cs_root",
+      "target": "cs_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "cs_basic",
+      "target": "cs_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "cs_basic",
+      "target": "cs_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "cs_basic",
+      "target": "cs_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "cs_basic",
+      "target": "cs_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "cs_basic",
+      "target": "cs_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "cs_core",
+      "target": "cs_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "cs_practice",
+      "target": "cs_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "cs_practice",
+      "target": "cs_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "cs_practice",
+      "target": "cs_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "cs_practice",
+      "target": "cs_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "cs_practice",
+      "target": "cs_practice_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "cs_advanced",
+      "target": "cs_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "cs_advanced",
+      "target": "cs_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "cs_advanced",
+      "target": "cs_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "cs_advanced",
+      "target": "cs_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "cs_advanced",
+      "target": "cs_advanced_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ne_root",
+      "target": "ne_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ne_root",
+      "target": "ne_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ne_root",
+      "target": "ne_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ne_root",
+      "target": "ne_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ne_basic",
+      "target": "ne_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ne_basic",
+      "target": "ne_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ne_basic",
+      "target": "ne_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ne_basic",
+      "target": "ne_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ne_basic",
+      "target": "ne_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "ne_core",
+      "target": "ne_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "ne_practice",
+      "target": "ne_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ne_practice",
+      "target": "ne_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ne_practice",
+      "target": "ne_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ne_practice",
+      "target": "ne_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ne_advanced",
+      "target": "ne_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ne_advanced",
+      "target": "ne_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ne_advanced",
+      "target": "ne_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ne_advanced",
+      "target": "ne_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ce_root",
+      "target": "ce_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ce_root",
+      "target": "ce_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ce_root",
+      "target": "ce_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ce_root",
+      "target": "ce_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ce_basic",
+      "target": "ce_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ce_basic",
+      "target": "ce_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ce_basic",
+      "target": "ce_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ce_basic",
+      "target": "ce_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ce_basic",
+      "target": "ce_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "ce_core",
+      "target": "ce_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "ce_practice",
+      "target": "ce_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ce_practice",
+      "target": "ce_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ce_practice",
+      "target": "ce_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ce_practice",
+      "target": "ce_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ce_advanced",
+      "target": "ce_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ce_advanced",
+      "target": "ce_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ce_advanced",
+      "target": "ce_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ce_advanced",
+      "target": "ce_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_root",
+      "target": "iot_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "iot_root",
+      "target": "iot_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "iot_root",
+      "target": "iot_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "iot_root",
+      "target": "iot_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_basic",
+      "target": "iot_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "iot_basic",
+      "target": "iot_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "iot_basic",
+      "target": "iot_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "iot_basic",
+      "target": "iot_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_basic",
+      "target": "iot_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "iot_core",
+      "target": "iot_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "iot_practice",
+      "target": "iot_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "iot_practice",
+      "target": "iot_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "iot_practice",
+      "target": "iot_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "iot_practice",
+      "target": "iot_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_advanced",
+      "target": "iot_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "iot_advanced",
+      "target": "iot_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "iot_advanced",
+      "target": "iot_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "iot_advanced",
+      "target": "iot_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "iot_advanced",
+      "target": "iot_advanced_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "se_root",
+      "target": "se_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "se_root",
+      "target": "se_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "se_root",
+      "target": "se_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "se_root",
+      "target": "se_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "se_basic",
+      "target": "se_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "se_basic",
+      "target": "se_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "se_basic",
+      "target": "se_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "se_basic",
+      "target": "se_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "se_basic",
+      "target": "se_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "se_core",
+      "target": "se_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "se_practice",
+      "target": "se_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "se_practice",
+      "target": "se_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "se_practice",
+      "target": "se_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "se_practice",
+      "target": "se_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "se_advanced",
+      "target": "se_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "se_advanced",
+      "target": "se_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "se_advanced",
+      "target": "se_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "se_advanced",
+      "target": "se_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "se_advanced",
+      "target": "se_advanced_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "dmt_root",
+      "target": "dmt_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "dmt_root",
+      "target": "dmt_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "dmt_root",
+      "target": "dmt_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "dmt_root",
+      "target": "dmt_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "dmt_basic",
+      "target": "dmt_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "dmt_basic",
+      "target": "dmt_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "dmt_basic",
+      "target": "dmt_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "dmt_basic",
+      "target": "dmt_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "dmt_basic",
+      "target": "dmt_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "dmt_core",
+      "target": "dmt_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "dmt_practice",
+      "target": "dmt_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "dmt_practice",
+      "target": "dmt_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "dmt_practice",
+      "target": "dmt_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "dmt_practice",
+      "target": "dmt_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "dmt_advanced",
+      "target": "dmt_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "dmt_advanced",
+      "target": "dmt_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "dmt_advanced",
+      "target": "dmt_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "dmt_advanced",
+      "target": "dmt_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "dmt_advanced",
+      "target": "dmt_advanced_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ds_root",
+      "target": "ds_basic",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ds_root",
+      "target": "ds_core",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ds_root",
+      "target": "ds_practice",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ds_root",
+      "target": "ds_advanced",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ds_basic",
+      "target": "ds_basic_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ds_basic",
+      "target": "ds_basic_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ds_basic",
+      "target": "ds_basic_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ds_basic",
+      "target": "ds_basic_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ds_basic",
+      "target": "ds_basic_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_06",
+      "relationType": "contains",
+      "sortOrder": 6
+    },
+    {
+      "source": "ds_core",
+      "target": "ds_core_07",
+      "relationType": "contains",
+      "sortOrder": 7
+    },
+    {
+      "source": "ds_practice",
+      "target": "ds_practice_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ds_practice",
+      "target": "ds_practice_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ds_practice",
+      "target": "ds_practice_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ds_practice",
+      "target": "ds_practice_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ds_advanced",
+      "target": "ds_advanced_01",
+      "relationType": "contains",
+      "sortOrder": 1
+    },
+    {
+      "source": "ds_advanced",
+      "target": "ds_advanced_02",
+      "relationType": "contains",
+      "sortOrder": 2
+    },
+    {
+      "source": "ds_advanced",
+      "target": "ds_advanced_03",
+      "relationType": "contains",
+      "sortOrder": 3
+    },
+    {
+      "source": "ds_advanced",
+      "target": "ds_advanced_04",
+      "relationType": "contains",
+      "sortOrder": 4
+    },
+    {
+      "source": "ds_advanced",
+      "target": "ds_advanced_05",
+      "relationType": "contains",
+      "sortOrder": 5
+    }
+  ]
+}

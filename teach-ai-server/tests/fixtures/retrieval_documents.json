@@ -1,0 +1,72 @@
+[
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "11",
+    "resourceType": "plan",
+    "title": "二叉树遍历教案",
+    "content": "前序遍历按照根节点、左子树、右子树的顺序访问。中序遍历先访问左子树。",
+    "scope": "mine",
+    "updatedAt": "1"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 102,
+    "courseName": "计算机网络",
+    "sourceType": "ai_resource",
+    "sourceId": "12",
+    "resourceType": "plan",
+    "title": "TCP 握手教案",
+    "content": "TCP 通过三次握手建立连接。",
+    "scope": "mine",
+    "updatedAt": "1"
+  },
+  {
+    "teacherId": 2002,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "13",
+    "resourceType": "plan",
+    "title": "其他教师二叉树资料",
+    "content": "这份二叉树资料不应被教师 1001 检索到。",
+    "scope": "mine",
+    "updatedAt": "1"
+  },
+  {
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "case",
+    "sourceId": "21",
+    "resourceType": "case",
+    "title": "平台二叉树教学案例",
+    "content": "使用家族树引导学生理解二叉树层级和遍历顺序。",
+    "scope": "platform",
+    "sourceUrl": "https://example.test/cases/21",
+    "updatedAt": "1"
+  },
+  {
+    "teacherId": 1001,
+    "courseId": 101,
+    "courseName": "数据结构",
+    "sourceType": "ai_resource",
+    "sourceId": "14",
+    "resourceType": "quiz",
+    "title": "二叉树练习",
+    "content": "判断给定访问序列是否为二叉树的前序遍历。",
+    "scope": "mine",
+    "updatedAt": "1"
+  },
+  {
+    "sourceType": "graph_node",
+    "sourceId": "tree-traversal",
+    "resourceType": "graph_node",
+    "title": "二叉树遍历知识点",
+    "content": "二叉树遍历包含前序、中序和后序遍历。",
+    "scope": "platform",
+    "graphNodeId": "tree-traversal",
+    "updatedAt": "1"
+  }
+]

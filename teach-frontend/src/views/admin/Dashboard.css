@@ -1,0 +1,478 @@
+.admin-dashboard {
+  min-width: 0;
+}
+
+.admin-dashboard .ant-spin-nested-loading,
+.admin-dashboard .ant-spin-container {
+  min-width: 0;
+}
+
+.admin-dashboard .dashboard-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
+  padding: 20px 22px;
+  border: 1px solid #dbe6f4;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.admin-dashboard .hero-kicker {
+  display: inline-flex;
+  margin-bottom: 7px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-dashboard .dashboard-hero h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.admin-dashboard .dashboard-hero p {
+  margin: 7px 0 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.admin-dashboard .dashboard-hero .ant-btn {
+  height: 40px;
+  border-radius: 6px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.admin-dashboard .metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-dashboard .metric-card,
+.admin-dashboard .panel-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.admin-dashboard .metric-card {
+  min-height: 110px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 13px;
+  align-items: center;
+}
+
+.admin-dashboard .metric-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  place-self: center;
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.admin-dashboard .metric-card .metric-icon {
+  display: flex;
+}
+
+.admin-dashboard .metric-icon .anticon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.admin-dashboard .metric-icon svg {
+  display: block;
+}
+
+.admin-dashboard .metric-card div {
+  min-width: 0;
+}
+
+.admin-dashboard .metric-card span,
+.admin-dashboard .metric-card em {
+  display: block;
+}
+
+.admin-dashboard .metric-card div > span {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-dashboard .metric-card strong {
+  display: block;
+  margin-top: 7px;
+  color: #0f172a;
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.admin-dashboard .metric-card small {
+  margin-left: 5px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-dashboard .metric-card em {
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.45;
+  font-style: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-dashboard .dashboard-main {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.1fr) minmax(320px, 0.85fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.admin-dashboard .panel-card {
+  min-width: 0;
+  padding: 17px;
+}
+
+.admin-dashboard .todo-panel,
+.admin-dashboard .health-panel {
+  min-height: 330px;
+}
+
+.admin-dashboard .chart-panel {
+  min-height: 330px;
+}
+
+.admin-dashboard .quick-panel,
+.admin-dashboard .teacher-panel {
+  min-height: 254px;
+}
+
+.admin-dashboard .panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-dashboard .panel-head h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.admin-dashboard .panel-head p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-dashboard .danger-number {
+  color: #dc2626;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.admin-dashboard .health-score {
+  color: #0f766e;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.admin-dashboard .todo-list,
+.admin-dashboard .health-list,
+.admin-dashboard .teacher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-dashboard .todo-row {
+  width: 100%;
+  min-height: 61px;
+  padding: 11px 13px;
+  border: 1px solid #e6edf6;
+  border-radius: 8px;
+  background: #f8fafc;
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admin-dashboard .todo-row:hover {
+  border-color: #bfdbfe;
+  background: #f8fbff;
+}
+
+.admin-dashboard .todo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.admin-dashboard .todo-copy,
+.admin-dashboard .todo-copy strong,
+.admin-dashboard .todo-copy small {
+  min-width: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-dashboard .todo-copy strong {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.admin-dashboard .todo-copy small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.admin-dashboard .todo-row b {
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.admin-dashboard .health-row {
+  padding: 11px 0;
+}
+
+.admin-dashboard .health-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.admin-dashboard .health-copy strong {
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.admin-dashboard .health-copy span {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-dashboard .health-track {
+  height: 9px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #eef2f7;
+}
+
+.admin-dashboard .health-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.admin-dashboard .chart-box {
+  width: 100%;
+  height: 254px;
+  min-height: 254px;
+}
+
+.admin-dashboard .quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-dashboard .quick-grid button {
+  min-height: 76px;
+  padding: 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  text-align: left;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.admin-dashboard .quick-grid button:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.admin-dashboard .quick-grid .anticon {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.admin-dashboard .quick-grid span,
+.admin-dashboard .quick-grid small {
+  display: block;
+}
+
+.admin-dashboard .quick-grid span {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.admin-dashboard .quick-grid small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.admin-dashboard .teacher-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.admin-dashboard .teacher-row:last-child {
+  border-bottom: 0;
+}
+
+.admin-dashboard .teacher-row div {
+  min-width: 0;
+}
+
+.admin-dashboard .teacher-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.admin-dashboard .teacher-title-line,
+.admin-dashboard .teacher-sub-line {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.admin-dashboard .teacher-title-line strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-dashboard .teacher-title-line .ant-tag {
+  margin-inline-end: 0;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.admin-dashboard .teacher-sub-line span,
+.admin-dashboard .teacher-sub-line time {
+  min-width: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.admin-dashboard .teacher-sub-line span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-dashboard .teacher-sub-line time {
+  flex-shrink: 0;
+}
+
+.admin-dashboard .teacher-row strong,
+.admin-dashboard .teacher-row small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-dashboard .teacher-row strong {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.admin-dashboard .teacher-row small {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+@media (max-width: 1500px) {
+  .admin-dashboard .metric-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-dashboard .dashboard-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .admin-dashboard .dashboard-hero {
+    flex-direction: column;
+  }
+
+  .admin-dashboard .dashboard-hero .ant-btn {
+    width: 100%;
+  }
+
+  .admin-dashboard .metric-strip,
+  .admin-dashboard .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-dashboard .dashboard-hero,
+  .admin-dashboard .metric-card,
+  .admin-dashboard .panel-card {
+    padding: 14px;
+  }
+
+  .admin-dashboard .metric-card {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .quick-grid {
+    grid-template-columns: 1fr;
+  }
+}

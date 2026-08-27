@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.ClassAnalysisRecordLiteMapper">
+
+    <select id="selectRecentByTeacherId" resultType="com.ruyi.teach.model.entity.ClassAnalysisRecordLite">
+        select
+            id,
+            teacher_id,
+            audio_url,
+            plan_text,
+            transcript_json,
+            ai_report,
+            status,
+            create_time
+        from class_analysis_record
+        where teacher_id = #{teacherId}
+        order by create_time desc, id desc
+        limit 40
+    </select>
+
+</mapper>

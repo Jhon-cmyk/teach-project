@@ -1,0 +1,720 @@
+/* Global responsive guardrails for tablet and smaller viewports. */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+#app {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+
+.ant-layout,
+.ant-layout-content,
+.ant-spin-nested-loading,
+.ant-spin-container,
+.ant-card,
+.ant-form,
+.ant-row,
+.ant-col {
+  min-width: 0;
+}
+
+.ant-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ant-table-wrapper .ant-table-content {
+  overflow-x: auto;
+}
+
+.ant-table-wrapper table {
+  min-width: max-content;
+}
+
+.ant-modal {
+  max-width: calc(100vw - 32px);
+}
+
+.ant-modal-content,
+.ant-drawer-content {
+  max-width: 100%;
+}
+
+.ant-modal-body,
+.ant-drawer-body {
+  min-width: 0;
+}
+
+@media (pointer: coarse) {
+  .ant-btn,
+  button,
+  [role='button'],
+  .nav-item,
+  .custom-menu .ant-menu-item,
+  .admin-menu .ant-menu-item {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .modern-layout,
+  .admin-layout {
+    width: 100vw;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .modern-sider,
+  .admin-sider {
+    flex: 0 0 80px !important;
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+  }
+
+  .modern-sider .logo-text,
+  .modern-sider .collapse-text,
+  .modern-sider .ant-menu-title-content,
+  .admin-sider .brand-copy,
+  .admin-sider .collapse-text,
+  .admin-sider .ant-menu-title-content {
+    display: none !important;
+  }
+
+  .modern-sider .logo-area,
+  .admin-sider .brand-block {
+    justify-content: center;
+    padding-inline: 0 !important;
+  }
+
+  .modern-sider .custom-menu,
+  .admin-sider .admin-menu {
+    padding-inline: 8px !important;
+  }
+
+  .modern-sider .ant-menu-item,
+  .admin-sider .ant-menu-item {
+    padding-inline: 0 !important;
+    justify-content: center;
+  }
+
+  .modern-sider .menu-icon,
+  .admin-sider .anticon {
+    margin-right: 0 !important;
+  }
+
+  .main-workspace,
+  .admin-main {
+    min-width: 0 !important;
+  }
+
+  .modern-header,
+  .admin-header {
+    height: auto !important;
+    min-height: 68px !important;
+    padding: 12px 18px !important;
+    gap: 12px !important;
+  }
+
+  .modern-header .greeting-sub,
+  .admin-header .page-desc,
+  .admin-header .user-copy {
+    display: none !important;
+  }
+
+  .modern-content,
+  .admin-content {
+    padding: 18px !important;
+    min-width: 0 !important;
+  }
+
+  .admin-content {
+    height: calc(100vh - 68px) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth-container,
+  .auth-content,
+  .form-side,
+  .login-wrapper,
+  .auth-card,
+  .bilibili-layout-container,
+  .content-wrapper,
+  .coding-problem-page,
+  .homework-page,
+  .diagnosis-page,
+  .course-analysis-page,
+  .personal-community-page,
+  .community-page,
+  .homework-help-page,
+  .read-page,
+  .tutorial-page,
+  .ai-console-wrapper,
+  .smart-writing-page,
+  .teacher-community-desk,
+  .task-monitor-page,
+  .teaching-manage,
+  .resource-library,
+  .resource-search-page,
+  .data-visual-page,
+  .graph-page,
+  .stats-page,
+  .node-detail-page,
+  .admin-dashboard {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .auth-container,
+  .bilibili-layout-container,
+  .coding-problem-page,
+  .homework-page,
+  .edu-app,
+  .course-analysis-page,
+  .ai-console-wrapper,
+  .smart-writing-page {
+    height: auto !important;
+    min-height: calc(100vh - 70px) !important;
+    overflow: auto !important;
+  }
+
+  .auth-content {
+    min-height: 100vh;
+    height: auto !important;
+  }
+
+  .auth-container .form-side {
+    width: 100% !important;
+    min-height: 100vh;
+    padding: 24px 18px !important;
+  }
+
+  .auth-container .login-wrapper,
+  .auth-container .auth-card {
+    width: min(100%, 480px) !important;
+    max-width: 100% !important;
+  }
+
+  .auth-container .visual-side,
+  .auth-container .image-side,
+  .auth-container .slogan-side {
+    display: none !important;
+  }
+
+  .layout-container .topbar {
+    height: auto !important;
+    min-height: 70px;
+  }
+
+  .layout-container .topbar-inner {
+    max-width: none !important;
+    padding: 10px 16px !important;
+    gap: 12px;
+  }
+
+  .layout-container .logo {
+    min-width: 0;
+  }
+
+  .layout-container .brand-logo-image {
+    height: 46px !important;
+    max-width: 112px !important;
+  }
+
+  .layout-container .logo-text-main {
+    font-size: 20px !important;
+    white-space: nowrap;
+  }
+
+  .layout-container .logo-text-sub {
+    display: none !important;
+  }
+
+  .layout-container .nav-menu {
+    justify-content: flex-start !important;
+    gap: 4px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: none !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .layout-container .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .layout-container .nav-item {
+    height: 46px !important;
+    padding: 0 12px !important;
+    font-size: 15px !important;
+  }
+
+  .layout-container .user-block {
+    padding: 4px !important;
+  }
+
+  .layout-container .user-name {
+    display: none !important;
+  }
+
+  .main-content-wrapper,
+  .page,
+  .edu-app {
+    min-width: 0 !important;
+  }
+
+  .container-1200,
+  .page-container,
+  .diagnosis-shell,
+  .content-wrapper,
+  .read-layout,
+  .page-shell,
+  .content-section,
+  .glass-panel,
+  .surface-card,
+  .panel-card,
+  .table-card,
+  .table-panel,
+  .table-container {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .container-1200 {
+    width: 100% !important;
+    padding-inline: 18px !important;
+  }
+
+  .page-container,
+  .diagnosis-shell,
+  .content-wrapper {
+    width: 100% !important;
+    padding-inline: 18px !important;
+  }
+
+  .top-section,
+  .main-grid,
+  .analysis-layout,
+  .workspace,
+  .read-layout,
+  .diagnosis-body,
+  .answer-inbox-shell,
+  .answer-inbox-metrics,
+  .answer-reader-head,
+  .dashboard-grid,
+  .secondary-grid,
+  .stats-grid,
+  .course-grid,
+  .resource-grid,
+  .recommendation-grid,
+  .problem-list,
+  .class-grid,
+  .task-grid,
+  .card-grid,
+  .asset-grid,
+  .case-grid,
+  .overview-grid,
+  .content-grid,
+  .workbench,
+  .writing-workspace,
+  .tool-layout,
+  .form-row,
+  .form-row-2,
+  .case-diff,
+  .code-result-grid,
+  .answer-layout,
+  .overview-body,
+  .student-portrait-grid,
+  .detail-body {
+    grid-template-columns: 1fr !important;
+  }
+
+  .top-section,
+  .main-grid,
+  .analysis-layout,
+  .workspace,
+  .read-layout,
+  .diagnosis-body,
+  .answer-inbox-shell,
+  .writing-workspace,
+  .tool-layout {
+    display: grid !important;
+  }
+
+  .problem-list,
+  .course-grid,
+  .resource-grid,
+  .recommendation-grid,
+  .class-grid,
+  .task-grid,
+  .card-grid,
+  .asset-grid,
+  .case-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)) !important;
+  }
+
+  .left-block,
+  .right-top-block,
+  .middle-top-block,
+  .video-column,
+  .sidebar-column,
+  .upload-panel,
+  .visual-panel,
+  .paper-panel,
+  .answer-panel,
+  .problem-panel,
+  .code-panel,
+  .ai-panel,
+  .engine-sidebar,
+  .chat-workspace,
+  .config-panel,
+  .editor-panel,
+  .tool-config-panel,
+  .tool-result-panel,
+  .answer-reader,
+  .queue-sidebar,
+  .side-card,
+  .content-area,
+  .read-sidebar,
+  .edu-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .edu-main {
+    padding: 18px !important;
+    overflow-y: auto !important;
+  }
+
+  .bilibili-layout-container .content-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .edu-app {
+    height: auto !important;
+    min-height: calc(100vh - 70px);
+    overflow: visible !important;
+  }
+
+  .page-shell,
+  .content-section,
+  .panel-scroll,
+  .scroll-y,
+  .answer-panel,
+  .paper-panel,
+  .problem-panel,
+  .code-panel,
+  .ai-panel,
+  .tool-config-panel,
+  .tool-result-panel,
+  .config-panel,
+  .editor-panel {
+    overflow: visible !important;
+  }
+
+  .left-block,
+  .right-top-block,
+  .workspace,
+  .main-grid,
+  .analysis-layout,
+  .writing-workspace,
+  .tool-layout,
+  .answer-inbox-shell,
+  .read-layout {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .banner-wrapper {
+    height: clamp(220px, 34vw, 320px) !important;
+  }
+
+  .heatmap-card {
+    height: auto !important;
+    min-height: 220px;
+  }
+
+  .toolbar-card,
+  .filter-dashboard,
+  .toolbar-main,
+  .toolbar-left,
+  .toolbar-right,
+  .filter-group,
+  .header-actions,
+  .action-group,
+  .enhanced-header,
+  .page-header,
+  .analysis-header,
+  .detail-header,
+  .page-top,
+  .table-card-head,
+  .table-toolbar,
+  .page-top-header,
+  .monitor-header,
+  .workspace-header,
+  .reader-actions,
+  .answer-reader-status-row,
+  .answer-title-row,
+  .task-top,
+  .task-actions,
+  .notification-toolbar,
+  .history-top,
+  .panel-header,
+  .section-heading,
+  .section-header,
+  .publish-actions,
+  .form-actions {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+
+  .filter-search,
+  .filter-selects,
+  .search-box,
+  .toolbar-card .ant-select,
+  .table-toolbar .ant-input,
+  .table-toolbar .ant-select {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .filter-search {
+    flex-basis: 100% !important;
+  }
+
+  .filter-selects {
+    width: 100% !important;
+  }
+
+  .filter-selects .ant-select {
+    flex: 1 1 150px !important;
+    width: auto !important;
+  }
+
+  .ant-form-inline {
+    gap: 10px;
+  }
+
+  .ant-form-inline .ant-form-item {
+    margin-right: 0;
+  }
+
+  .ant-tabs-nav-wrap {
+    overflow: auto !important;
+  }
+
+  .ant-tabs-nav-list {
+    min-width: max-content;
+  }
+
+  .custom-tabs-header,
+  .dash-tabs,
+  .queue-tabs,
+  .status-tabs,
+  .tab-row,
+  .material-strip,
+  .history-switch,
+  .notification-filters,
+  .course-filters {
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .custom-tabs-header::-webkit-scrollbar,
+  .dash-tabs::-webkit-scrollbar,
+  .queue-tabs::-webkit-scrollbar,
+  .status-tabs::-webkit-scrollbar,
+  .tab-row::-webkit-scrollbar,
+  .material-strip::-webkit-scrollbar,
+  .history-switch::-webkit-scrollbar,
+  .notification-filters::-webkit-scrollbar,
+  .course-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-player-box,
+  .main-video,
+  .anim-iframe-box,
+  .chart-container,
+  .chart-canvas,
+  .chart-box,
+  .echarts-box,
+  .heatmap-chart-box {
+    max-width: 100% !important;
+  }
+
+  .video-player-box {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .main-video {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .CodeMirror,
+  .cm-editor,
+  .code-editor,
+  .editor-container,
+  .editor-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .md-body,
+  .markdown-body,
+  .rich-content,
+  .reply-rich-content,
+  .drawer-article,
+  .question-paper,
+  .note-card-body {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .md-body pre,
+  .markdown-body pre,
+  .rich-content pre,
+  .reply-rich-content pre,
+  .note-card-body pre {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .teacher-wide-modal,
+  .admin-wide-modal {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .teacher-wide-modal .ant-modal-body,
+  .admin-wide-modal .ant-modal-body {
+    height: auto !important;
+    max-height: calc(100vh - 128px) !important;
+    overflow: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-sider,
+  .admin-sider {
+    flex-basis: 64px !important;
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+  }
+
+  .modern-content,
+  .admin-content,
+  .edu-main {
+    padding: 12px !important;
+  }
+
+  .modern-header .user-info,
+  .admin-header .logout-btn .ant-btn-icon + span,
+  .layout-container .logo-text-group {
+    display: none !important;
+  }
+
+  .workbench-header,
+  .auth-card,
+  .page-container,
+  .diagnosis-shell,
+  .content-wrapper,
+  .dashboard-hero,
+  .page-hero,
+  .surface-card,
+  .panel-card,
+  .content-section,
+  .glass-panel {
+    padding: 14px !important;
+  }
+
+  .metric-grid,
+  .metric-strip,
+  .recommendation-grid,
+  .quick-grid,
+  .answer-inbox-metrics,
+  .overview-grid,
+  .stats-grid,
+  .hero-stats,
+  .summary-grid,
+  .drawer-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .homework-page .workspace,
+  .coding-problem-page .main-grid,
+  .analysis-layout,
+  .diagnosis-body,
+  .read-layout,
+  .answer-inbox-shell {
+    gap: 12px !important;
+  }
+
+  .filter-selects,
+  .header-actions,
+  .reader-actions,
+  .task-actions,
+  .composer-actions,
+  .form-actions,
+  .submitted-actions {
+    width: 100% !important;
+  }
+
+  .filter-selects .ant-select,
+  .header-actions .ant-btn,
+  .reader-actions .ant-btn,
+  .task-actions .ant-btn,
+  .composer-actions .ant-btn,
+  .form-actions .ant-btn,
+  .submitted-actions .ant-btn,
+  .btn-load,
+  .btn-reupload {
+    width: 100% !important;
+  }
+
+  .answer-inbox-hero,
+  .workbench-header,
+  .page-intro,
+  .page-hero,
+  .dashboard-hero {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .ant-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .ant-pagination-options {
+    display: none !important;
+  }
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CourseGraphResourceLinkMapper">
+
+    <select id="selectActiveByTeacherAndNode" resultType="com.ruyi.teach.model.entity.CourseGraphResourceLink">
+        select
+            id,
+            teacher_id,
+            node_id,
+            resource_id,
+            resource_type,
+            relevance_score,
+            source,
+            create_time,
+            update_time,
+            is_delete
+        from course_graph_resource_link
+        where teacher_id = #{teacherId}
+          and node_id = #{nodeId}
+          and is_delete = 0
+        order by relevance_score desc, update_time desc, id desc
+    </select>
+
+    <select id="selectActiveByTeacherAndNodeIds" resultType="com.ruyi.teach.model.entity.CourseGraphResourceLink">
+        select
+            id,
+            teacher_id,
+            node_id,
+            resource_id,
+            resource_type,
+            relevance_score,
+            source,
+            create_time,
+            update_time,
+            is_delete
+        from course_graph_resource_link
+        where teacher_id = #{teacherId}
+          and is_delete = 0
+          and node_id in
+        <foreach collection="nodeIds" item="nodeId" open="(" separator="," close=")">
+            #{nodeId}
+        </foreach>
+        order by relevance_score desc, update_time desc, id desc
+    </select>
+
+    <select id="selectByTeacherNodeAndResource" resultType="com.ruyi.teach.model.entity.CourseGraphResourceLink">
+        select
+            id,
+            teacher_id,
+            node_id,
+            resource_id,
+            resource_type,
+            relevance_score,
+            source,
+            create_time,
+            update_time,
+            is_delete
+        from course_graph_resource_link
+        where teacher_id = #{teacherId}
+          and node_id = #{nodeId}
+          and resource_id = #{resourceId}
+          and is_delete = 0
+        limit 1
+    </select>
+
+</mapper>

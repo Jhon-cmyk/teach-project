@@ -1,0 +1,46 @@
+server:
+  error:
+    include-message: never
+    include-stacktrace: never
+  servlet:
+    session:
+      cookie:
+        secure: ${SESSION_COOKIE_SECURE:true}
+        same-site: lax
+
+spring:
+  devtools:
+    add-properties: false
+    restart:
+      enabled: false
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+ruyi:
+  upload-path: ${RUYI_UPLOAD_PATH}
+
+knife4j:
+  enable: false
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+app:
+  cors:
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS}
+
+auth:
+  token:
+    # Production must provide a private, stable secret so tokens survive service restarts.
+    secret: ${AUTH_TOKEN_SECRET}

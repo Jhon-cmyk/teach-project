@@ -1,0 +1,27 @@
+# TeachApplicationTests replaces these fail-closed values with a disposable
+# Testcontainers MySQL instance. They must never fall back to the developer database.
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:1/teach_test_unconfigured
+    username: test_database_not_configured
+    password: __test_database_not_configured__
+  flyway:
+    enabled: true
+
+ruyi:
+  upload-path: ${TEST_UPLOAD_PATH:./target/test-uploads/}
+
+knife4j:
+  enable: false
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+
+app:
+  cors:
+    allowed-origins: ${TEST_CORS_ALLOWED_ORIGINS:http://localhost}
+
+auth:
+  token:
+    secret: __test-only-auth-secret__

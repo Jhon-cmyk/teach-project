@@ -1,0 +1,72 @@
+# Judge0 编程沙箱 - 开发环境一键部署
+# 使用方式: docker-compose up -d
+# 默认端口: 2358 (Server), 2359 (Worker)
+
+x-judge0-common: &judge0-common
+  image: judge0/judge0:1.13.1
+  env_file: judge0.env.local
+  read_only: true
+  tmpfs:
+    - /tmp
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+  cap_add:
+    - SETUID
+    - SETGID
+
+services:
+  server:
+    <<: *judge0-common
+    container_name: judge0-server
+    ports:
+      - "2358:2358"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    <<: *judge0-common
+    container_name: judge0-worker
+    command: ["./worker"]
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    container_name: judge0-db
+    env_file: judge0.env.local
+    volumes:
+      - judge0-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: judge0-redis
+    env_file: judge0.env.local
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\""]
+    volumes:
+      - judge0-redis-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$REDIS_PASSWORD\" ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  judge0-db-data:
+  judge0-redis-data:

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CommunityFeaturedAnswerLiteMapper">
+  <select id="selectActiveFeatured" resultType="com.ruyi.teach.model.entity.CommunityFeaturedAnswerLite">
+    select id,post_id,excerpt,teacher_name,is_recommended,update_time,is_delete
+    from community_featured_answer
+    where is_delete = 0
+    order by update_time desc, id desc
+  </select>
+</mapper>

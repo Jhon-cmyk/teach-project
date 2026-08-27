@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyi.teach.mapper.CourseGraphNodeMapper">
+
+    <select id="selectActiveNodes" resultType="com.ruyi.teach.model.entity.CourseGraphNode">
+        select
+            id,
+            parentId,
+            name,
+            category,
+            symbolSize,
+            description,
+            difficulty,
+            importance,
+            estimatedHours,
+            teachingWeek,
+            commonMistakes,
+            teachingTips,
+            resourceCount,
+            exerciseCount,
+            isCore,
+            isKeyPoint,
+            resourceSummary,
+            resourceTypes,
+            learnUrl,
+            learningContent,
+            sortOrder,
+            createTime,
+            updateTime,
+            isDelete
+        from course_graph_node
+        where isDelete = 0
+        order by sortOrder asc, category asc, id asc
+    </select>
+
+    <select id="selectChildIdsByParentIds" resultType="java.lang.String">
+        select id
+        from course_graph_node
+        where isDelete = 0
+          and parentId in
+        <foreach collection="parentIds" item="pid" open="(" separator="," close=")">
+            #{pid}
+        </foreach>
+    </select>
+
+</mapper>
