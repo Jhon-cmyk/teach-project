@@ -50,13 +50,16 @@
 - **AI 接口治理**：`/ai/**` 按登录用户做每分钟滑动窗口限流；教师专属接口（`/ai/teacher/**` 等）强制角色校验。
 - **代码执行双模式**：生产默认走 Judge0 沙箱；本地模式启动时打印明确 WARN，避免无隔离执行被误带上线。
 - **备份与公开目录隔离**：数据库备份目录与匿名静态目录强制分离，配置错误时启动期直接报错。
+- **共享短生命周期状态**：图形验证码、Token 登出名单、AI 限流窗口与提交冷却统一放入 Redis，
+  每个调用点显式声明 Redis 不可用时的降级方向（安全开关 fail-closed，限流与冷却 fail-open），
+  且 Redis 不参与就绪探针，避免一次抖动让所有实例同时下线。
 
 ### 1.4 项目规模
 
 | 模块 | 规模 |
 |---|---|
 | Java 后端 | 461 个源文件 / 约 4.2 万行 |
-| Java 测试 | 51 个测试类 / **166 个用例** |
+| Java 测试 | 56 个测试类 / **190 个用例** |
 | Web 前端 | 76 个 `.vue` + 38 个 `.ts` / 约 8.2 万行 |
 | Python AI 服务 | 28 个文件 / 约 0.8 万行，**49 个用例** |
 | REST 接口 | **315 个**端点 / 58 个 Controller |
@@ -89,7 +92,7 @@ flowchart LR
 
 | 模块 | 目录 | 技术 |
 |---|---|---|
-| Java 后端 | `src/` | Java 21、Spring Boot 3.5.9、MyBatis-Plus 3.5.15、Flyway、MySQL 8、Knife4j |
+| Java 后端 | `src/` | Java 21、Spring Boot 3.5.9、MyBatis-Plus 3.5.15、Flyway、MySQL 8、Redis 7、Knife4j |
 | Web 前端 | `teach-frontend/` | Vue 3.5、TypeScript、Vite、Ant Design Vue 4、Pinia、Vue Router 4、ECharts 6、Axios |
 | AI 与 Agent | `teach-ai-server/` | Python 3.10、Flask 3.1、gunicorn、Qdrant、Sentence Transformers、MediaPipe、OpenCV、Matplotlib |
 | 编排与网关 | `compose.yml`、`teach-frontend/nginx.conf` | Docker Compose、Nginx 1.27 |
@@ -117,7 +120,7 @@ teach-project/
 │   │   ├── mapper/                   # MyBatis XML
 │   │   ├── seed/                     # 课程图谱种子数据
 │   │   └── knowledge-base/           # 内置知识库资料
-│   └── test/java/                    # 51 个测试类
+│   └── test/java/                    # 56 个测试类
 ├── teach-frontend/                   # Vue 3 前端 + nginx.conf + Dockerfile
 ├── teach-ai-server/                  # Python AI 服务（agent/ evaluation/ tests/）
 ├── deploy/
@@ -155,7 +158,7 @@ teach-project/
 | 内存 | 建议 ≥ 8 GB（AI 镜像内含 PyTorch，构建阶段较吃内存） |
 | 磁盘 | 建议 ≥ 10 GB（镜像 + 数据卷） |
 | 网络 | 首次构建需拉取镜像与 Python 依赖，需稳定网络 |
-| 端口 | `8080`、`8820`、`5000`、`6333`、`6334`、`3306` 未被占用 |
+| 端口 | `8080`、`8820`、`5000`、`6379`、`6333`、`6334`、`3306` 未被占用 |
 
 #### 步骤 1：获取代码
 
@@ -209,7 +212,7 @@ docker compose up -d
 docker compose ps
 ```
 
-> 启动顺序由健康检查串联：`mysql` / `qdrant` → `ai-server` → `backend` → `frontend`。
+> 启动顺序由健康检查串联：`mysql` / `redis` / `qdrant` → `ai-server` → `backend` → `frontend`。
 > `backend` 启动时会自动执行 Flyway 迁移，建出全部 62 张表，无需手工导入 SQL。
 
 #### 步骤 4：确认服务状态
@@ -302,7 +305,22 @@ docker compose up -d --build       # 拉取更新后重新构建启动
 
 ### 3.2 方式二：本地开发部署
 
-适合二次开发。需要先准备好 MySQL 8，前端与 AI 服务分别启动。
+适合二次开发。需要先准备好 MySQL 8 与 Redis 7，前端与 AI 服务分别启动。
+
+> Redis 承载图形验证码、Token 登出名单、AI 限流窗口与代码提交冷却这四类
+> "必须被所有实例看到"的短生命周期状态（业务主数据仍以 MySQL 为权威源）。
+> 最省事的方式是只起编排文件里的 Redis：`docker compose up -d redis`；若暂时没有 Redis，
+> 后端仍可正常启动，这四项按下面的策略降级：
+
+| 功能 | Redis 不可用时的行为 |
+|---|---|
+| 图形验证码 | 校验失败并提示刷新（fail-closed） |
+| Token 登出名单 | 拒绝认证并告警（fail-closed；可用 `AUTH_BLACKLIST_FAILURE_POLICY=fail-open` 改为放行，需自行承担风险） |
+| AI 限流 | 放行并记 WARN（fail-open） |
+| 提交冷却 | 放行并记 WARN（fail-open） |
+
+> Redis 不参与就绪探针，避免一次抖动把所有实例同时判为未就绪而整体下线；
+> 它仍会出现在 `/api/actuator/health` 明细里。
 
 #### 3.2.1 准备数据库
 
@@ -390,6 +408,8 @@ npm run dev
 | `ALIYUN_OSS_*` | 文件对象存储（头像、作业图片等） |
 | `JUDGE0_*`、`CODE_EXECUTOR_MODE` | 编程评测（`judge0` 沙箱 / `local` 本机执行） |
 | `AI_RATE_LIMIT_PER_MINUTE` | `/ai/**` 每用户每分钟请求上限，`0` 表示关闭限流 |
+| `REDIS_HOST`、`REDIS_PORT`、`REDIS_PASSWORD`、`REDIS_DATABASE` | Redis 连接；验证码、登出名单、限流窗口、提交冷却依赖它 |
+| `AUTH_BLACKLIST_FAILURE_POLICY` | Redis 不可用时登出名单的行为，默认 `fail-closed`（拒绝该 Token） |
 | `RUYI_UPLOAD_PATH`、`RUYI_BACKUP_PATH` | 上传目录与数据库备份目录，**两者必须分离** |
 | `APP_CORS_ALLOWED_ORIGINS` | 允许的跨域来源（逗号分隔） |
 | `BILIBILI_COOKIE` | 可选，B 站资料导入 |
@@ -417,7 +437,7 @@ npm run dev
 
 ### 4.1 一键本地验证
 
-需要 Docker 处于运行状态（集成测试使用 Testcontainers 启动隔离的 MySQL）：
+需要 Docker 处于运行状态（集成测试使用 Testcontainers 启动隔离的 MySQL 与 Redis）：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\verify-project.ps1
@@ -438,7 +458,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-secrets.ps1
 ### 4.2 单独运行各模块测试
 
 ```bash
-./mvnw test                                             # Java：166 个用例
+./mvnw test                                             # Java：190 个用例
 cd teach-frontend && npm run build                      # 前端：类型检查 + 生产构建
 cd teach-ai-server && python -m unittest discover -s tests   # Python：49 个用例
 ```
@@ -449,7 +469,7 @@ cd teach-ai-server && python -m unittest discover -s tests   # Python：49 个�
 
 | 任务 | 内容 |
 |---|---|
-| `Java backend` | Maven 全量测试（含隔离 MySQL 迁移验证） |
+| `Java backend` | Maven 全量测试（含隔离的 MySQL 与 Redis 容器） |
 | `Web type check and build` | 前端类型检查与生产构建 |
 | `Python tests and Agent evaluation` | Python 单元测试 + 固定 Agent 评测任务 |
 | `Configuration and credential scan` | Compose 配置校验 + 明文凭证扫描 |
@@ -474,6 +494,7 @@ cd teach-ai-server && python -m unittest discover -s tests   # Python：49 个�
 | 服务 | 用途 | 是否必需 |
 |---|---|---|
 | MySQL 8 | 业务数据与迁移 | ✅ 必需 |
+| Redis 7 | 验证码、Token 登出名单、AI 限流窗口、提交冷却 | ✅ 必需（不可用时按各自的降级策略运行） |
 | Qdrant | Agent 检索与知识库向量 | 使用 AI 检索功能时必需 |
 | Judge0 | 编程题沙箱评测 | 使用编程评测时必需 |
 | DeepSeek / 兼容大模型 | AI 备课、批改、问答 | 使用 AI 功能时必需 |
