@@ -44,6 +44,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!--
+          Redis 只用于"必须被所有实例看到"的短生命周期状态：图形验证码、Token 登出黑名单、
+          AI 限流窗口、代码提交冷却。业务主数据仍以 MySQL 为权威源，不进缓存。
+          默认客户端（Lettuce）即可满足需求，不替换为 Jedis。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

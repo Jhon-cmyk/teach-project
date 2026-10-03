@@ -26,6 +26,33 @@ services:
       retries: 20
       start_period: 20s
 
+  redis:
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    # appendonly 保证重启不丢"已登出 Token"名单；maxmemory 上限 + LRU 回收保证
+    # 长期运行不会把内存吃穿（名单与限流键本身都带 TTL，正常不会触到上限）。
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --maxmemory
+      - ${REDIS_MAXMEMORY:-256mb}
+      - --maxmemory-policy
+      - allkeys-lru
+    ports:
+      - "${DOCKER_REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 5s
+
   qdrant:
     image: qdrant/qdrant:v1.12.4
     restart: unless-stopped
@@ -87,6 +114,11 @@ services:
       DB_URL: jdbc:mysql://mysql:3306/${DOCKER_DB_NAME:-teach_platform}?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
       DB_USERNAME: ${DOCKER_DB_USERNAME:-teach}
       DB_PASSWORD: ${DOCKER_DB_PASSWORD:-change-me}
+      # Redis 承载验证码、Token 登出名单、AI 限流窗口与提交冷却
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+      REDIS_DATABASE: ${REDIS_DATABASE:-0}
       FLYWAY_ENABLED: "true"
       FLYWAY_BASELINE_ON_MIGRATE: "false"
       RUYI_UPLOAD_PATH: /app/files/
@@ -147,6 +179,8 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
+      redis:
+        condition: service_healthy
       qdrant:
         condition: service_healthy
       ai-server:
@@ -193,6 +227,7 @@ services:
 
 volumes:
   mysql_data:
+  redis_data:
   qdrant_data:
   backend_files:
   backend_backups:
