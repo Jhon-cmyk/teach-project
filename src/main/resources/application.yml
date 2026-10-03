@@ -122,6 +122,9 @@ ai:
   tutor:
     image-max-size-mb: ${AI_TUTOR_IMAGE_MAX_SIZE_MB:8}
     audio-max-seconds: ${AI_TUTOR_AUDIO_MAX_SECONDS:60}
+  rate-limit:
+    # /ai/** 按用户每分钟请求上限；设为 0 表示关闭限流
+    requests-per-minute: ${AI_RATE_LIMIT_PER_MINUTE:40}
 
 homework:
   vision:

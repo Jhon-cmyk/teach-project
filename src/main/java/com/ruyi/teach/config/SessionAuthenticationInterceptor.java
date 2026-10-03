@@ -47,6 +47,11 @@ public class SessionAuthenticationInterceptor implements HandlerInterceptor {
             new RolePathRule("/ai/agent", UserRole.TEACHER, UserRole.ADMIN),
             new RolePathRule("/ai/resource", UserRole.TEACHER, UserRole.ADMIN),
             new RolePathRule("/ai/micro-video", UserRole.TEACHER),
+            // 教师专属 AI 接口：会真实调用付费大模型，不能只校验登录。
+            // /ai/stream、/ai/tutor、/ai/analyze/file 学生与教师都在用，因此不在此处限制角色。
+            new RolePathRule("/ai/teacher", UserRole.TEACHER, UserRole.ADMIN),
+            new RolePathRule("/ai/grade-homework", UserRole.TEACHER, UserRole.ADMIN),
+            new RolePathRule("/ai/coding/generate", UserRole.TEACHER, UserRole.ADMIN),
             new RolePathRule("/analysis", UserRole.TEACHER, UserRole.ADMIN),
             new RolePathRule("/coding/problem/teacher", UserRole.TEACHER),
             new RolePathRule("/coding/problem/student", UserRole.STUDENT),

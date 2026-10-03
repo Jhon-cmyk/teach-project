@@ -90,6 +90,8 @@ services:
       FLYWAY_ENABLED: "true"
       FLYWAY_BASELINE_ON_MIGRATE: "false"
       RUYI_UPLOAD_PATH: /app/files/
+      # 必须与 RUYI_UPLOAD_PATH 分离：上传目录经 /profile/** 匿名公开
+      RUYI_BACKUP_PATH: /app/data/backups/
       APP_CORS_ALLOWED_ORIGINS: http://localhost:${DOCKER_FRONTEND_PORT:-8080}
       SESSION_COOKIE_SECURE: ${DOCKER_SESSION_COOKIE_SECURE:-false}
       AUTH_TOKEN_TTL: ${AUTH_TOKEN_TTL:-30d}
@@ -141,6 +143,7 @@ services:
       - "${DOCKER_BACKEND_PORT:-8820}:8820"
     volumes:
       - backend_files:/app/files
+      - backend_backups:/app/data/backups
     depends_on:
       mysql:
         condition: service_healthy
@@ -192,4 +195,5 @@ volumes:
   mysql_data:
   qdrant_data:
   backend_files:
+  backend_backups:
   ai_videos:

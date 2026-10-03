@@ -28,6 +28,12 @@ springdoc:
 
 ruyi:
   upload-path: ${RUYI_UPLOAD_PATH}
+  # 必须与 upload-path 分离，否则数据库备份会经 /profile/** 被未登录用户下载
+  backup-path: ${RUYI_BACKUP_PATH:./backups/}
+
+# 生产默认走 Judge0 沙箱；LocalCodeExecutor 无隔离，不允许成为生产缺省值。
+code-executor:
+  mode: ${CODE_EXECUTOR_MODE:judge0}
 
 knife4j:
   enable: false

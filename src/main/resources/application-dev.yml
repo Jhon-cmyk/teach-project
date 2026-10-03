@@ -5,6 +5,8 @@ spring:
 
 ruyi:
   upload-path: ${RUYI_UPLOAD_PATH:./files/}
+  # 数据库备份目录，必须与 upload-path 分离：upload-path 由 /profile/** 匿名对外提供
+  backup-path: ${RUYI_BACKUP_PATH:./backups/}
 
 knife4j:
   enable: ${KNIFE4J_ENABLED:true}

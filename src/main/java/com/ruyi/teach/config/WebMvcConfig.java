@@ -11,9 +11,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     private final SessionAuthenticationInterceptor sessionAuthenticationInterceptor;
+    private final AiRateLimitInterceptor aiRateLimitInterceptor;
 
-    public WebMvcConfig(SessionAuthenticationInterceptor sessionAuthenticationInterceptor) {
+    public WebMvcConfig(SessionAuthenticationInterceptor sessionAuthenticationInterceptor,
+                        AiRateLimitInterceptor aiRateLimitInterceptor) {
         this.sessionAuthenticationInterceptor = sessionAuthenticationInterceptor;
+        this.aiRateLimitInterceptor = aiRateLimitInterceptor;
     }
 
     // 读取 yml 里配置的路径
@@ -43,5 +46,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(sessionAuthenticationInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/actuator/health", "/actuator/health/**");
+
+        // 必须晚于认证拦截器：限流按登录用户 ID 计数，依赖认证阶段绑定的身份。
+        registry.addInterceptor(aiRateLimitInterceptor)
+                .addPathPatterns("/ai/**")
+                .order(1);
     }
 }

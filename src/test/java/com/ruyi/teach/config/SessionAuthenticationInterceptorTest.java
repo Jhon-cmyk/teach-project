@@ -77,6 +77,34 @@ class SessionAuthenticationInterceptorTest {
     }
 
     @Test
+    void restrictsTeacherOnlyAiEndpointsButKeepsSharedAiEndpointsOpenToStudents() {
+        // 教师专属 AI 接口：学生不得调用（否则可盗用付费大模型）
+        BusinessException teacherOnly = assertThrows(
+                BusinessException.class,
+                () -> preHandleAs("GET", "/api/ai/teacher/vision/stream", "student")
+        );
+        assertEquals(40101, teacherOnly.getCode());
+        assertThrows(
+                BusinessException.class,
+                () -> preHandleAs("POST", "/api/ai/coding/generate", "student")
+        );
+        assertThrows(
+                BusinessException.class,
+                () -> preHandleAs("POST", "/api/ai/grade-homework", "student")
+        );
+
+        assertTrue(preHandleAs("GET", "/api/ai/teacher/vision/stream", "teacher"));
+        assertTrue(preHandleAs("POST", "/api/ai/coding/generate", "admin"));
+
+        // 学生与教师共用的 AI 接口必须保持可用，避免限制角色后锁死学生功能
+        assertTrue(preHandleAs("POST", "/api/ai/stream", "student"));
+        assertTrue(preHandleAs("POST", "/api/ai/tutor/stream", "student"));
+        assertTrue(preHandleAs("POST", "/api/ai/tutor/speech-to-text", "student"));
+        assertTrue(preHandleAs("POST", "/api/ai/analyze/file", "student"));
+        assertTrue(preHandleAs("POST", "/api/ai/stream", "teacher"));
+    }
+
+    @Test
     void bearerTokenIdentityOverridesSharedBrowserSession() {
         TabAuthTokenService tokenService = mock(TabAuthTokenService.class);
         SessionAuthenticationInterceptor tokenInterceptor =

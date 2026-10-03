@@ -91,6 +91,14 @@ public class AdminDataTransferController {
     @Value("${ruyi.upload-path:D:/teach/files/}")
     private String uploadPath;
 
+    /**
+     * 数据库备份目录。必须位于 {@code ruyi.upload-path} 之外：
+     * 上传目录由 WebMvcConfig 以 /profile/** 对外提供匿名静态访问，
+     * 备份文件（完整数据库导出）一旦落在该目录下即可被未登录用户直接下载。
+     */
+    @Value("${ruyi.backup-path:./backups/}")
+    private String backupPath;
+
     @GetMapping("/template/students")
     public void downloadStudentTemplate(HttpServletRequest request, HttpServletResponse response) throws Exception {
         getAdminLoginUser(request);
@@ -515,7 +523,15 @@ public class AdminDataTransferController {
     }
 
     private Path getBackupDir() {
-        return Path.of(uploadPath).resolve("admin-backups").normalize();
+        Path backupDir = Path.of(backupPath).toAbsolutePath().normalize();
+        Path publicUploadDir = Path.of(uploadPath).toAbsolutePath().normalize();
+        if (backupDir.startsWith(publicUploadDir)) {
+            throw new IllegalStateException(
+                    "备份目录不能位于对外公开的上传目录内（/profile/** 会匿名暴露该目录）："
+                            + "ruyi.backup-path=" + backupDir + ", ruyi.upload-path=" + publicUploadDir
+            );
+        }
+        return backupDir;
     }
 
     private Path resolveBackupFile(String filename) {

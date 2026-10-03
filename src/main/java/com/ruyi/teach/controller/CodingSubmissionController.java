@@ -64,6 +64,11 @@ public class CodingSubmissionController {
     public BaseResponse<CodingRunResultVO> runCode(@RequestBody CodingRunRequest req,
                                                     HttpServletRequest request) {
         User loginUser = getLoginUser(request);
+        // 与 /submit 的 requireActivePublish 保持一致：本接口会真实执行提交的代码，
+        // 不能只校验登录，否则任意已登录账号都能触发代码执行。
+        if (!"student".equals(loginUser.getUserRole())) {
+            throw new BusinessException(ErrorCode.NO_AUTH_ERROR, "仅学生可运行编程题代码");
+        }
         validateRunRequest(req);
 
         CodingProblem problem = problemService.getById(req.getProblemId());

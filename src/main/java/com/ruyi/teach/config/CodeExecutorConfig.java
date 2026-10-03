@@ -4,6 +4,8 @@ import com.ruyi.teach.service.CodeExecutor;
 import com.ruyi.teach.client.Judge0Client;
 import com.ruyi.teach.service.LocalCodeExecutor;
 import com.ruyi.teach.model.vo.CodingRunResultVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,10 +13,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CodeExecutorConfig {
 
+    private static final Logger log = LoggerFactory.getLogger(CodeExecutorConfig.class);
+
     @Value("${judge0.default-timeout-ms:5000}")
     private long defaultTimeoutMs;
 
-    @Value("${code-executor.mode:local}")
+    /**
+     * 缺省值取 judge0 而不是 local：配置缺失时应当退化为"沙箱执行失败（可见）"，
+     * 而不是"无沙箱执行（静默）"。
+     */
+    @Value("${code-executor.mode:judge0}")
     private String mode;
 
     @Bean
@@ -39,6 +47,8 @@ public class CodeExecutorConfig {
                         .build();
             };
         }
+        log.warn("代码执行器使用 LocalCodeExecutor（无隔离）：提交的代码将以应用进程身份在本机执行，"
+                + "且内存上限不会被强制。仅限本地开发使用；生产环境请设置 CODE_EXECUTOR_MODE=judge0。");
         return new LocalCodeExecutor(defaultTimeoutMs);
     }
 

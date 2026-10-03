@@ -22,7 +22,8 @@ RUN apt-get update \
 WORKDIR /app
 
 COPY --from=build --chown=app:app /workspace/app.jar /app/app.jar
-RUN mkdir -p /app/files && chown -R app:app /app
+# /app/data/backups 必须预先创建并归属 app 用户，否则挂载命名卷后会由 root 持有，非 root 进程无法写入
+RUN mkdir -p /app/files /app/data/backups && chown -R app:app /app
 
 USER app
 
