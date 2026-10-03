@@ -50,14 +50,17 @@ function Test-PlaceholderValue {
         return [string]::IsNullOrWhiteSpace($fallback) -or $fallback -match $placeholderPattern
     }
 
-    return $normalized -match '^\$(' `
+    return $normalized -match '^\$' `
         -or $normalized -match '^\$env:' `
         -or $normalized -match '^(?i)(process\.env|import\.meta\.env|os\.getenv|os\.environ|System\.getenv)'
 }
 
 # Only scan files Git would publish: tracked files plus non-ignored untracked files.
+# core.quotePath=false keeps non-ASCII paths verbatim; with Git's default quoting they come
+# back as "..." with octal escapes, which no filesystem can resolve, so those files would be
+# skipped without any indication that they were never scanned.
 $candidatePaths = @(
-    git -C $repoRoot ls-files --cached --others --exclude-standard
+    git -C $repoRoot -c core.quotePath=false ls-files --cached --others --exclude-standard
 )
 
 $configAssignmentPattern = '(?i)^\s*[#-]*\s*["'']?([A-Za-z0-9_.-]*(?:password|passwd|pwd|api[-_]?key|api[-_]?secret|access[-_]?key(?:[-_]?id|[-_]?secret)?|secret|auth[-_]?token|app[-_]?id)[A-Za-z0-9_.-]*)["'']?\s*[:=]\s*["'']?(.*?)["'']?[,]?\s*$'
@@ -67,11 +70,25 @@ $cookieLiteralPattern = '(?i)\b[A-Za-z0-9_]*cookie\s*=\s*["'']([^"'']{20,})["'']
 
 foreach ($relativePath in $candidatePaths) {
     $fullPath = Join-Path $repoRoot $relativePath
-    if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+
+    # Test-Path rejects some paths with an exception, and Get-Item can fail on a path that
+    # Test-Path already accepted (observed on GitHub's Linux/pwsh runner, where that
+    # combination aborted the entire scan instead of skipping one file). Both are therefore
+    # handled per file, and Get-Item is replaced by a provider-free FileInfo.
+    try {
+        if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+            continue
+        }
+        $file = [System.IO.FileInfo]$fullPath
+    } catch {
+        Write-Warning "Skipped unreadable path '$relativePath': $($_.Exception.Message)"
         continue
     }
 
-    $file = Get-Item -LiteralPath $fullPath
+    if (-not $file.Exists) {
+        Write-Warning "Skipped unreadable path '$relativePath': not found"
+        continue
+    }
     if ($file.Length -ge 2MB) {
         continue
     }
