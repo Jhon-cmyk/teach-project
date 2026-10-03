@@ -48,8 +48,8 @@ public class UserController {
 
     @Operation(summary = "获取图形验证码")
     @GetMapping("/captcha")
-    public BaseResponse<CaptchaVO> getCaptcha(HttpServletRequest request) {
-        return ResultUtils.success(userService.generateCaptcha(request));
+    public BaseResponse<CaptchaVO> getCaptcha(HttpServletRequest request, HttpServletResponse response) {
+        return ResultUtils.success(userService.generateCaptcha(request, response));
     }
 
     @Operation(summary = "用户注册")

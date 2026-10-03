@@ -1,6 +1,7 @@
 package com.ruyi.teach;
 
 import org.flywaydb.core.Flyway;
+import com.ruyi.teach.testsupport.RedisContainerSupport;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,10 +35,12 @@ class TeachApplicationTests {
 
     @DynamicPropertySource
     static void configureIsolatedDatabase(DynamicPropertyRegistry registry) {
+        MYSQL.start();
         registry.add("spring.datasource.url", MYSQL::getJdbcUrl);
         registry.add("spring.datasource.username", MYSQL::getUsername);
         registry.add("spring.datasource.password", MYSQL::getPassword);
         registry.add("spring.flyway.enabled", () -> true);
+        RedisContainerSupport.register(registry);
     }
 
     @Autowired

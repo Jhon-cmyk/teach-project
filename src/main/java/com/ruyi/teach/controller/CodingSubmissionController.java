@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ruyi.teach.common.BaseResponse;
 import com.ruyi.teach.common.ResultUtils;
 import com.ruyi.teach.common.TraceContext;
+import com.ruyi.teach.cache.SubmitCooldownStore;
 import com.ruyi.teach.exception.BusinessException;
 import com.ruyi.teach.exception.ErrorCode;
 import com.ruyi.teach.model.dto.CodingRunRequest;
@@ -21,8 +22,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -39,7 +40,6 @@ public class CodingSubmissionController {
     private static final Pattern NUMBER_PATTERN = Pattern.compile("(\\d{1,3})");
 
     private static final long SUBMIT_COOLDOWN_MS = 30_000;
-    private static final ConcurrentHashMap<String, Long> lastSubmitTime = new ConcurrentHashMap<>();
 
     @Resource
     private CodeExecutor codeExecutor;
@@ -58,6 +58,9 @@ public class CodingSubmissionController {
 
     @Resource
     private DeepSeekService deepSeekService;
+
+    @Resource
+    private SubmitCooldownStore submitCooldownStore;
 
     @Operation(summary = "运行代码（不判分，仅跑样例用例）")
     @PostMapping("/run")
@@ -176,7 +179,6 @@ public class CodingSubmissionController {
 
         CodingRunResultVO vo = buildSubmitResult(req.getLanguage(), judgeResult, testScore, aiScore, finalScore, aiReviewMd, submission.getId());
 
-        recordSubmitTime(loginUser.getId(), req.getProblemId());
         return ResultUtils.success(vo);
     }
 
@@ -350,8 +352,6 @@ public class CodingSubmissionController {
                 completeEvent.put("accepted", passedCount == totalCount);
                 emitter.send(SseEmitter.event().name("submission_complete").data(objectMapper.writeValueAsString(completeEvent)));
                 emitter.complete();
-
-                recordSubmitTime(loginUser.getId(), req.getProblemId());
 
             } catch (Exception e) {
                 log.error("Coding submission failed, trace_id={}, submissionId={}",
@@ -548,16 +548,14 @@ public class CodingSubmissionController {
     }
 
     private void checkSubmitCooldown(Long studentId, Long problemId) {
-        String key = studentId + ":" + problemId;
-        Long lastTime = lastSubmitTime.get(key);
-        if (lastTime != null && (System.currentTimeMillis() - lastTime) < SUBMIT_COOLDOWN_MS) {
-            long remaining = (SUBMIT_COOLDOWN_MS - (System.currentTimeMillis() - lastTime)) / 1000;
-            throw new BusinessException(ErrorCode.OPERATION_ERROR, "提交过于频繁，请 " + remaining + " 秒后再试");
+        Duration remaining = submitCooldownStore.acquire(
+                studentId, problemId, Duration.ofMillis(SUBMIT_COOLDOWN_MS));
+        if (!remaining.isZero() && !remaining.isNegative()) {
+            throw new BusinessException(
+                    ErrorCode.OPERATION_ERROR,
+                    "提交过于频繁，请 " + remaining.toSeconds() + " 秒后再试"
+            );
         }
-    }
-
-    private void recordSubmitTime(Long studentId, Long problemId) {
-        lastSubmitTime.put(studentId + ":" + problemId, System.currentTimeMillis());
     }
 
     private CodingProblemPublish requireActivePublish(Long problemId, User loginUser) {

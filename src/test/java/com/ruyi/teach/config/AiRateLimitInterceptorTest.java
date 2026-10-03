@@ -1,8 +1,10 @@
 package com.ruyi.teach.config;
 
+import com.ruyi.teach.cache.AiRateLimitGuard;
 import com.ruyi.teach.controller.SessionUserContext;
 import com.ruyi.teach.exception.BusinessException;
 import com.ruyi.teach.model.entity.User;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -11,11 +13,38 @@ import org.springframework.test.util.ReflectionTestUtils;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+/**
+ * 拦截器职责：决定哪些请求进入限流、额度用尽时报什么错。
+ * 滑动窗口本身的原子性由 Redis 侧实现保证，属于 {@code AiRateLimitGuard} 的测试范围。
+ */
 class AiRateLimitInterceptorTest {
 
+    private AiRateLimitGuard guard;
+    private long lastUserId;
+    private int lastRequestsPerMinute;
+
+    @BeforeEach
+    void setUp() {
+        guard = mock(AiRateLimitGuard.class);
+        lastUserId = -1L;
+        lastRequestsPerMinute = -1;
+        when(guard.allow(anyLong(), anyInt(), anyLong())).thenAnswer(invocation -> {
+            lastUserId = invocation.getArgument(0);
+            lastRequestsPerMinute = invocation.getArgument(1);
+            return true;
+        });
+    }
+
     private AiRateLimitInterceptor interceptorWithLimit(int requestsPerMinute) {
-        AiRateLimitInterceptor interceptor = new AiRateLimitInterceptor();
+        AiRateLimitInterceptor interceptor = new AiRateLimitInterceptor(guard);
         ReflectionTestUtils.setField(interceptor, "requestsPerMinute", requestsPerMinute);
         return interceptor;
     }
@@ -37,10 +66,7 @@ class AiRateLimitInterceptorTest {
     @Test
     void rejectsRequestsBeyondThePerMinuteLimit() {
         AiRateLimitInterceptor interceptor = interceptorWithLimit(3);
-
-        assertDoesNotThrow(() -> call(interceptor, 1L));
-        assertDoesNotThrow(() -> call(interceptor, 1L));
-        assertDoesNotThrow(() -> call(interceptor, 1L));
+        when(guard.allow(anyLong(), anyInt(), anyLong())).thenReturn(false);
 
         BusinessException exception = assertThrows(
                 BusinessException.class,
@@ -50,13 +76,14 @@ class AiRateLimitInterceptorTest {
     }
 
     @Test
-    void countsEachUserIndependently() {
-        AiRateLimitInterceptor interceptor = interceptorWithLimit(1);
+    void passesTheConfiguredLimitAndLoginUserIdToTheLimiter() {
+        AiRateLimitInterceptor interceptor = interceptorWithLimit(7);
 
-        assertDoesNotThrow(() -> call(interceptor, 1L));
-        assertThrows(BusinessException.class, () -> call(interceptor, 1L));
-        // 另一个用户不应被前一个用户的用量影响
-        assertDoesNotThrow(() -> call(interceptor, 2L));
+        assertDoesNotThrow(() -> call(interceptor, 42L));
+
+        assertEquals(42L, lastUserId);
+        assertEquals(7, lastRequestsPerMinute);
+        verify(guard).allow(eq(42L), eq(7), anyLong());
     }
 
     @Test
@@ -66,6 +93,8 @@ class AiRateLimitInterceptorTest {
         for (int i = 0; i < 50; i++) {
             assertDoesNotThrow(() -> call(interceptor, 1L));
         }
+
+        verify(guard, never()).allow(anyLong(), anyInt(), anyLong());
     }
 
     @Test
@@ -79,5 +108,7 @@ class AiRateLimitInterceptorTest {
                     () -> interceptor.preHandle(request, new MockHttpServletResponse(), new Object())
             );
         }
+
+        verify(guard, never()).allow(anyLong(), anyInt(), anyLong());
     }
 }

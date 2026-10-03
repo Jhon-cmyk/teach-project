@@ -5,6 +5,14 @@ spring:
     url: jdbc:mysql://127.0.0.1:1/teach_test_unconfigured
     username: test_database_not_configured
     password: __test_database_not_configured__
+  # Fail-closed like the datasource above: integration tests must inject a
+  # disposable Testcontainers Redis, never reach a developer or shared instance.
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 1
+      timeout: 300ms
+      connect-timeout: 300ms
   flyway:
     enabled: true
 

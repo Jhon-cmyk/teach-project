@@ -17,8 +17,6 @@ import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.Base64;
 import java.util.HexFormat;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class TabAuthTokenService {
@@ -33,7 +31,9 @@ public class TabAuthTokenService {
     private final SecureRandom secureRandom = new SecureRandom();
     private Duration tokenTtl = DEFAULT_TOKEN_TTL;
     private byte[] signingKey = randomBytes(32);
-    private final Map<String, Long> revokedTokens = new ConcurrentHashMap<>();
+
+    @Resource
+    private RevokedTokenStore revokedTokenBlacklist;
 
     @Resource
     private UserMapper userMapper;
@@ -59,7 +59,6 @@ public class TabAuthTokenService {
             throw new IllegalArgumentException("login user and id must not be null");
         }
 
-        cleanupRevokedTokens();
         long expiresAt = System.currentTimeMillis() + tokenTtl.toMillis();
         String nonce = Base64.getUrlEncoder().withoutPadding().encodeToString(randomBytes(18));
         String payload = user.getId() + ":" + expiresAt + ":" + nonce;
@@ -73,38 +72,34 @@ public class TabAuthTokenService {
             return null;
         }
 
-        if (revokedTokens.containsKey(hash(rawToken))) {
-            return null;
-        }
-
         String[] tokenParts = rawToken.split("\\.", 2);
         if (tokenParts.length != 2 || !constantTimeEquals(sign(tokenParts[0]), tokenParts[1])) {
             return null;
         }
 
         String[] payloadParts;
+        long userId;
+        long expiresAt;
         try {
             String payload = new String(
                     Base64.getUrlDecoder().decode(tokenParts[0]),
                     StandardCharsets.UTF_8
             );
             payloadParts = payload.split(":", 3);
+            if (payloadParts.length != 3) {
+                return null;
+            }
+            userId = Long.parseLong(payloadParts[0]);
+            expiresAt = Long.parseLong(payloadParts[1]);
         } catch (IllegalArgumentException e) {
             return null;
         }
-        if (payloadParts.length != 3) {
+        if (userId <= 0 || expiresAt <= System.currentTimeMillis()) {
             return null;
         }
 
-        long userId;
-        long expiresAt;
-        try {
-            userId = Long.parseLong(payloadParts[0]);
-            expiresAt = Long.parseLong(payloadParts[1]);
-        } catch (NumberFormatException e) {
-            return null;
-        }
-        if (userId <= 0 || expiresAt <= System.currentTimeMillis()) {
+        // 签名与有效期都通过后，再查吊销名单：未通过校验的 Token 连 Redis 都不该访问
+        if (revokedTokenBlacklist.isRevoked(hash(rawToken), expiresAt)) {
             return null;
         }
 
@@ -123,7 +118,7 @@ public class TabAuthTokenService {
         }
         Long expiresAt = readExpiresAt(rawToken);
         if (expiresAt != null && expiresAt > System.currentTimeMillis()) {
-            revokedTokens.put(hash(rawToken), expiresAt);
+            revokedTokenBlacklist.revoke(hash(rawToken), expiresAt);
         }
     }
 
@@ -166,11 +161,6 @@ public class TabAuthTokenService {
         } catch (IllegalArgumentException e) {
             return null;
         }
-    }
-
-    private void cleanupRevokedTokens() {
-        long now = System.currentTimeMillis();
-        revokedTokens.entrySet().removeIf(entry -> entry.getValue() <= now);
     }
 
     private byte[] randomBytes(int length) {

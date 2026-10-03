@@ -46,7 +46,8 @@ class SessionAuthenticationWebTest {
 
     @Test
     void captchaEndpointRemainsAnonymous() throws Exception {
-        when(userService.generateCaptcha(org.mockito.ArgumentMatchers.any()))
+        when(userService.generateCaptcha(org.mockito.ArgumentMatchers.any(),
+                org.mockito.ArgumentMatchers.any()))
                 .thenReturn(new CaptchaVO());
 
         mockMvc.perform(get("/user/captcha"))

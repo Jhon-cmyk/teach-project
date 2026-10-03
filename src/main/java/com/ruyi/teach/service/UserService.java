@@ -5,6 +5,7 @@ import com.ruyi.teach.model.dto.CaptchaLoginRequest;
 import com.ruyi.teach.model.entity.User;
 import com.ruyi.teach.model.vo.CaptchaVO;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public interface UserService extends IService<User> {
     /**
@@ -40,9 +41,9 @@ public interface UserService extends IService<User> {
     boolean updateUserPassword(Long id, String oldPassword, String newPassword);
 
     /**
-     * 生成图形验证码（存入 session，5 分钟有效）
+     * 生成图形验证码（答案存 Redis，并在浏览器写入绑定 Cookie，5 分钟有效）
      */
-    CaptchaVO generateCaptcha(HttpServletRequest request);
+    CaptchaVO generateCaptcha(HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 账号密码 + 图形验证码登录

@@ -23,12 +23,15 @@ class TabAuthTokenServiceTest {
 
     private TabAuthTokenService service;
     private UserMapper userMapper;
+    private RevokedTokenStore revokedStore;
 
     @BeforeEach
     void setUp() {
+        revokedStore = new InMemoryRevokedTokenStore();
         service = new TabAuthTokenService();
         userMapper = mock(UserMapper.class);
         ReflectionTestUtils.setField(service, "userMapper", userMapper);
+        ReflectionTestUtils.setField(service, "revokedTokenBlacklist", revokedStore);
     }
 
     @Test
@@ -104,6 +107,8 @@ class TabAuthTokenServiceTest {
         restartedInstance.configureSigningSecret("stable-test-secret");
         ReflectionTestUtils.setField(firstInstance, "userMapper", userMapper);
         ReflectionTestUtils.setField(restartedInstance, "userMapper", userMapper);
+        ReflectionTestUtils.setField(firstInstance, "revokedTokenBlacklist", revokedStore);
+        ReflectionTestUtils.setField(restartedInstance, "revokedTokenBlacklist", revokedStore);
 
         User user = new User();
         user.setId(51L);
@@ -119,5 +124,24 @@ class TabAuthTokenServiceTest {
         String encodedPayload = token.split("\\.", 2)[0];
         String payload = new String(Base64.getUrlDecoder().decode(encodedPayload), StandardCharsets.UTF_8);
         return Long.parseLong(payload.split(":", 3)[1]);
+    }
+
+    /**
+     * 内存实现：本测试关注 Token 签名与"只吊销当前标签页"的语义，
+     * 不需要 Redis。Redis 侧行为由集成测试覆盖。
+     */
+    private static final class InMemoryRevokedTokenStore implements RevokedTokenStore {
+
+        private final java.util.Set<String> revoked = new java.util.HashSet<>();
+
+        @Override
+        public boolean isRevoked(String tokenHash, long tokenExpiresAt) {
+            return revoked.contains(tokenHash);
+        }
+
+        @Override
+        public void revoke(String tokenHash, long tokenExpiresAt) {
+            revoked.add(tokenHash);
+        }
     }
 }

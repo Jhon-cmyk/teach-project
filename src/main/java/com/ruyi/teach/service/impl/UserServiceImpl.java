@@ -5,6 +5,7 @@ import cn.hutool.captcha.LineCaptcha;
 import cn.hutool.core.util.IdUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ruyi.teach.cache.CaptchaStore;
 import com.ruyi.teach.exception.BusinessException;
 import com.ruyi.teach.exception.ErrorCode;
 import com.ruyi.teach.exception.ThrowUtils;
@@ -21,10 +22,13 @@ import com.ruyi.teach.service.AdminAuditLogger;
 import com.ruyi.teach.service.PasswordService;
 import com.ruyi.teach.service.UserService;
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,8 +39,20 @@ import java.util.Date;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+    /**
+     * 验证码答案在进程内的兜底存储前缀（仅 Redis 不可用时使用）。
+     *
+     * <p>这里<b>不再有</b> Session 版浏览器绑定：绑定已改为签名 Cookie（见
+     * {@link CaptchaStore}）。原因是用实例私有的 Session 做绑定，会同时废掉
+     * "验证码跨实例可用"这个目的——A 写入的绑定 B 读不到。
+     */
     private static final String CAPTCHA_SESSION_PREFIX = "captcha:";
+
+    /** 兜底 Session 存储的有效期，与 {@link CaptchaStore} 中的 TTL 保持一致。 */
     private static final long CAPTCHA_TTL_MS = 5 * 60 * 1000L;
+
+    @Resource
+    private CaptchaStore captchaStore;
 
     @Resource
     private UserLoginLogMapper userLoginLogMapper;
@@ -166,14 +182,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public CaptchaVO generateCaptcha(HttpServletRequest request) {
+    public CaptchaVO generateCaptcha(HttpServletRequest request, HttpServletResponse response) {
         LineCaptcha captcha = CaptchaUtil.createLineCaptcha(130, 48, 4, 20);
         String code = captcha.getCode();
-        String captchaId = IdUtil.simpleUUID();
 
-        HttpSession session = request.getSession();
-        session.setAttribute(CAPTCHA_SESSION_PREFIX + captchaId,
-                new CaptchaEntry(code, System.currentTimeMillis() + CAPTCHA_TTL_MS));
+        // 优先写入 Redis，使"A 实例取码、B 实例校验"也能通过。
+        String captchaId = captchaStore.create(code);
+        if (captchaId == null) {
+            // Redis 不可用：退回进程内 Session 存储答案。单实例下行为与改造前完全一致；
+            // 多实例下该验证码只在当前实例有效，属于可用性优先的降级。
+            captchaId = IdUtil.simpleUUID();
+            request.getSession().setAttribute(CAPTCHA_SESSION_PREFIX + captchaId,
+                    new CaptchaEntry(code, System.currentTimeMillis() + CAPTCHA_TTL_MS));
+        }
+
+        // 浏览器绑定：签名 Cookie，任何实例都能独立验签（用 Session 会破坏跨实例能力）
+        writeCaptchaBindingCookie(response, captchaStore.issueBinding(captchaId));
 
         CaptchaVO vo = new CaptchaVO();
         vo.setCaptchaId(captchaId);
@@ -191,22 +215,63 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String captchaCode = loginRequest.getCaptchaCode();
         ThrowUtils.throwIf(StringUtils.isAnyBlank(captchaId, captchaCode), ErrorCode.PARAMS_ERROR, "请先完成图形验证");
 
-        HttpSession session = request.getSession();
-        String key = CAPTCHA_SESSION_PREFIX + captchaId;
-        CaptchaEntry entry = (CaptchaEntry) session.getAttribute(key);
-        if (entry == null) {
+        // 先确认该验证码确实由当前浏览器申请，再消耗答案：
+        // 缺少绑定校验时任何人都能重放别人的 captchaId，验证码会失去防机器人意义。
+        if (!captchaStore.verifyBinding(captchaId, readCaptchaBindingToken(request))) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "验证码与当前浏览器不匹配，请刷新");
+        }
+
+        // 先取 Redis（跨实例可用），失败再取本次进程的 Session 兜底（降级路径）
+        String expectedCode = captchaStore.consume(captchaId);
+        if (expectedCode == null) {
+            expectedCode = consumeSessionCaptcha(request.getSession(), CAPTCHA_SESSION_PREFIX + captchaId);
+        }
+
+        if (expectedCode == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "验证码已失效，请刷新");
         }
-        if (System.currentTimeMillis() > entry.expireAt) {
-            session.removeAttribute(key);
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "验证码已过期，请刷新");
-        }
-        if (!entry.code.equalsIgnoreCase(captchaCode)) {
+        if (!expectedCode.equalsIgnoreCase(captchaCode)) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "验证码错误");
         }
-        session.removeAttribute(key);
 
         return userLogin(loginRequest.getUserAccount(), loginRequest.getUserPassword(), request);
+    }
+
+    /** 写入浏览器绑定 Cookie：HttpOnly 防脚本读取，SameSite=Lax 防跨站带上。 */
+    private void writeCaptchaBindingCookie(HttpServletResponse response, String bindingToken) {
+        ResponseCookie cookie = ResponseCookie.from(CaptchaStore.BINDING_COOKIE, bindingToken)
+                .path("/")
+                .httpOnly(true)
+                .sameSite("Lax")
+                .build();
+        response.addHeader("Set-Cookie", cookie.toString());
+    }
+
+    /** 读取浏览器绑定令牌；不存在时返回 null。 */
+    private String readCaptchaBindingToken(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies == null) {
+            return null;
+        }
+        for (Cookie cookie : cookies) {
+            if (CaptchaStore.BINDING_COOKIE.equals(cookie.getName())) {
+                return cookie.getValue();
+            }
+        }
+        return null;
+    }
+
+    /** 读取进程内 Session 中兜底的验证码，处理过期并一次性移除。 */
+    private String consumeSessionCaptcha(HttpSession session, String sessionKey) {
+        Object attribute = session.getAttribute(sessionKey);
+        if (!(attribute instanceof CaptchaEntry entry)) {
+            return null;
+        }
+        session.removeAttribute(sessionKey);
+        if (System.currentTimeMillis() > entry.expireAt) {
+            return null;
+        }
+        return entry.code;
     }
 
     private void saveStudentLoginLog(User user) {

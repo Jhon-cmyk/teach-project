@@ -2,6 +2,7 @@ package com.ruyi.teach.integration;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ruyi.teach.cache.CaptchaStore;
 import com.ruyi.teach.controller.SessionUserContext;
 import com.ruyi.teach.mapper.AiResourceMapper;
 import com.ruyi.teach.mapper.CourseChapterMapper;
@@ -23,10 +24,13 @@ import com.ruyi.teach.service.DeepSeekService;
 import com.ruyi.teach.service.PasswordService;
 import com.ruyi.teach.service.TeachingCaseAssetService;
 import com.ruyi.teach.service.UserService;
+import jakarta.servlet.http.Cookie;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpSession;
@@ -37,6 +41,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.transaction.annotation.Transactional;
+import com.ruyi.teach.testsupport.RedisContainerSupport;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -70,10 +75,12 @@ class CoreBusinessFlowIntegrationTest {
 
     @DynamicPropertySource
     static void configureIsolatedDatabase(DynamicPropertyRegistry registry) {
+        MYSQL.start();
         registry.add("spring.datasource.url", MYSQL::getJdbcUrl);
         registry.add("spring.datasource.username", MYSQL::getUsername);
         registry.add("spring.datasource.password", MYSQL::getPassword);
         registry.add("spring.flyway.enabled", () -> true);
+        RedisContainerSupport.register(registry);
     }
 
     @Autowired
@@ -121,6 +128,19 @@ class CoreBusinessFlowIntegrationTest {
     @MockitoBean
     private DeepSeekService deepSeekService;
 
+    @Autowired
+    private StringRedisTemplate redisTemplate;
+
+    /**
+     * 本测试类带 {@code @Transactional}，事务回滚对 Redis 无效：验证码、登录吊销名单、
+     * 限流窗口与提交冷却都会在测试方法之间残留。必须在每个用例前显式清理，
+     * 否则用例顺序会影响结果。
+     */
+    @BeforeEach
+    void clearRedisState() {
+        redisTemplate.getConnectionFactory().getConnection().serverCommands().flushAll();
+    }
+
     @Test
     void studentCanRegisterLoginAndLogoutWhileDuplicateRegistrationIsRejected() throws Exception {
         String account = "flow_student";
@@ -163,6 +183,7 @@ class CoreBusinessFlowIntegrationTest {
                 .andExpect(jsonPath("$.data.captchaCode").isNotEmpty())
                 .andReturn();
         JsonNode captchaData = responseJson(captcha).path("data");
+        String captchaBinding = captchaBindingCookie(captcha);
 
         String loginBody = objectMapper.createObjectNode()
                 .put("userAccount", account)
@@ -173,6 +194,7 @@ class CoreBusinessFlowIntegrationTest {
 
         mockMvc.perform(post("/user/login/captcha")
                         .session(session)
+                        .cookie(new Cookie(CaptchaStore.BINDING_COOKIE, captchaBinding))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(loginBody))
                 .andExpect(jsonPath("$.code").value(0))
@@ -207,29 +229,31 @@ class CoreBusinessFlowIntegrationTest {
                 .andExpect(jsonPath("$.code").value(40100));
 
         MockHttpSession oldPasswordSession = new MockHttpSession();
-        JsonNode oldPasswordCaptcha = fetchLocalCaptcha(oldPasswordSession);
+        CaptchaResult oldPasswordCaptcha = fetchLocalCaptcha(oldPasswordSession);
         String oldPasswordLoginBody = objectMapper.createObjectNode()
                 .put("userAccount", account)
                 .put("userPassword", rawLoginInput)
-                .put("captchaId", oldPasswordCaptcha.path("captchaId").asText())
-                .put("captchaCode", oldPasswordCaptcha.path("captchaCode").asText())
+                .put("captchaId", oldPasswordCaptcha.data().path("captchaId").asText())
+                .put("captchaCode", oldPasswordCaptcha.data().path("captchaCode").asText())
                 .toString();
         mockMvc.perform(post("/user/login/captcha")
                         .session(oldPasswordSession)
+                        .cookie(new Cookie(CaptchaStore.BINDING_COOKIE, oldPasswordCaptcha.bindingCookie()))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(oldPasswordLoginBody))
                 .andExpect(jsonPath("$.code").value(40000));
 
         MockHttpSession changedPasswordSession = new MockHttpSession();
-        JsonNode changedPasswordCaptcha = fetchLocalCaptcha(changedPasswordSession);
+        CaptchaResult changedPasswordCaptcha = fetchLocalCaptcha(changedPasswordSession);
         String changedPasswordLoginBody = objectMapper.createObjectNode()
                 .put("userAccount", account)
                 .put("userPassword", changedPassword)
-                .put("captchaId", changedPasswordCaptcha.path("captchaId").asText())
-                .put("captchaCode", changedPasswordCaptcha.path("captchaCode").asText())
+                .put("captchaId", changedPasswordCaptcha.data().path("captchaId").asText())
+                .put("captchaCode", changedPasswordCaptcha.data().path("captchaCode").asText())
                 .toString();
         mockMvc.perform(post("/user/login/captcha")
                         .session(changedPasswordSession)
+                        .cookie(new Cookie(CaptchaStore.BINDING_COOKIE, changedPasswordCaptcha.bindingCookie()))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(changedPasswordLoginBody))
                 .andExpect(jsonPath("$.code").value(0))
@@ -616,7 +640,11 @@ class CoreBusinessFlowIntegrationTest {
         return objectMapper.readTree(result.getResponse().getContentAsString(StandardCharsets.UTF_8));
     }
 
-    private JsonNode fetchLocalCaptcha(MockHttpSession session) throws Exception {
+    /** 取码结果：验证码数据 + 浏览器绑定 Cookie 的值。 */
+    private record CaptchaResult(JsonNode data, String bindingCookie) {
+    }
+
+    private CaptchaResult fetchLocalCaptcha(MockHttpSession session) throws Exception {
         MvcResult captcha = mockMvc.perform(get("/user/captcha")
                         .session(session)
                         .with(request -> {
@@ -627,6 +655,18 @@ class CoreBusinessFlowIntegrationTest {
                 .andExpect(jsonPath("$.data.captchaId").isNotEmpty())
                 .andExpect(jsonPath("$.data.captchaCode").isNotEmpty())
                 .andReturn();
-        return responseJson(captcha).path("data");
+        return new CaptchaResult(responseJson(captcha).path("data"), captchaBindingCookie(captcha));
+    }
+
+    /**
+     * 取出 Set-Cookie 里的浏览器绑定值。
+     *
+     * <p>绑定必须是"随浏览器走"的签名 Cookie，不能依赖 Session——用 Session 做绑定会
+     * 让验证码在负载均衡到其它实例后失效，这条断言正是为了锁住该行为。
+     */
+    private static String captchaBindingCookie(MvcResult result) {
+        jakarta.servlet.http.Cookie cookie =
+                result.getResponse().getCookie(CaptchaStore.BINDING_COOKIE);
+        return cookie == null ? null : cookie.getValue();
     }
 }

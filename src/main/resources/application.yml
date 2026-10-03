@@ -12,6 +12,13 @@ server:
 auth:
   token:
     ttl: ${AUTH_TOKEN_TTL:30d}
+    # 登出黑名单是安全开关：Redis 不可用时默认拒绝该 Token（fail-closed）。
+    # 若可用性优先于"已登出 Token 立即失效"，可显式改为 fail-open，但需自行承担风险。
+    blacklist-failure-policy: ${AUTH_BLACKLIST_FAILURE_POLICY:fail-closed}
+
+captcha:
+  # 图形验证码有效期，Redis 与进程内兜底存储共用
+  ttl: ${CAPTCHA_TTL:5m}
 
 spring:
   config:
@@ -20,6 +27,16 @@ spring:
     default: dev
   application:
     name: teach-backend
+  # Redis 只承载"必须被所有实例看到"的短生命周期状态，业务主数据仍以 MySQL 为权威源
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: ${REDIS_DATABASE:0}
+      # 命令级超时必须显式设置：默认值偏长，Redis 抖动会把请求线程一起拖住
+      timeout: ${REDIS_TIMEOUT:1s}
+      connect-timeout: ${REDIS_CONNECT_TIMEOUT:1s}
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/teach_platform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai}
@@ -125,6 +142,8 @@ ai:
   rate-limit:
     # /ai/** 按用户每分钟请求上限；设为 0 表示关闭限流
     requests-per-minute: ${AI_RATE_LIMIT_PER_MINUTE:40}
+    # 滑动窗口长度，仅在极少数需要放宽统计口径时调整
+    window: ${AI_RATE_LIMIT_WINDOW:60s}
 
 homework:
   vision:
@@ -158,3 +177,8 @@ management:
       enabled: true
     readinessstate:
       enabled: true
+    # Redis 只承载验证码/黑名单/限流/冷却，其中三项 Redis 不可用时按降级策略继续服务。
+    # 若把 Redis 计入就绪探针，一次抖动会让所有实例同时被判为未就绪而整体下线，
+    # 故障面比 Redis 自身大得多。这里保留在 health 中可见，但不参与就绪判定。
+    readiness:
+      exclude: redis
