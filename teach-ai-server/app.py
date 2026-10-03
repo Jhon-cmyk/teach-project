@@ -116,6 +116,7 @@ def get_session_id(payload):
 
 
 @app.route('/health', methods=['GET'])
+@app.route('/face/health', methods=['GET'])
 def health():
     return jsonify({
         'code': 0,
@@ -272,6 +273,7 @@ def micro_video_render():
 
 
 @app.route('/detect', methods=['POST'])
+@app.route('/face/detect', methods=['POST'])
 def detect():
     data = request.get_json(silent=True) or {}
     image_data = data.get('image')
@@ -400,6 +402,7 @@ def detect():
 
 
 @app.route('/stats', methods=['GET'])
+@app.route('/face/stats', methods=['GET'])
 def get_stats():
     """查询某个 session 的累计疲劳统计"""
     session_id = request.args.get('sessionId', 'anonymous')
