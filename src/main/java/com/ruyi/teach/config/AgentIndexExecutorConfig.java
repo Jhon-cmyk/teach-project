@@ -20,6 +20,8 @@ public class AgentIndexExecutorConfig {
         executor.setWaitForTasksToCompleteOnShutdown(true);
         executor.setAwaitTerminationSeconds(10);
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
+        // 把提交线程的 trace_id 带到工作线程，日志与响应头保持一致
+        executor.setTaskDecorator(new TraceTaskDecorator());
         executor.initialize();
         return executor;
     }

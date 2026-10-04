@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ruyi.teach.client.RemoteResourceClient;
+import com.ruyi.teach.common.TraceContext;
 import com.ruyi.teach.mapper.TeachingCaseMapper;
 import com.ruyi.teach.model.entity.TeachingCase;
 import com.ruyi.teach.util.CaseDocumentTextExtractor;
@@ -193,7 +194,8 @@ public class PlatformTeachingCaseService {
         CompletionService<CrawledCase> completionService = new ExecutorCompletionService<>(executor);
         try {
             for (String url : candidates) {
-                completionService.submit(() -> crawl(url, TEACHER_CRAWL_CONNECT_TIMEOUT_MS, TEACHER_CRAWL_READ_TIMEOUT_MS));
+                completionService.submit(TraceContext.wrapCallable(
+                        () -> crawl(url, TEACHER_CRAWL_CONNECT_TIMEOUT_MS, TEACHER_CRAWL_READ_TIMEOUT_MS)));
             }
 
             long deadline = System.currentTimeMillis() + TEACHER_CRAWL_DEADLINE_MS;
