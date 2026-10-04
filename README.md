@@ -502,3 +502,12 @@ cd teach-ai-server && python -m unittest discover -s tests   # Python：49 个�
 | 讯飞数字人 | 数字人播报 | 可选 |
 | 阿里云 OSS | 对象存储 | 可选（不配置时使用本地存储） |
 | 阿里云 ASR / TTS | 语音识别与合成 | 可选 |
+
+---
+
+## 许可
+
+本项目基于 [MIT License](LICENSE) 发布。
+
+> 仓库内 `teach-frontend/src/vm-sdk/` 下的数字人播放器为其供应商提供的第三方产物，
+> 版权归原供应商所有，不在本项目 MIT 许可范围内，请遵循供应商的授权条款使用。
